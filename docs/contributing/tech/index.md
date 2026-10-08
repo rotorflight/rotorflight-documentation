@@ -15,10 +15,11 @@ Cleanflight, and still mention those projects; the concepts still apply.
 | [Customizing the Build](customizing-the-build.md) | Choosing which features go into a build. |
 | [Custom Board Configuration](custom-boards.md) | Defining a board's pins and devices with the CLI. |
 | [Blackbox Log Format](blackbox-format.md) | How Blackbox logs are encoded. |
+| [Governor Reference](governor.md) | Governor modes, states and every setting in detail. |
 | [SmartFuel Internals](smartfuel.md) | The SmartFuel charge estimator in detail. |
 | [Hardware Debugging](hardware-debugging.md) | Debugging on the board with a debug probe. |
 | [Debugging with VS Code and J-Link](hardware-debugging-vscode-jlink.md) | A VS Code set-up for the above. |
 | [Test Coverage](test-coverage.md) | Measuring unit test coverage. |
 | [Modeling Cross-Coupling](modeling-cross-coupling.md) | Theory behind cyclic cross-coupling compensation. |
 
-The governor's design is described for users on [Governor](../../setup/governor.md).
+For using the governor, see [Governor](../../setup/governor.md).

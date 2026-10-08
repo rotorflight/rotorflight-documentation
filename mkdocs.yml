@@ -200,6 +200,7 @@ nav:
           - Customizing the Build: contributing/tech/customizing-the-build.md
           - Custom Board Configuration: contributing/tech/custom-boards.md
           - Blackbox Log Format: contributing/tech/blackbox-format.md
+          - Governor Reference: contributing/tech/governor.md
           - SmartFuel Internals: contributing/tech/smartfuel.md
           - Hardware Debugging: contributing/tech/hardware-debugging.md
           - Debugging with VS Code and J-Link: contributing/tech/hardware-debugging-vscode-jlink.md
