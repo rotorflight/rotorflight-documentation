@@ -1,0 +1,198 @@
+site_name: Rotorflight Documentation
+site_description: Documentation for the Rotorflight helicopter flight controller firmware, Configurator, Blackbox and radio Lua suites
+site_url: https://doc.rotorflight.org/
+repo_url: https://github.com/rotorflight/rotorflight-documentation
+repo_name: rotorflight-documentation
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  logo: assets/Rotorflight_outline_dark.svg # white outline variant, for contrast against the blue toolbar
+  favicon: assets/favicon.ico
+  font: false # use the system-font stack from extra.css instead of a fetched webfont
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.action.edit
+    - content.code.copy
+    - content.tabs.link
+
+plugins:
+  - search
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - toc:
+      permalink: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/rotorflight
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/FyfMF4RwSA
+    - icon: fontawesome/solid/globe
+      link: https://www.rotorflight.org/
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - getting-started/index.md
+      - Downloads: getting-started/downloads.md
+      - Flashing the Firmware: getting-started/flashing-the-firmware.md
+      - First Connection: getting-started/first-connection.md
+      - Backup & Restore: getting-started/backup-and-restore.md
+      - Upgrade Notes: getting-started/upgrade-notes.md
+      - Arming & Safety: getting-started/arming.md
+      - Example Build: getting-started/example-build.md
+  - Setup Guides:
+      - setup/index.md
+      - Remapping Outputs: setup/remapping.md
+      - Servo Setup: setup/servos.md
+      - Mixer & Swashplate Setup: setup/mixer.md
+      - Swash Wiggle: setup/swash-wiggle.md
+      - Extra Servo: setup/extra-servo.md
+      - RPM Measurement: setup/rpm-measurement.md
+      - RPM Filters: setup/rpm-filters.md
+      - ESC Telemetry: setup/esc-telemetry.md
+      - ESC Forward Programming: setup/esc-programming.md
+      - BLHeli_S to Bluejay: setup/blheli-s-to-bluejay.md
+      - Governor:
+          - setup/governor.md
+          - Governor Setup: setup/governor-setup.md
+          - FlyRotor ESC Governor: setup/governor-flyrotor.md
+      - Nitro Helicopters: setup/nitro.md
+      - Gear Ratios: setup/gear-ratios.md
+      - SmartFuel: setup/smartfuel.md
+      - Profile Switching: setup/profile-switching.md
+      - Stability Modes: setup/stability-modes.md
+      - LED Strip: setup/led-strip.md
+      - OpenLager Logging: setup/openlager.md
+      - FBUS Master: setup/fbus-master.md
+      - ELRS Custom Telemetry: setup/elrs-custom-telemetry.md
+  - Configurator:
+      - configurator/index.md
+      - Status: configurator/tabs/status.md
+      - Setup: configurator/tabs/setup.md
+      - Configuration: configurator/tabs/configuration.md
+      - Presets: configurator/tabs/presets.md
+      - Power: configurator/tabs/power.md
+      - Receiver: configurator/tabs/receiver.md
+      - Failsafe: configurator/tabs/failsafe.md
+      - Mixer: configurator/tabs/mixer.md
+      - Servos: configurator/tabs/servos.md
+      - Motors: configurator/tabs/motors.md
+      - Governor: configurator/tabs/governor.md
+      - Profiles: configurator/tabs/profiles.md
+      - Rates: configurator/tabs/rates.md
+      - Gyro: configurator/tabs/gyro.md
+      - Modes: configurator/tabs/modes.md
+      - Adjustments: configurator/tabs/adjustments.md
+      - GPS: configurator/tabs/gps.md
+      - LED Strip: configurator/tabs/led-strip.md
+      - Remap FC: configurator/tabs/remap-fc.md
+      - Beepers: configurator/tabs/beepers.md
+      - Sensors: configurator/tabs/sensors.md
+      - CRSF Sensors: configurator/tabs/crsf-sensors.md
+      - XACT Servo Programming: configurator/tabs/xact-servo.md
+      - ESC Programming: configurator/tabs/esc-programming.md
+      - Blackbox: configurator/tabs/blackbox.md
+      - CLI: configurator/tabs/cli.md
+  - Radio & Lua:
+      - radio/index.md
+      - FrSky Ethos:
+          - radio/ethos/index.md
+          - Radio Setup: radio/ethos/radio-setup.md
+          - Model Setup: radio/ethos/model-setup.md
+          - Rotorflight Lua Suite: radio/ethos/lua-suite.md
+          - Missing Sensors: radio/ethos/missing-sensors.md
+          - Background Task: radio/ethos/background-task.md
+          - Nexus Status: radio/ethos/nexus-status.md
+          - Simulators: radio/ethos/simulators.md
+      - EdgeTX:
+          - radio/edgetx/index.md
+          - Radio Setup: radio/edgetx/radio-setup.md
+          - Rotorflight Lua Suite: radio/edgetx/lua-suite.md
+          - Widgets: radio/edgetx/widgets.md
+          - RF API: radio/edgetx/rf-api.md
+      - Futaba: radio/futaba.md
+      - Jeti: radio/jeti.md
+      - Other Radios: radio/others.md
+  - Tuning:
+      - tuning/index.md
+      - Tuning Process: tuning/process.md
+      - Filter Tuning: tuning/filters.md
+      - Feedforward: tuning/feedforward.md
+      - Governor Tuning: tuning/governor.md
+      - High Speed Integral: tuning/high-speed-integral.md
+      - Cyclic Cross-Coupling: tuning/cyclic-cross-coupling.md
+      - Motorised Tail & TTA: tuning/motorised-tail.md
+      - Rescue: tuning/rescue.md
+      - Tuning Examples: tuning/examples.md
+  - Hardware:
+      - hardware/index.md
+      - Radiomaster Nexus: hardware/radiomaster-nexus.md
+      - FrSky 007: hardware/frsky-007.md
+      - FlyDragon F722: hardware/flydragon-f722.md
+      - Flywing HELI-F405: hardware/flywing-heli-f405.md
+      - GooSky F701: hardware/goosky-f701.md
+      - GooSky F4 Mini: hardware/goosky-f4mini.md
+      - GooSky S2: hardware/goosky-s2.md
+      - Matek G474-HELI: hardware/matek-g474-heli.md
+      - Matek G474-HLITE: hardware/matek-g474-hlite.md
+      - Betaflight FC (DIY): hardware/betaflight-diy.md
+      - For Manufacturers:
+          - hardware/manufacturers/index.md
+          - Design Requirements: hardware/manufacturers/design-requirements.md
+          - Reference Design: hardware/manufacturers/reference-design.md
+  - Reference:
+      - reference/index.md
+      - CLI Command Reference: reference/cli-reference.md
+      - Telemetry Sensors: reference/telemetry.md
+      - Serial Ports: reference/serial-ports.md
+      - Receivers: reference/receivers.md
+      - Blackbox: reference/blackbox.md
+      - LED Strip: reference/led-strip.md
+      - Buzzer: reference/buzzer.md
+      - MSP Overview: reference/msp-overview.md
+  - Contributing:
+      - contributing/index.md
+      - Developers: contributing/developers.md
+      - Building the Firmware: contributing/building-the-firmware.md
+      - Editing the Docs: contributing/editing-the-docs.md
+      - Flow Charts: contributing/flow-charts.md
+      - Modeling Cross-Coupling: contributing/modeling-cross-coupling.md
+      - Support the Project: contributing/support.md
