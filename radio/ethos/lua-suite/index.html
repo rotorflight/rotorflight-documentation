@@ -13,10 +13,10 @@
         <link rel="canonical" href="https://doc.rotorflight.org/radio/ethos/lua-suite/">
       
       
-        <link rel="prev" href="../model-setup/">
+        <link rel="prev" href="../radio-setup/">
       
       
-        <link rel="next" href="../missing-sensors/">
+        <link rel="next" href="../troubleshooting/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Rotorflight Lua Suite - Rotorflight Documentation</title>
+        <title>Using RFSuite - Rotorflight Documentation</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#rotorflight-lua-suite" class="md-skip">
+        <a href="#using-rfsuite-on-ethos" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Rotorflight Lua Suite
+              Using RFSuite
             
           </span>
         </div>
@@ -2359,14 +2359,6 @@
       
         
       
-        
-      
-        
-      
-        
-      
-        
-      
     
     
     
@@ -2451,34 +2443,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../model-setup/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Model Setup
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -2491,6 +2455,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using RFSuite
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -2498,7 +2480,7 @@
   <span class="md-ellipsis">
     
   
-    Rotorflight Lua Suite
+    Using RFSuite
   
 
     
@@ -2507,6 +2489,114 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-configuration-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The configuration tool
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The configuration tool">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#editing-and-saving" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editing and saving
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esc-programming" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ESC programming
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The dashboard
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The dashboard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#battery-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Battery selection
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voice-announcements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Voice announcements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2520,98 +2610,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../missing-sensors/" class="md-nav__link">
+      <a href="../troubleshooting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Missing Sensors
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../background-task/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Background Task
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../nexus-status/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Nexus Status
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../simulators/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Simulators
+    Troubleshooting
   
 
     
@@ -2644,8 +2650,6 @@
       
         
           
-        
-      
         
       
         
@@ -2748,7 +2752,7 @@
   <span class="md-ellipsis">
     
   
-    Rotorflight Lua Suite
+    Using RFSuite
   
 
     
@@ -2769,42 +2773,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../edgetx/widgets/" class="md-nav__link">
+      <a href="../../edgetx/classic-scripts/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Widgets
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../edgetx/rf-api/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    RF API
+    Classic Lua Scripts
   
 
     
@@ -4442,6 +4418,103 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-configuration-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The configuration tool
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The configuration tool">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#editing-and-saving" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editing and saving
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esc-programming" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ESC programming
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The dashboard
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The dashboard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#battery-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Battery selection
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voice-announcements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Voice announcements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4465,13 +4538,119 @@
   
 
 
-<h1 id="rotorflight-lua-suite">Rotorflight Lua Suite<a class="headerlink" href="#rotorflight-lua-suite" title="Permanent link">&para;</a></h1>
-<div class="admonition info">
-<p class="admonition-title">Being written</p>
-<p>This page is part of the new Rotorflight documentation and is still
-being written. In the meantime, ask on the
-<a href="https://discord.gg/FyfMF4RwSA">Rotorflight Discord</a>.</p>
+<h1 id="using-rfsuite-on-ethos">Using RFSuite on Ethos<a class="headerlink" href="#using-rfsuite-on-ethos" title="Permanent link">&para;</a></h1>
+<h2 id="the-configuration-tool">The configuration tool<a class="headerlink" href="#the-configuration-tool" title="Permanent link">&para;</a></h2>
+<p>Press <strong>SYS</strong>, go to the second page and open <strong>Rotorflight</strong>. The suite
+connects to the flight controller over telemetry; once it answers, the
+menus are enabled.</p>
+<p><img alt="RFSuite main menu" src="../img/rf-home.png" width="560" /></p>
+<table>
+<thead>
+<tr>
+<th>Menu</th>
+<th>Holds</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Flight Tuning</strong></td>
+<td>PIDs, Rates, Governor (per profile) and Advanced: filters, PID controller, bandwidth, autolevel, main and tail rotor, rescue, rate tables. The <strong>Tune Advisor</strong> gives tuning hints from your recent flights.</td>
+</tr>
+<tr>
+<td><strong>Setup</strong></td>
+<td>Configuration, Radio Config, Telemetry, Accelerometer, Alignment, Ports, Mixer, Servos, Controls (modes, adjustments, failsafe, beepers, Blackbox), Power, ESC &amp; Motors, Governor.</td>
+</tr>
+<tr>
+<td><strong>Tools</strong></td>
+<td>Profile copy and selection; diagnostics -- status, ELRS link, info.</td>
+</tr>
+<tr>
+<td><strong>Logs</strong></td>
+<td>Flight logs recorded by the radio.</td>
+</tr>
+<tr>
+<td><strong>Settings</strong></td>
+<td>Suite settings: dashboard theme, audio announcements, ActiveLook, language.</td>
+</tr>
+</tbody>
+</table>
+<div class="grid">
+<p><img alt="Flight Tuning menu" src="../img/rf-tuning.png" />
+<img alt="Setup menu" src="../img/rf-setup.png" /></p>
 </div>
+<h3 id="editing-and-saving">Editing and saving<a class="headerlink" href="#editing-and-saving" title="Permanent link">&para;</a></h3>
+<p><img alt="PIDs page" src="../img/rf-pids.png" width="560" /></p>
+<p>Each page has the same buttons at the top:</p>
+<table>
+<thead>
+<tr>
+<th>Button</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Back</strong></td>
+<td>Back to the menu.</td>
+</tr>
+<tr>
+<td><strong>Save</strong></td>
+<td>Writes the page to the flight controller and saves it permanently. Nothing changes until you save.</td>
+</tr>
+<tr>
+<td><strong>Reload</strong></td>
+<td>Reads the page from the flight controller again, discarding your edits.</td>
+</tr>
+<tr>
+<td><strong>*</strong></td>
+<td>Page-specific actions, where a page has them.</td>
+</tr>
+<tr>
+<td><strong>?</strong></td>
+<td>Help for the page, including tuning tips.</td>
+</tr>
+</tbody>
+</table>
+<p>Pages that depend on the profile -- PIDs, rates, governor -- show the
+profile number in their title, e.g. <em>PIDs #1</em>, and edit the profile that's
+currently active.</p>
+<p>While the helicopter is <strong>armed</strong>, pages are read-only: nothing can be
+written in flight.</p>
+<h3 id="esc-programming">ESC programming<a class="headerlink" href="#esc-programming" title="Permanent link">&para;</a></h3>
+<p><strong>Setup → ESC &amp; Motors → Esc Programing</strong> programs the ESC through the
+flight controller. The entry for your ESC lights up when the flight
+controller reports its ESC telemetry protocol. See
+<a href="../../../setup/esc-programming/">ESC Forward Programming</a>.</p>
+<p><img alt="ESC &amp; Motors menu" src="../img/rf-esc.png" width="560" /></p>
+<h2 id="the-dashboard">The dashboard<a class="headerlink" href="#the-dashboard" title="Permanent link">&para;</a></h2>
+<p>Add the <strong>Rotorflight Dashboard</strong> widget to a full-screen page: press
+<strong>DISP</strong>, add a screen with the full-screen layout, and choose the widget.</p>
+<p><img alt="RFSuite dashboard" src="../img/dashboard.png" width="560" /></p>
+<p>It shows the arming and governor state, headspeed, fuel and voltage,
+profiles, flight count, timer and Blackbox use, with separate layouts for
+before, during and after the flight. Themes are chosen under <strong>Settings →
+Dashboard</strong>.</p>
+<ul>
+<li><strong>Slide up</strong> (or long-press PAGE) for the toolbar: reset the flight,
+  erase the Blackbox, choose the battery profile, open the info panel, or
+  open the configuration tool.</li>
+<li><strong>Slide down</strong> for the info panel: link quality, firmware, flight
+  controller status and more.</li>
+<li>A <strong>status banner</strong> appears for conditions such as failsafe, governor
+  fallback, an override left on, or a reboot needed.</li>
+</ul>
+<h3 id="battery-selection">Battery selection<a class="headerlink" href="#battery-selection" title="Permanent link">&para;</a></h3>
+<p>With more than one <a href="../../../configurator/tabs/power/#battery-profiles">battery profile</a>
+set up, the suite asks which pack you've plugged in when the helicopter
+connects:</p>
+<p><img alt="Battery selection" src="../img/battery-select.png" width="480" /></p>
+<h2 id="voice-announcements">Voice announcements<a class="headerlink" href="#voice-announcements" title="Permanent link">&para;</a></h2>
+<p>Under <strong>Settings → Audio</strong>, choose what's announced: arming and disarming,
+governor state, profile and rate changes, adjustments, battery and fuel
+levels, and timers -- and which switches trigger on-demand callouts.</p>
+<h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
+<p>Every page and setting is documented in the
+<a href="https://github.com/rotorflight/rotorflight-lua-ethos-suite/blob/master/docs/pages/README.md">RFSuite page reference</a>.</p>
 
 
 
@@ -4509,7 +4688,7 @@ being written. In the meantime, ask on the
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../model-setup/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Model Setup">
+          <a href="../radio-setup/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Radio Setup">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -4519,20 +4698,20 @@ being written. In the meantime, ask on the
                 Previous
               </span>
               <div class="md-ellipsis">
-                Model Setup
+                Radio Setup
               </div>
             </div>
           </a>
         
         
           
-          <a href="../missing-sensors/" class="md-footer__link md-footer__link--next" aria-label="Next: Missing Sensors">
+          <a href="../troubleshooting/" class="md-footer__link md-footer__link--next" aria-label="Next: Troubleshooting">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Missing Sensors
+                Troubleshooting
               </div>
             </div>
             <div class="md-footer__button md-icon">

@@ -27,7 +27,7 @@
     
     
       
-        <title>Radio - Rotorflight Documentation</title>
+        <title>Radio & Lua - Rotorflight Documentation</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#radio" class="md-skip">
+        <a href="#radio-lua" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Radio
+              Radio &amp; Lua
             
           </span>
         </div>
@@ -2357,14 +2357,6 @@
       
         
       
-        
-      
-        
-      
-        
-      
-        
-      
     
     
     
@@ -2452,34 +2444,6 @@
   
   
     <li class="md-nav__item">
-      <a href="ethos/model-setup/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Model Setup
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="ethos/lua-suite/" class="md-nav__link">
         
   
@@ -2487,7 +2451,7 @@
   <span class="md-ellipsis">
     
   
-    Rotorflight Lua Suite
+    Using RFSuite
   
 
     
@@ -2508,98 +2472,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ethos/missing-sensors/" class="md-nav__link">
+      <a href="ethos/troubleshooting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Missing Sensors
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="ethos/background-task/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Background Task
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="ethos/nexus-status/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Nexus Status
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="ethos/simulators/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Simulators
+    Troubleshooting
   
 
     
@@ -2632,8 +2512,6 @@
       
         
           
-        
-      
         
       
         
@@ -2736,7 +2614,7 @@
   <span class="md-ellipsis">
     
   
-    Rotorflight Lua Suite
+    Using RFSuite
   
 
     
@@ -2757,42 +2635,14 @@
   
   
     <li class="md-nav__item">
-      <a href="edgetx/widgets/" class="md-nav__link">
+      <a href="edgetx/classic-scripts/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Widgets
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="edgetx/rf-api/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    RF API
+    Classic Lua Scripts
   
 
     
@@ -4430,6 +4280,47 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pick-your-radio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pick your radio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-every-radio-needs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What every radio needs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#versions-must-match" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Versions must match
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4453,13 +4344,119 @@
   
 
 
-<h1 id="radio">Radio<a class="headerlink" href="#radio" title="Permanent link">&para;</a></h1>
-<div class="admonition info">
-<p class="admonition-title">Being written</p>
-<p>This page is part of the new Rotorflight documentation and is still
-being written. In the meantime, ask on the
-<a href="https://discord.gg/FyfMF4RwSA">Rotorflight Discord</a>.</p>
-</div>
+<h1 id="radio-lua">Radio &amp; Lua<a class="headerlink" href="#radio-lua" title="Permanent link">&para;</a></h1>
+<p>Rotorflight works with any radio and receiver whose protocol it supports
+(see <a href="../configurator/tabs/receiver/">Receiver</a>). With a radio that runs
+Lua scripts and a receiver with telemetry, you also get the <strong>Rotorflight
+Lua suite</strong>: configure and tune the helicopter at the field from the radio,
+a live dashboard, voice callouts, and ESC programming -- no laptop needed.</p>
+<h2 id="pick-your-radio">Pick your radio<a class="headerlink" href="#pick-your-radio" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Radio</th>
+<th>Lua suite</th>
+<th>Needs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><a href="ethos/">FrSky Ethos</a></strong> (X10, X12, X14, X18, X20, Twin X Lite)</td>
+<td>RFSuite for Ethos</td>
+<td>Ethos 1.6.2+; FrSky S.Port / F.Port / F.Bus receiver, or ExpressLRS</td>
+</tr>
+<tr>
+<td><strong><a href="edgetx/">EdgeTX</a></strong> colour radios</td>
+<td>RFSuite for EdgeTX</td>
+<td>EdgeTX 2.11+; CRSF link (ExpressLRS or Crossfire)</td>
+</tr>
+<tr>
+<td><strong><a href="edgetx/classic-scripts/">EdgeTX / OpenTX</a></strong>, older or black-and-white</td>
+<td>Classic Lua scripts</td>
+<td>OpenTX 2.3.12+ / EdgeTX 2.5+; S.Port, F.Port or CRSF</td>
+</tr>
+<tr>
+<td><strong><a href="futaba/">Futaba</a></strong></td>
+<td>--</td>
+<td>SBUS2 telemetry</td>
+</tr>
+<tr>
+<td><strong><a href="jeti/">Jeti</a></strong></td>
+<td>--</td>
+<td>EX Bus telemetry</td>
+</tr>
+<tr>
+<td><a href="others/">Other radios</a></td>
+<td>--</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="what-every-radio-needs">What every radio needs<a class="headerlink" href="#what-every-radio-needs" title="Permanent link">&para;</a></h2>
+<p>However you fly, set up the radio model with:</p>
+<ul>
+<li><strong>Separate collective and throttle channels.</strong> Collective is a pitch
+  curve on the left stick; throttle is a separate channel -- a switch or a
+  flat curve, with the governor doing the work.</li>
+<li><strong>A throttle hold</strong> that sends a throttle value below 0%.</li>
+<li><strong>An arm switch</strong> on its own channel (AUX 1 / channel 5 with ExpressLRS).</li>
+<li><strong>No trims or mixes on cyclic or yaw.</strong> The flight controller does all
+  the mixing; the radio just sends stick positions.</li>
+<li><strong>Failsafe</strong> that stops sending channels on signal loss (see
+  <a href="../configurator/tabs/failsafe/">Failsafe</a>).</li>
+</ul>
+<p>A typical channel layout:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Channel</th>
+<th>ELRS order</th>
+<th>FrSky / Futaba order</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td>Roll (aileron)</td>
+<td>Roll</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td>Pitch (elevator)</td>
+<td>Pitch</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td>Collective</td>
+<td>Throttle</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td>Yaw (rudder)</td>
+<td>Yaw</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td>AUX 1 -- arm</td>
+<td>Collective (FrSky) / AUX 1 (Futaba)</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td>Throttle</td>
+<td>AUX 1 -- arm (FrSky) / Collective (Futaba)</td>
+</tr>
+<tr>
+<td style="text-align: center;">7+</td>
+<td>Profile switch, rescue, Blackbox ...</td>
+<td>...</td>
+</tr>
+</tbody>
+</table>
+<p>Match it with the channel preset on the
+<a href="../configurator/tabs/receiver/#channel-assignment">Receiver</a> tab.</p>
+<h2 id="versions-must-match">Versions must match<a class="headerlink" href="#versions-must-match" title="Permanent link">&para;</a></h2>
+<p>The Lua suite talks to the firmware over MSP, so it must be from the same
+Rotorflight release as the firmware. When you update one, update the other.</p>
 
 
 
@@ -4514,13 +4511,13 @@ being written. In the meantime, ask on the
         
         
           
-          <a href="ethos/" class="md-footer__link md-footer__link--next" aria-label="Next: Ethos">
+          <a href="ethos/" class="md-footer__link md-footer__link--next" aria-label="Next: FrSky Ethos">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Ethos
+                FrSky Ethos
               </div>
             </div>
             <div class="md-footer__button md-icon">

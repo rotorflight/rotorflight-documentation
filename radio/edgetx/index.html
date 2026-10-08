@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://doc.rotorflight.org/radio/edgetx/">
       
       
-        <link rel="prev" href="../ethos/simulators/">
+        <link rel="prev" href="../ethos/troubleshooting/">
       
       
         <link rel="next" href="radio-setup/">
@@ -27,7 +27,7 @@
     
     
       
-        <title>Edgetx - Rotorflight Documentation</title>
+        <title>EdgeTX - Rotorflight Documentation</title>
       
     
     
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Edgetx
+              EdgeTX
             
           </span>
         </div>
@@ -2357,14 +2357,6 @@
       
         
       
-        
-      
-        
-      
-        
-      
-        
-      
     
     
     
@@ -2452,34 +2444,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../ethos/model-setup/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Model Setup
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../ethos/lua-suite/" class="md-nav__link">
         
   
@@ -2487,7 +2451,7 @@
   <span class="md-ellipsis">
     
   
-    Rotorflight Lua Suite
+    Using RFSuite
   
 
     
@@ -2508,98 +2472,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../ethos/missing-sensors/" class="md-nav__link">
+      <a href="../ethos/troubleshooting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Missing Sensors
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ethos/background-task/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Background Task
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ethos/nexus-status/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Nexus Status
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ethos/simulators/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Simulators
+    Troubleshooting
   
 
     
@@ -2634,8 +2514,6 @@
       
         
           
-        
-      
         
       
         
@@ -2738,7 +2616,7 @@
   <span class="md-ellipsis">
     
   
-    Rotorflight Lua Suite
+    Using RFSuite
   
 
     
@@ -2759,42 +2637,14 @@
   
   
     <li class="md-nav__item">
-      <a href="widgets/" class="md-nav__link">
+      <a href="classic-scripts/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Widgets
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="rf-api/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    RF API
+    Classic Lua Scripts
   
 
     
@@ -4432,6 +4282,36 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installing-rfsuite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing RFSuite
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4455,13 +4335,82 @@
   
 
 
-<h1 id="edgetx">Edgetx<a class="headerlink" href="#edgetx" title="Permanent link">&para;</a></h1>
-<div class="admonition info">
-<p class="admonition-title">Being written</p>
-<p>This page is part of the new Rotorflight documentation and is still
-being written. In the meantime, ask on the
-<a href="https://discord.gg/FyfMF4RwSA">Rotorflight Discord</a>.</p>
+<h1 id="edgetx">EdgeTX<a class="headerlink" href="#edgetx" title="Permanent link">&para;</a></h1>
+<p>There are two Rotorflight Lua packages for EdgeTX radios:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>RFSuite for EdgeTX</strong></th>
+<th><strong>Classic Lua scripts</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Radios</td>
+<td>Colour-screen radios on <strong>EdgeTX 2.11+</strong> (e.g. TX16S, TX15, Boxer, T15, TX12 colour)</td>
+<td>Any OpenTX 2.3.12+ / EdgeTX 2.5+ radio, including black-and-white</td>
+</tr>
+<tr>
+<td>Link</td>
+<td><strong>CRSF</strong> only -- ExpressLRS or Crossfire</td>
+<td>S.Port, F.Port or CRSF</td>
+</tr>
+<tr>
+<td>Interface</td>
+<td>Touch, LVGL</td>
+<td>Menu pages</td>
+</tr>
+<tr>
+<td>Dashboard</td>
+<td>Theme-able dashboard widget</td>
+<td>Third-party widgets</td>
+</tr>
+<tr>
+<td>Page</td>
+<td><a href="lua-suite/">Using RFSuite</a></td>
+<td><a href="classic-scripts/">Classic Lua Scripts</a></td>
+</tr>
+</tbody>
+</table>
+<p>If your radio and link support it, use <strong>RFSuite</strong>.</p>
+<h2 id="installing-rfsuite">Installing RFSuite<a class="headerlink" href="#installing-rfsuite" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Updater (recommended)</label><label for="__tabbed_1_2">Manually</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ol>
+<li>Download the <a href="https://github.com/rotorflight/rotorflight-lua-edgetx-suite-updater/releases">RFSuite Updater</a>
+   for Windows, macOS or Linux.</li>
+<li>Connect the radio by USB and choose <strong>USB Storage (SD)</strong> on the radio.</li>
+<li>Run the updater, choose the release track and language, and click
+   <strong>Install / Update</strong>. Your settings and custom themes are kept.</li>
+<li>Eject the drive and unplug.</li>
+</ol>
 </div>
+<div class="tabbed-block">
+<ol>
+<li>Download <code>rfsuite-radio-install-v&lt;version&gt;_&lt;language&gt;.zip</code> from the
+   <a href="https://github.com/rotorflight/rotorflight-lua-edgetx-suite/releases">RFSuite releases</a>.</li>
+<li>Copy its <code>SCRIPTS</code>, <code>WIDGETS</code> and <code>SOUNDS</code> folders to the root of the
+   radio's SD card -- over USB storage, or with the card in a computer.</li>
+</ol>
+<p>To update, unpack a newer archive over the old one. Your settings live
+in <code>/SCRIPTS/TOOLS/rfsuite.user/</code>, which the archive doesn't touch.</p>
+</div>
+</div>
+</div>
+<p>You'll then find <strong>RFSuite</strong> in the radio's <strong>Tools</strong> menu, and the
+<strong>RFSuite</strong> and <strong>RFSuite Service</strong> widgets in the widget list.</p>
+<div class="admonition note">
+<p class="admonition-title">RFSuite is newer</p>
+<p>RFSuite for EdgeTX is still in development snapshots (0.1.x). The
+classic scripts follow the main Rotorflight releases.</p>
+</div>
+<p>Then set up the radio model: <a href="radio-setup/">Radio Setup</a>.</p>
+<h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
+<p>RFSuite's own documentation covers every page, the dashboard and
+troubleshooting in detail:
+<a href="https://github.com/rotorflight/rotorflight-lua-edgetx-suite/blob/master/docs/README.md">RFSuite for EdgeTX docs</a>.</p>
 
 
 
@@ -4499,7 +4448,7 @@ being written. In the meantime, ask on the
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../ethos/simulators/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Simulators">
+          <a href="../ethos/troubleshooting/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Troubleshooting">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -4509,7 +4458,7 @@ being written. In the meantime, ask on the
                 Previous
               </span>
               <div class="md-ellipsis">
-                Simulators
+                Troubleshooting
               </div>
             </div>
           </a>

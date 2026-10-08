@@ -2357,14 +2357,6 @@
       
         
       
-        
-      
-        
-      
-        
-      
-        
-      
     
     
     
@@ -2452,34 +2444,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../ethos/model-setup/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Model Setup
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../ethos/lua-suite/" class="md-nav__link">
         
   
@@ -2487,7 +2451,7 @@
   <span class="md-ellipsis">
     
   
-    Rotorflight Lua Suite
+    Using RFSuite
   
 
     
@@ -2508,98 +2472,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../ethos/missing-sensors/" class="md-nav__link">
+      <a href="../ethos/troubleshooting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Missing Sensors
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ethos/background-task/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Background Task
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ethos/nexus-status/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Nexus Status
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ethos/simulators/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Simulators
+    Troubleshooting
   
 
     
@@ -2632,8 +2512,6 @@
       
         
           
-        
-      
         
       
         
@@ -2736,7 +2614,7 @@
   <span class="md-ellipsis">
     
   
-    Rotorflight Lua Suite
+    Using RFSuite
   
 
     
@@ -2757,42 +2635,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../edgetx/widgets/" class="md-nav__link">
+      <a href="../edgetx/classic-scripts/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Widgets
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../edgetx/rf-api/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    RF API
+    Classic Lua Scripts
   
 
     
@@ -4464,12 +4314,49 @@
 
 
 <h1 id="other-radios">Other Radios<a class="headerlink" href="#other-radios" title="Permanent link">&para;</a></h1>
-<div class="admonition info">
-<p class="admonition-title">Being written</p>
-<p>This page is part of the new Rotorflight documentation and is still
-being written. In the meantime, ask on the
-<a href="https://discord.gg/FyfMF4RwSA">Rotorflight Discord</a>.</p>
-</div>
+<p>Any radio whose receiver speaks a protocol Rotorflight supports can fly a
+Rotorflight helicopter -- see the protocol list on the
+<a href="../../configurator/tabs/receiver/#protocol">Receiver</a> tab:</p>
+<table>
+<thead>
+<tr>
+<th>Radio system</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spektrum</td>
+<td>SRXL2 receivers (telemetry, binding from the Configurator), or DSM satellites</td>
+</tr>
+<tr>
+<td>FlySky</td>
+<td>iBUS, or iBUS2 for control and telemetry</td>
+</tr>
+<tr>
+<td>Graupner HoTT</td>
+<td>SUMD, plus HoTT telemetry on a separate port</td>
+</tr>
+<tr>
+<td>JR</td>
+<td>XBUS</td>
+</tr>
+<tr>
+<td>ImmersionRC Ghost</td>
+<td>GHOST</td>
+</tr>
+<tr>
+<td>Any ExpressLRS or Crossfire module</td>
+<td>CRSF</td>
+</tr>
+</tbody>
+</table>
+<p>Set up the radio as in <a href="../#what-every-radio-needs">Radio &amp; Lua</a>:
+separate collective and throttle channels, a throttle hold, an arm switch,
+and no mixing or trims on the cyclic and tail.</p>
+<p>Got a setup guide for a radio that isn't covered here? See
+<a href="../../contributing/editing-the-docs/">Editing the Docs</a> -- contributions are
+welcome.</p>
 
 
 

@@ -27,7 +27,7 @@
     
     
       
-        <title>Ethos - Rotorflight Documentation</title>
+        <title>FrSky Ethos - Rotorflight Documentation</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ethos" class="md-skip">
+        <a href="#frsky-ethos" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ethos
+              FrSky Ethos
             
           </span>
         </div>
@@ -2359,14 +2359,6 @@
       
         
       
-        
-      
-        
-      
-        
-      
-        
-      
     
     
     
@@ -2454,34 +2446,6 @@
   
   
     <li class="md-nav__item">
-      <a href="model-setup/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Model Setup
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="lua-suite/" class="md-nav__link">
         
   
@@ -2489,7 +2453,7 @@
   <span class="md-ellipsis">
     
   
-    Rotorflight Lua Suite
+    Using RFSuite
   
 
     
@@ -2510,98 +2474,14 @@
   
   
     <li class="md-nav__item">
-      <a href="missing-sensors/" class="md-nav__link">
+      <a href="troubleshooting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Missing Sensors
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="background-task/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Background Task
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="nexus-status/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Nexus Status
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="simulators/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Simulators
+    Troubleshooting
   
 
     
@@ -2634,8 +2514,6 @@
       
         
           
-        
-      
         
       
         
@@ -2738,7 +2616,7 @@
   <span class="md-ellipsis">
     
   
-    Rotorflight Lua Suite
+    Using RFSuite
   
 
     
@@ -2759,42 +2637,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../edgetx/widgets/" class="md-nav__link">
+      <a href="../edgetx/classic-scripts/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Widgets
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../edgetx/rf-api/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    RF API
+    Classic Lua Scripts
   
 
     
@@ -4432,6 +4282,58 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#first-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        First start
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4455,13 +4357,72 @@
   
 
 
-<h1 id="ethos">Ethos<a class="headerlink" href="#ethos" title="Permanent link">&para;</a></h1>
-<div class="admonition info">
-<p class="admonition-title">Being written</p>
-<p>This page is part of the new Rotorflight documentation and is still
-being written. In the meantime, ask on the
-<a href="https://discord.gg/FyfMF4RwSA">Rotorflight Discord</a>.</p>
+<h1 id="frsky-ethos">FrSky Ethos<a class="headerlink" href="#frsky-ethos" title="Permanent link">&para;</a></h1>
+<p><strong>RFSuite for Ethos</strong> is Rotorflight's Lua suite for FrSky radios. It
+adds:</p>
+<ul>
+<li>a <strong>configuration tool</strong> in the System menu, with touch pages for
+  almost everything the Configurator does -- tuning, governor, mixer,
+  servos, power, ESC programming;</li>
+<li>a <strong>dashboard widget</strong> that shows the helicopter's state, headspeed, fuel
+  and voltage, changing layout before, during and after the flight;</li>
+<li><strong>voice announcements</strong> for arming, profiles, adjustments and fuel;</li>
+<li><strong>flight logs</strong>, and an <strong>ActiveLook</strong> glasses widget.</li>
+</ul>
+<p><img alt="RFSuite dashboard on an X20S" src="img/dashboard.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Try it without a radio</p>
+<p>The <a href="https://ethos.studio1247.com/nightly16/X20PRO_FCC?backup=https://github.com/rotorflight/rotorflight-lua-ethos-suite/raw/refs/heads/master/demo/DEMO.zip&amp;reset=all&amp;language=en">RFSuite web simulator</a>
+runs the suite in your browser, against a simulated helicopter.</p>
 </div>
+<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Ethos 1.6.2 or later</strong>, on an X10, X12, X14, X18, X20 or Twin X Lite.</li>
+<li>A receiver with telemetry:<ul>
+<li>FrSky ACCESS, ACCST, TD or TW receivers on <strong>S.Port</strong>, <strong>F.Port</strong> or
+  <strong>F.Bus</strong> -- for example Archer, TD MX, TW MX, R-XSR, RX6R;</li>
+<li>or <strong>ExpressLRS</strong>, through an Ethos-supported ELRS module.</li>
+</ul>
+</li>
+<li>Rotorflight firmware from the same release as the suite.</li>
+</ul>
+<h2 id="installing">Installing<a class="headerlink" href="#installing" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Updater (recommended)</label><label for="__tabbed_1_2">Ethos Suite</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ol>
+<li>Download the <a href="https://github.com/rotorflight/rotorflight-lua-ethos-suite-updater/releases">RFSuite Updater</a>
+   for Windows, macOS or Linux.</li>
+<li>Connect the radio to the computer by USB.</li>
+<li>Run the updater, choose the release and language, and install.</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Download the zip for your language from the
+   <a href="https://github.com/rotorflight/rotorflight-lua-ethos-suite/releases/latest">RFSuite releases</a>.</li>
+<li>Connect the radio to FrSky's Ethos Suite, open <strong>Lua Development
+   Tools</strong>, choose <strong>Install Lua Scripts</strong>, select the zip and install
+   <code>rfsuite</code>.</li>
+</ol>
+</div>
+</div>
+</div>
+<p>Restart the radio afterwards.</p>
+<h2 id="first-start">First start<a class="headerlink" href="#first-start" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Set up the radio model and telemetry -- see <a href="radio-setup/">Radio Setup</a>.</li>
+<li>Make sure the <strong>Rotorflight [Background]</strong> task is running: in the
+   model's <strong>Lua</strong> page, enable it. The dashboard shows <em>Background task
+   not running</em> if it isn't.</li>
+<li>Power up the helicopter, then press <strong>SYS</strong>, go to the second page and
+   open <strong>Rotorflight</strong>.</li>
+</ol>
+<p><img alt="Rotorflight in the Ethos System menu" src="img/system-menu.png" width="480" /></p>
+<p>Then see <a href="lua-suite/">Using RFSuite</a>.</p>
+<h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
+<p>Every RFSuite page is documented, setting by setting, in the
+<a href="https://github.com/rotorflight/rotorflight-lua-ethos-suite/blob/master/docs/pages/README.md">RFSuite page reference</a>.</p>
 
 
 
@@ -4499,7 +4460,7 @@ being written. In the meantime, ask on the
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Radio">
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Radio &amp;amp; Lua">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -4509,7 +4470,7 @@ being written. In the meantime, ask on the
                 Previous
               </span>
               <div class="md-ellipsis">
-                Radio
+                Radio &amp; Lua
               </div>
             </div>
           </a>
