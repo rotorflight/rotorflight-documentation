@@ -1,6 +1,92 @@
 # Receivers
 
-!!! info "Being written"
-    This page is part of the new Rotorflight documentation and is still
-    being written. In the meantime, ask on the
-    [Rotorflight Discord](https://discord.gg/FyfMF4RwSA).
+The [Receiver](../configurator/tabs/receiver.md) tab page covers set-up.
+This page is the reference: protocol names for the CLI, Spektrum binding,
+RSSI and signal-loss settings.
+
+## Serial receiver protocols
+
+Set with `serialrx_provider`, on a UART with the Serial RX function.
+
+| `serialrx_provider` | Protocol | Telemetry on the same wire |
+| --- | --- | :-: |
+| `CRSF` | TBS Crossfire, ExpressLRS | Yes |
+| `SBUS` | Futaba S.BUS (inverted) | -- |
+| `SBUS2` | Futaba S.BUS2 | Yes |
+| `FPORT` / `FPORT2` | FrSky F.Port / F.Port 2 | Yes |
+| `FBUS` | FrSky F.Bus | Yes |
+| `SPEK1024` / `SPEK2048` | Spektrum DSM2 / DSMX satellites | -- |
+| `SRXL` | Spektrum SRXL (and Multiplex) | Yes |
+| `SRXL2` | Spektrum SRXL2 | Yes |
+| `GHST` | ImmersionRC Ghost | Yes |
+| `SUMD` / `SUMH` | Graupner HoTT | -- |
+| `IBUS` | FlySky iBUS | -- |
+| `IBUS2` | FlySky iBUS2 | Yes |
+| `JETIEXBUS` | Jeti EX Bus | Yes |
+| `XB-A` / `XB-B` / `XB-B-RJ01` | JR XBUS Mode A / Mode B / RJ01 | -- |
+
+The signal options are `serialrx_inverted`, `serialrx_halfduplex` and
+`serialrx_pinswap` -- see [Serial Ports](serial-ports.md#pin-swap-inversion-and-half-duplex).
+
+Some protocol options:
+
+| Setting | |
+| --- | --- |
+| `sbus_baud_fast` | Fast (200 kbaud) SBUS, for receivers that support it. |
+| `srxl2_unit_id` | SRXL2 unit ID; **0** for full-size Spektrum receivers such as the AR6610T. |
+| `srxl2_baud_fast` | Fast SRXL2 baud rate. |
+| `crsf_use_negotiated_baud` | Let CRSF/ELRS negotiate a higher baud rate. |
+| `crsf_telemetry_mode` | `NATIVE` or `CUSTOM` -- see [ELRS Custom Telemetry](../setup/elrs-custom-telemetry.md). |
+| `crsf_telemetry_link_rate` / `crsf_telemetry_link_ratio` | ELRS packet rate and telemetry ratio, for custom telemetry. |
+
+## Spektrum binding
+
+**SRXL2** receivers bind from the Configurator: **Bind Receiver** on the
+Receiver tab, or `bind_rx` in the CLI.
+
+**Satellites** bind through the flight controller, which sends the bind
+pulses at power-up:
+
+1. Set `spektrum_sat_bind` to the code for your satellite and save:
+
+    | Value | Mode |
+    | :-: | --- |
+    | 3 | DSM2 1024-bit, 22 ms |
+    | 5 | DSM2 2048-bit, 11 ms |
+    | 7 | DSMX 1024-bit, 22 ms |
+    | 8 | DSMX 2048-bit, 22 ms |
+    | 9 | DSMX 2048-bit, 11 ms |
+
+2. Power cycle the flight controller. The satellite blinks, ready to bind;
+   bind it from the transmitter.
+3. With `spektrum_sat_bind_autoreset = ON` (the default) the setting resets
+   to 0 after binding.
+
+The satellite must be powered from a pin the flight controller can switch
+at power-up (the board's DSM port does this).
+
+## RSSI
+
+| Source | Set up with |
+| --- | --- |
+| From the receiver protocol | Automatic for CRSF, F.Port, F.Bus, SRXL2, Ghost and others -- choose **AUTO** on the Receiver tab. |
+| From a channel | `rssi_channel` -- a receiver channel that carries RSSI. |
+| From an analogue input | The `RSSI_ADC` feature and the board's RSSI pad. |
+| From frame errors | `rssi_src_frame_errors = ON` -- estimated from SBUS frame loss. |
+
+`rssi_scale`, `rssi_offset` and `rssi_invert` adjust a channel or ADC
+reading to 0-100%.
+
+## Signal loss
+
+A channel value outside `rx_pulse_min` .. `rx_pulse_max` (default 885 -
+2115 µs) counts as invalid. What happens then is set on the
+[Failsafe](../configurator/tabs/failsafe.md) tab; the per-channel fallback
+values are the `rxfail` command:
+
+```
+rxfail <channel> <a|h|s> [value]
+```
+
+`a` = auto (centre, throttle low), `h` = hold the last value,
+`s` = set the given value in µs.

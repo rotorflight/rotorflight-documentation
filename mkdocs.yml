@@ -60,6 +60,9 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - pymdownx.details
+  - pymdownx.snippets:
+      base_path: [includes]
+      check_paths: true
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
@@ -174,6 +177,7 @@ nav:
   - Reference:
       - reference/index.md
       - CLI Command Reference: reference/cli-reference.md
+      - CLI Settings: reference/cli-settings.md
       - Telemetry Sensors: reference/telemetry.md
       - Serial Ports: reference/serial-ports.md
       - Receivers: reference/receivers.md
@@ -185,9 +189,19 @@ nav:
       - contributing/index.md
       - Developers: contributing/developers.md
       - Building the Firmware: contributing/building-the-firmware.md
+      - Coding Style: contributing/coding-style.md
       - Editing the Docs: contributing/editing-the-docs.md
-      - Flow Charts: contributing/flow-charts.md
-      - Modeling Cross-Coupling: contributing/modeling-cross-coupling.md
-      - Technical Reference:
-          - SmartFuel Internals: contributing/tech/smartfuel.md
       - Support the Project: contributing/support.md
+      - Technical Reference:
+          - contributing/tech/index.md
+          - Parameter Groups: contributing/tech/parameter-groups.md
+          - Configuration Format: contributing/tech/configuration-format.md
+          - Atomic Barrier: contributing/tech/atomic-barrier.md
+          - Customizing the Build: contributing/tech/customizing-the-build.md
+          - Custom Board Configuration: contributing/tech/custom-boards.md
+          - Blackbox Log Format: contributing/tech/blackbox-format.md
+          - SmartFuel Internals: contributing/tech/smartfuel.md
+          - Hardware Debugging: contributing/tech/hardware-debugging.md
+          - Debugging with VS Code and J-Link: contributing/tech/hardware-debugging-vscode-jlink.md
+          - Test Coverage: contributing/tech/test-coverage.md
+          - Modeling Cross-Coupling: contributing/tech/modeling-cross-coupling.md

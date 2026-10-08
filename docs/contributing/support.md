@@ -1,6 +1,10 @@
 # Support the Project
 
-!!! info "Being written"
-    This page is part of the new Rotorflight documentation and is still
-    being written. In the meantime, ask on the
-    [Rotorflight Discord](https://discord.gg/FyfMF4RwSA).
+If you enjoy flying Rotorflight, please consider supporting the project with
+a [donation through Open Collective](https://opencollective.com/rotorflight/donate)
+-- one-off or recurring.
+
+[![Donate to Rotorflight](img/opencollective-rotorflight.png){ width="350" }](https://opencollective.com/rotorflight/donate)
+
+Open Collective handles the bookkeeping, and every transaction is public --
+complete transparency, just like the software.
