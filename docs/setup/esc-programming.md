@@ -35,8 +35,8 @@ connection, but the wire has to carry data both ways.
 
 === "Ethos"
 
-    In the Rotorflight Lua suite, open **Setup → ESC & Motors → Esc
-    Programing** and pick
+    In the Rotorflight Lua suite, open **Setup → ESC & Motors → ESC
+    Prog.** and pick
     your ESC. The settings are grouped into pages such as Basic, Advanced
     and Other. See [Rotorflight Lua Suite](../radio/ethos/lua-suite.md).
 

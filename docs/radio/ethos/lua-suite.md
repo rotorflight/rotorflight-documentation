@@ -44,7 +44,7 @@ written in flight.
 
 ### ESC programming
 
-**Setup → ESC & Motors → Esc Programing** programs the ESC through the
+**Setup → ESC & Motors → ESC Prog.** programs the ESC through the
 flight controller. The entry for your ESC lights up when the flight
 controller reports its ESC telemetry protocol. See
 [ESC Forward Programming](../../setup/esc-programming.md).
