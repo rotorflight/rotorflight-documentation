@@ -298,3 +298,40 @@ body,
 [data-md-color-scheme="slate"] .md-search-result__article {
   background-color: #1a2027;
 }
+
+/* ---------------------------------------------------------------------------
+   Gear ratio calculator (setup/gear-ratios.md)
+   --------------------------------------------------------------------------- */
+
+.gear-calc {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  margin: 1rem 0;
+}
+
+.gear-calc__inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1rem;
+}
+
+.gear-calc__inputs label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+}
+
+.gear-calc__inputs input {
+  width: 4.5rem;
+  padding: 0.2rem 0.4rem;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 4px;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+}
+
+.gear-calc__result {
+  margin-bottom: 0;
+}

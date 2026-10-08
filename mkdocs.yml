@@ -40,8 +40,17 @@ theme:
     - content.code.copy
     - content.tabs.link
 
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+  anchors: warn
+
 plugins:
   - search
+
+extra_javascript:
+  - javascripts/gear-calc.js
 
 extra_css:
   - stylesheets/extra.css
@@ -83,17 +92,14 @@ nav:
       - Remapping Outputs: setup/remapping.md
       - Servo Setup: setup/servos.md
       - Mixer & Swashplate Setup: setup/mixer.md
-      - Swash Wiggle: setup/swash-wiggle.md
       - Extra Servo: setup/extra-servo.md
       - RPM Measurement: setup/rpm-measurement.md
       - RPM Filters: setup/rpm-filters.md
       - ESC Telemetry: setup/esc-telemetry.md
       - ESC Forward Programming: setup/esc-programming.md
       - BLHeli_S to Bluejay: setup/blheli-s-to-bluejay.md
-      - Governor:
-          - setup/governor.md
-          - Governor Setup: setup/governor-setup.md
-          - FlyRotor ESC Governor: setup/governor-flyrotor.md
+      - Governor: setup/governor.md
+      - Governor Setup: setup/governor-setup.md
       - Nitro Helicopters: setup/nitro.md
       - Gear Ratios: setup/gear-ratios.md
       - SmartFuel: setup/smartfuel.md
