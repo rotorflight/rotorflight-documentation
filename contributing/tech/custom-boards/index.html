@@ -10,31 +10,31 @@
       
       
       
-        <link rel="canonical" href="https://doc.rotorflight.org/contributing/modeling-cross-coupling/">
+        <link rel="canonical" href="https://doc.rotorflight.org/contributing/tech/custom-boards/">
       
       
-        <link rel="prev" href="../flow-charts/">
+        <link rel="prev" href="../customizing-the-build/">
       
       
-        <link rel="next" href="../tech/smartfuel/">
+        <link rel="next" href="../blackbox-format/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/favicon.ico">
+      <link rel="icon" href="../../../assets/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
-        <title>Modeling Cross-Coupling - Rotorflight Documentation</title>
+        <title>Custom Board Configuration - Rotorflight Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -47,9 +47,9 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#modeling-cross-coupling" class="md-skip">
+        <a href="#custom-board-configuration-using-cli" class="md-skip">
           Skip to content
         </a>
       
@@ -88,9 +88,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Rotorflight Documentation" class="md-header__button md-logo" aria-label="Rotorflight Documentation" data-md-component="logo">
+    <a href="../../.." title="Rotorflight Documentation" class="md-header__button md-logo" aria-label="Rotorflight Documentation" data-md-component="logo">
       
-  <img src="../../assets/Rotorflight_outline_dark.svg" alt="logo">
+  <img src="../../../assets/Rotorflight_outline_dark.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Modeling Cross-Coupling
+              Custom Board Configuration
             
           </span>
         </div>
@@ -220,7 +220,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -241,7 +241,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../getting-started/" class="md-tabs__link">
+        <a href="../../../getting-started/" class="md-tabs__link">
           
   
   
@@ -263,7 +263,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../setup/" class="md-tabs__link">
+        <a href="../../../setup/" class="md-tabs__link">
           
   
   
@@ -285,7 +285,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../configurator/" class="md-tabs__link">
+        <a href="../../../configurator/" class="md-tabs__link">
           
   
   
@@ -307,7 +307,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../radio/" class="md-tabs__link">
+        <a href="../../../radio/" class="md-tabs__link">
           
   
   
@@ -329,7 +329,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../tuning/" class="md-tabs__link">
+        <a href="../../../tuning/" class="md-tabs__link">
           
   
   
@@ -351,7 +351,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../hardware/" class="md-tabs__link">
+        <a href="../../../hardware/" class="md-tabs__link">
           
   
   
@@ -373,7 +373,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../reference/" class="md-tabs__link">
+        <a href="../../../reference/" class="md-tabs__link">
           
   
   
@@ -397,7 +397,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+        <a href="../../" class="md-tabs__link">
           
   
   
@@ -433,9 +433,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Rotorflight Documentation" class="md-nav__button md-logo" aria-label="Rotorflight Documentation" data-md-component="logo">
+    <a href="../../.." title="Rotorflight Documentation" class="md-nav__button md-logo" aria-label="Rotorflight Documentation" data-md-component="logo">
       
-  <img src="../../assets/Rotorflight_outline_dark.svg" alt="logo">
+  <img src="../../../assets/Rotorflight_outline_dark.svg" alt="logo">
 
     </a>
     Rotorflight Documentation
@@ -462,7 +462,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -524,7 +524,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../getting-started/" class="md-nav__link ">
+            <a href="../../../getting-started/" class="md-nav__link ">
               
   
   
@@ -568,7 +568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/downloads/" class="md-nav__link">
+      <a href="../../../getting-started/downloads/" class="md-nav__link">
         
   
   
@@ -596,7 +596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/flashing-the-firmware/" class="md-nav__link">
+      <a href="../../../getting-started/flashing-the-firmware/" class="md-nav__link">
         
   
   
@@ -624,7 +624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/first-connection/" class="md-nav__link">
+      <a href="../../../getting-started/first-connection/" class="md-nav__link">
         
   
   
@@ -652,7 +652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/backup-and-restore/" class="md-nav__link">
+      <a href="../../../getting-started/backup-and-restore/" class="md-nav__link">
         
   
   
@@ -680,7 +680,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/upgrade-notes/" class="md-nav__link">
+      <a href="../../../getting-started/upgrade-notes/" class="md-nav__link">
         
   
   
@@ -708,7 +708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/arming/" class="md-nav__link">
+      <a href="../../../getting-started/arming/" class="md-nav__link">
         
   
   
@@ -736,7 +736,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/example-build/" class="md-nav__link">
+      <a href="../../../getting-started/example-build/" class="md-nav__link">
         
   
   
@@ -830,7 +830,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../setup/" class="md-nav__link ">
+            <a href="../../../setup/" class="md-nav__link ">
               
   
   
@@ -874,7 +874,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/remapping/" class="md-nav__link">
+      <a href="../../../setup/remapping/" class="md-nav__link">
         
   
   
@@ -902,7 +902,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/servos/" class="md-nav__link">
+      <a href="../../../setup/servos/" class="md-nav__link">
         
   
   
@@ -930,7 +930,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/mixer/" class="md-nav__link">
+      <a href="../../../setup/mixer/" class="md-nav__link">
         
   
   
@@ -958,7 +958,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/rpm-measurement/" class="md-nav__link">
+      <a href="../../../setup/rpm-measurement/" class="md-nav__link">
         
   
   
@@ -986,7 +986,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/rpm-filters/" class="md-nav__link">
+      <a href="../../../setup/rpm-filters/" class="md-nav__link">
         
   
   
@@ -1014,7 +1014,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/esc-telemetry/" class="md-nav__link">
+      <a href="../../../setup/esc-telemetry/" class="md-nav__link">
         
   
   
@@ -1042,7 +1042,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/esc-programming/" class="md-nav__link">
+      <a href="../../../setup/esc-programming/" class="md-nav__link">
         
   
   
@@ -1070,7 +1070,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/blheli-s-to-bluejay/" class="md-nav__link">
+      <a href="../../../setup/blheli-s-to-bluejay/" class="md-nav__link">
         
   
   
@@ -1098,7 +1098,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/governor/" class="md-nav__link">
+      <a href="../../../setup/governor/" class="md-nav__link">
         
   
   
@@ -1126,7 +1126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/governor-setup/" class="md-nav__link">
+      <a href="../../../setup/governor-setup/" class="md-nav__link">
         
   
   
@@ -1154,7 +1154,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/nitro/" class="md-nav__link">
+      <a href="../../../setup/nitro/" class="md-nav__link">
         
   
   
@@ -1182,7 +1182,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/gear-ratios/" class="md-nav__link">
+      <a href="../../../setup/gear-ratios/" class="md-nav__link">
         
   
   
@@ -1210,7 +1210,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/smartfuel/" class="md-nav__link">
+      <a href="../../../setup/smartfuel/" class="md-nav__link">
         
   
   
@@ -1238,7 +1238,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/profile-switching/" class="md-nav__link">
+      <a href="../../../setup/profile-switching/" class="md-nav__link">
         
   
   
@@ -1266,7 +1266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/stability-modes/" class="md-nav__link">
+      <a href="../../../setup/stability-modes/" class="md-nav__link">
         
   
   
@@ -1294,7 +1294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/led-strip/" class="md-nav__link">
+      <a href="../../../setup/led-strip/" class="md-nav__link">
         
   
   
@@ -1322,7 +1322,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/openlager/" class="md-nav__link">
+      <a href="../../../setup/openlager/" class="md-nav__link">
         
   
   
@@ -1350,7 +1350,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/fbus-master/" class="md-nav__link">
+      <a href="../../../setup/fbus-master/" class="md-nav__link">
         
   
   
@@ -1378,7 +1378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/elrs-custom-telemetry/" class="md-nav__link">
+      <a href="../../../setup/elrs-custom-telemetry/" class="md-nav__link">
         
   
   
@@ -1486,7 +1486,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../configurator/" class="md-nav__link ">
+            <a href="../../../configurator/" class="md-nav__link ">
               
   
   
@@ -1530,7 +1530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/status/" class="md-nav__link">
+      <a href="../../../configurator/tabs/status/" class="md-nav__link">
         
   
   
@@ -1558,7 +1558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/setup/" class="md-nav__link">
+      <a href="../../../configurator/tabs/setup/" class="md-nav__link">
         
   
   
@@ -1586,7 +1586,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/configuration/" class="md-nav__link">
+      <a href="../../../configurator/tabs/configuration/" class="md-nav__link">
         
   
   
@@ -1614,7 +1614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/presets/" class="md-nav__link">
+      <a href="../../../configurator/tabs/presets/" class="md-nav__link">
         
   
   
@@ -1642,7 +1642,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/power/" class="md-nav__link">
+      <a href="../../../configurator/tabs/power/" class="md-nav__link">
         
   
   
@@ -1670,7 +1670,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/receiver/" class="md-nav__link">
+      <a href="../../../configurator/tabs/receiver/" class="md-nav__link">
         
   
   
@@ -1698,7 +1698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/failsafe/" class="md-nav__link">
+      <a href="../../../configurator/tabs/failsafe/" class="md-nav__link">
         
   
   
@@ -1726,7 +1726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/mixer/" class="md-nav__link">
+      <a href="../../../configurator/tabs/mixer/" class="md-nav__link">
         
   
   
@@ -1754,7 +1754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/servos/" class="md-nav__link">
+      <a href="../../../configurator/tabs/servos/" class="md-nav__link">
         
   
   
@@ -1782,7 +1782,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/motors/" class="md-nav__link">
+      <a href="../../../configurator/tabs/motors/" class="md-nav__link">
         
   
   
@@ -1810,7 +1810,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/governor/" class="md-nav__link">
+      <a href="../../../configurator/tabs/governor/" class="md-nav__link">
         
   
   
@@ -1838,7 +1838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/profiles/" class="md-nav__link">
+      <a href="../../../configurator/tabs/profiles/" class="md-nav__link">
         
   
   
@@ -1866,7 +1866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/rates/" class="md-nav__link">
+      <a href="../../../configurator/tabs/rates/" class="md-nav__link">
         
   
   
@@ -1894,7 +1894,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/gyro/" class="md-nav__link">
+      <a href="../../../configurator/tabs/gyro/" class="md-nav__link">
         
   
   
@@ -1922,7 +1922,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/modes/" class="md-nav__link">
+      <a href="../../../configurator/tabs/modes/" class="md-nav__link">
         
   
   
@@ -1950,7 +1950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/adjustments/" class="md-nav__link">
+      <a href="../../../configurator/tabs/adjustments/" class="md-nav__link">
         
   
   
@@ -1978,7 +1978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/gps/" class="md-nav__link">
+      <a href="../../../configurator/tabs/gps/" class="md-nav__link">
         
   
   
@@ -2006,7 +2006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/led-strip/" class="md-nav__link">
+      <a href="../../../configurator/tabs/led-strip/" class="md-nav__link">
         
   
   
@@ -2034,7 +2034,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/remap-fc/" class="md-nav__link">
+      <a href="../../../configurator/tabs/remap-fc/" class="md-nav__link">
         
   
   
@@ -2062,7 +2062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/beepers/" class="md-nav__link">
+      <a href="../../../configurator/tabs/beepers/" class="md-nav__link">
         
   
   
@@ -2090,7 +2090,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/sensors/" class="md-nav__link">
+      <a href="../../../configurator/tabs/sensors/" class="md-nav__link">
         
   
   
@@ -2118,7 +2118,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/crsf-sensors/" class="md-nav__link">
+      <a href="../../../configurator/tabs/crsf-sensors/" class="md-nav__link">
         
   
   
@@ -2146,7 +2146,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/xact-servo/" class="md-nav__link">
+      <a href="../../../configurator/tabs/xact-servo/" class="md-nav__link">
         
   
   
@@ -2174,7 +2174,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/esc-programming/" class="md-nav__link">
+      <a href="../../../configurator/tabs/esc-programming/" class="md-nav__link">
         
   
   
@@ -2202,7 +2202,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/blackbox/" class="md-nav__link">
+      <a href="../../../configurator/tabs/blackbox/" class="md-nav__link">
         
   
   
@@ -2230,7 +2230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/cli/" class="md-nav__link">
+      <a href="../../../configurator/tabs/cli/" class="md-nav__link">
         
   
   
@@ -2296,7 +2296,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../radio/" class="md-nav__link ">
+            <a href="../../../radio/" class="md-nav__link ">
               
   
   
@@ -2367,7 +2367,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../radio/ethos/" class="md-nav__link ">
+            <a href="../../../radio/ethos/" class="md-nav__link ">
               
   
   
@@ -2411,7 +2411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../radio/ethos/radio-setup/" class="md-nav__link">
+      <a href="../../../radio/ethos/radio-setup/" class="md-nav__link">
         
   
   
@@ -2439,7 +2439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../radio/ethos/lua-suite/" class="md-nav__link">
+      <a href="../../../radio/ethos/lua-suite/" class="md-nav__link">
         
   
   
@@ -2467,7 +2467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../radio/ethos/troubleshooting/" class="md-nav__link">
+      <a href="../../../radio/ethos/troubleshooting/" class="md-nav__link">
         
   
   
@@ -2530,7 +2530,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../radio/edgetx/" class="md-nav__link ">
+            <a href="../../../radio/edgetx/" class="md-nav__link ">
               
   
   
@@ -2574,7 +2574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../radio/edgetx/radio-setup/" class="md-nav__link">
+      <a href="../../../radio/edgetx/radio-setup/" class="md-nav__link">
         
   
   
@@ -2602,7 +2602,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../radio/edgetx/lua-suite/" class="md-nav__link">
+      <a href="../../../radio/edgetx/lua-suite/" class="md-nav__link">
         
   
   
@@ -2630,7 +2630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../radio/edgetx/classic-scripts/" class="md-nav__link">
+      <a href="../../../radio/edgetx/classic-scripts/" class="md-nav__link">
         
   
   
@@ -2666,7 +2666,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../radio/futaba/" class="md-nav__link">
+      <a href="../../../radio/futaba/" class="md-nav__link">
         
   
   
@@ -2694,7 +2694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../radio/jeti/" class="md-nav__link">
+      <a href="../../../radio/jeti/" class="md-nav__link">
         
   
   
@@ -2722,7 +2722,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../radio/others/" class="md-nav__link">
+      <a href="../../../radio/others/" class="md-nav__link">
         
   
   
@@ -2792,7 +2792,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../tuning/" class="md-nav__link ">
+            <a href="../../../tuning/" class="md-nav__link ">
               
   
   
@@ -2836,7 +2836,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tuning/process/" class="md-nav__link">
+      <a href="../../../tuning/process/" class="md-nav__link">
         
   
   
@@ -2864,7 +2864,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tuning/filters/" class="md-nav__link">
+      <a href="../../../tuning/filters/" class="md-nav__link">
         
   
   
@@ -2892,7 +2892,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tuning/governor/" class="md-nav__link">
+      <a href="../../../tuning/governor/" class="md-nav__link">
         
   
   
@@ -2920,7 +2920,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tuning/high-speed-integral/" class="md-nav__link">
+      <a href="../../../tuning/high-speed-integral/" class="md-nav__link">
         
   
   
@@ -2948,7 +2948,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tuning/cyclic-cross-coupling/" class="md-nav__link">
+      <a href="../../../tuning/cyclic-cross-coupling/" class="md-nav__link">
         
   
   
@@ -2976,7 +2976,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tuning/motorised-tail/" class="md-nav__link">
+      <a href="../../../tuning/motorised-tail/" class="md-nav__link">
         
   
   
@@ -3004,7 +3004,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tuning/rescue/" class="md-nav__link">
+      <a href="../../../tuning/rescue/" class="md-nav__link">
         
   
   
@@ -3078,7 +3078,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../hardware/" class="md-nav__link ">
+            <a href="../../../hardware/" class="md-nav__link ">
               
   
   
@@ -3122,7 +3122,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hardware/radiomaster-nexus/" class="md-nav__link">
+      <a href="../../../hardware/radiomaster-nexus/" class="md-nav__link">
         
   
   
@@ -3150,7 +3150,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hardware/frsky-007/" class="md-nav__link">
+      <a href="../../../hardware/frsky-007/" class="md-nav__link">
         
   
   
@@ -3178,7 +3178,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hardware/flydragon-f722/" class="md-nav__link">
+      <a href="../../../hardware/flydragon-f722/" class="md-nav__link">
         
   
   
@@ -3206,7 +3206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hardware/flywing-heli-f405/" class="md-nav__link">
+      <a href="../../../hardware/flywing-heli-f405/" class="md-nav__link">
         
   
   
@@ -3234,7 +3234,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hardware/goosky-f701/" class="md-nav__link">
+      <a href="../../../hardware/goosky-f701/" class="md-nav__link">
         
   
   
@@ -3262,7 +3262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hardware/goosky-f4mini/" class="md-nav__link">
+      <a href="../../../hardware/goosky-f4mini/" class="md-nav__link">
         
   
   
@@ -3290,7 +3290,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hardware/matek-g474/" class="md-nav__link">
+      <a href="../../../hardware/matek-g474/" class="md-nav__link">
         
   
   
@@ -3318,7 +3318,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hardware/betaflight-diy/" class="md-nav__link">
+      <a href="../../../hardware/betaflight-diy/" class="md-nav__link">
         
   
   
@@ -3346,7 +3346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hardware/manufacturers/" class="md-nav__link">
+      <a href="../../../hardware/manufacturers/" class="md-nav__link">
         
   
   
@@ -3403,6 +3403,8 @@
       
         
       
+        
+      
     
     
     
@@ -3418,7 +3420,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../reference/" class="md-nav__link ">
+            <a href="../../../reference/" class="md-nav__link ">
               
   
   
@@ -3462,7 +3464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/cli-reference/" class="md-nav__link">
+      <a href="../../../reference/cli-reference/" class="md-nav__link">
         
   
   
@@ -3490,7 +3492,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/telemetry/" class="md-nav__link">
+      <a href="../../../reference/cli-settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI Settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reference/telemetry/" class="md-nav__link">
         
   
   
@@ -3518,7 +3548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/serial-ports/" class="md-nav__link">
+      <a href="../../../reference/serial-ports/" class="md-nav__link">
         
   
   
@@ -3546,7 +3576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/receivers/" class="md-nav__link">
+      <a href="../../../reference/receivers/" class="md-nav__link">
         
   
   
@@ -3574,7 +3604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/blackbox/" class="md-nav__link">
+      <a href="../../../reference/blackbox/" class="md-nav__link">
         
   
   
@@ -3602,7 +3632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/led-strip/" class="md-nav__link">
+      <a href="../../../reference/led-strip/" class="md-nav__link">
         
   
   
@@ -3630,7 +3660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/buzzer/" class="md-nav__link">
+      <a href="../../../reference/buzzer/" class="md-nav__link">
         
   
   
@@ -3658,7 +3688,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/msp-overview/" class="md-nav__link">
+      <a href="../../../reference/msp-overview/" class="md-nav__link">
         
   
   
@@ -3713,8 +3743,6 @@
       
         
       
-        
-      
     
     
     
@@ -3733,7 +3761,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   
@@ -3777,7 +3805,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../developers/" class="md-nav__link">
+      <a href="../../developers/" class="md-nav__link">
         
   
   
@@ -3805,7 +3833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../building-the-firmware/" class="md-nav__link">
+      <a href="../../building-the-firmware/" class="md-nav__link">
         
   
   
@@ -3833,7 +3861,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../editing-the-docs/" class="md-nav__link">
+      <a href="../../coding-style/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Coding Style
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../editing-the-docs/" class="md-nav__link">
         
   
   
@@ -3861,14 +3917,215 @@
   
   
     <li class="md-nav__item">
-      <a href="../flow-charts/" class="md-nav__link">
+      <a href="../../support/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Flow Charts
+    Support the Project
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_7" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical Reference
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9_7" id="__nav_9_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Technical Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parameter-groups/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parameter Groups
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration-format/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration Format
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../atomic-barrier/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Atomic Barrier
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../customizing-the-build/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Customizing the Build
   
 
     
@@ -3895,8 +4152,24 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Custom Board Configuration
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -3905,7 +4178,7 @@
   <span class="md-ellipsis">
     
   
-    Modeling Cross-Coupling
+    Custom Board Configuration
   
 
     
@@ -3914,6 +4187,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#custom-board-configuration-using-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Board Configuration Using CLI
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3926,33 +4227,15 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../blackbox-format/" class="md-nav__link">
         
-      
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_7" >
-        
-          
-          <label class="md-nav__link" for="__nav_9_7" id="__nav_9_7_label" tabindex="0">
-            
   
   
   <span class="md-ellipsis">
     
   
-    Technical Reference
+    Blackbox Log Format
   
 
     
@@ -3960,19 +4243,11 @@
   
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9_7">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Technical Reference
+      </a>
+    </li>
   
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+              
             
               
                 
@@ -3981,7 +4256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tech/smartfuel/" class="md-nav__link">
+      <a href="../smartfuel/" class="md-nav__link">
         
   
   
@@ -4002,9 +4277,29 @@
 
               
             
-          </ul>
-        </nav>
-      
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hardware-debugging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware Debugging
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -4017,14 +4312,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../support/" class="md-nav__link">
+      <a href="../hardware-debugging-vscode-jlink/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Support the Project
+    Debugging with VS Code and J-Link
   
 
     
@@ -4033,6 +4328,70 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../test-coverage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test Coverage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modeling-cross-coupling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modeling Cross-Coupling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -4062,8 +4421,25 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#custom-board-configuration-using-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Board Configuration Using CLI
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -4080,7 +4456,7 @@
 
 
   
-    <a href="https://github.com/rotorflight/rotorflight-documentation/edit/main/docs/contributing/modeling-cross-coupling.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/rotorflight/rotorflight-documentation/edit/main/docs/contributing/tech/custom-boards.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -4088,13 +4464,20 @@
   
 
 
-<h1 id="modeling-cross-coupling">Modeling Cross-Coupling<a class="headerlink" href="#modeling-cross-coupling" title="Permanent link">&para;</a></h1>
-<div class="admonition info">
-<p class="admonition-title">Being written</p>
-<p>This page is part of the new Rotorflight documentation and is still
-being written. In the meantime, ask on the
-<a href="https://discord.gg/FyfMF4RwSA">Rotorflight Discord</a>.</p>
-</div>
+  <h1>Custom Board Configuration</h1>
+
+<!-- Ported from rotorflight-firmware docs/Custom Board Configuration.md. -->
+<h2 id="custom-board-configuration-using-cli">Custom Board Configuration Using CLI<a class="headerlink" href="#custom-board-configuration-using-cli" title="Permanent link">&para;</a></h2>
+<p>Warning: This section covers beyond the normal use-case for Betaflight. It's recommended that you use a pre-made target configuration for a flight controller that has been thoroughly tested before. Those configurations can be found in the <a href="https://github.com/betaflight/unified-targets/tree/master/configs/default">unified targets list</a>.</p>
+<p>However, Betaflight can provide support for custom-made flight controllers, assuming it contains supported hardware. Before using Betaflight at all, it's highly recommended that you, first, check to make sure your MCU and your peripherals are supported. Checking the <a href="https://github.com/betaflight/betaflight/wiki/Supported-Sensors">Supported Sensors</a> and <a href="https://github.com/betaflight/betaflight/wiki/Hardware-Reference">Hardware Reference</a> wiki pages are good places to look. Betaflight is supported across many STM32 processors. Second, thoroughly test the functionality of your hardware by programming your board in an IDE (i.e. STMCube) or using any other hardware debugging methods/tools. </p>
+<p>Assuming your hardware is supported and you've thoroughly tested your peripherals, flash generic firmware into your board. It's recommended to flash betaflight firmware using the configurator and <a href="https://github.com/betaflight/betaflight/blob/master/docs/USB%20Flashing.md">USB Flashing</a>. </p>
+<p>To create your own configuration, you must first use the <code>resource</code> command in the command line interface to map your peripheral pins on your controller. Use the CLI documentation linked above and other wiki pages for command reference. Then, you use the <code>set</code> command to set the bus type, i2c address, lowpass filter frequency/type, baro_hardware, gyro_hardware, etc. This will mainly be dependent on your hardware and will involve a lot of trial and error. Use the <code>save</code> command to save your configuration and reboot the controller. If your hardware is not detected, then you need to modify or create more settings in the CLI to accurately describe your hardware to Betaflight to detect it. Use your custom board's and respective peripherals' datasheets and schematics to help you.</p>
+<p>Alongside <code>resource</code> and <code>set</code> commands, there are <code>timer</code> and <code>dma</code> commands. For certain functions, such as battery voltage monitoring and motor output, you need to associate a timer and/or a Direct Memory Access (DMA) channel to those pins for those to work.
+- <code># timer</code>
+- <code>timer &lt;pin&gt; AF(x) [1-3]</code>
+- <code># dma</code>
+- <code>dma [SPI_TX|ADC|pin] [index|pin] [0|1]</code></p>
+<p>For custom configuration like this outside the normal use-case, it's recommended that you use the pre-made <a href="https://github.com/betaflight/unified-targets/tree/master/configs/default">configs</a> as a source of reference.</p>
 
 
 
@@ -4132,7 +4515,7 @@ being written. In the meantime, ask on the
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../flow-charts/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Flow Charts">
+          <a href="../customizing-the-build/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Customizing the Build">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -4142,20 +4525,20 @@ being written. In the meantime, ask on the
                 Previous
               </span>
               <div class="md-ellipsis">
-                Flow Charts
+                Customizing the Build
               </div>
             </div>
           </a>
         
         
           
-          <a href="../tech/smartfuel/" class="md-footer__link md-footer__link--next" aria-label="Next: SmartFuel Internals">
+          <a href="../blackbox-format/" class="md-footer__link md-footer__link--next" aria-label="Next: Blackbox Log Format">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                SmartFuel Internals
+                Blackbox Log Format
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -4230,12 +4613,12 @@ being written. In the meantime, ask on the
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.action.edit", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.action.edit", "content.code.copy", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
-        <script src="../../javascripts/gear-calc.js"></script>
+        <script src="../../../javascripts/gear-calc.js"></script>
       
     
   </body>

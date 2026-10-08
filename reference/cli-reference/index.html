@@ -16,7 +16,7 @@
         <link rel="prev" href="../">
       
       
-        <link rel="next" href="../telemetry/">
+        <link rel="next" href="../cli-settings/">
       
       
         
@@ -3405,6 +3405,8 @@
       
         
       
+        
+      
     
     
     
@@ -3476,6 +3478,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI Command Reference
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -3493,6 +3513,1318 @@
 
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-the-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessing the CLI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Usage
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration Management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        diff
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dump" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dump
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        defaults
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        save
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#batch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        batch
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#profile-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Profile Management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Profile Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        profile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rateprofile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        rateprofile
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helicopter-configuration-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Helicopter Configuration Commands
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Helicopter Configuration Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mixer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mixer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        servo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#motor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        motor
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-set-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get / Set Variables
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Get / Set Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        set
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameter-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameter reference
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameter reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gyro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gyro
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accelerometer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accelerometer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#board-alignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Board Alignment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#motor_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Motor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mixer-swash" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mixer (Swash)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#governor-global" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Governor (Global)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#governor-per-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Governor (Per-Profile)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pid-gains-per-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PID Gains (Per-Profile)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rescue-mode-per-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rescue Mode (Per-Profile)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stability-modes-per-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stability Modes (Per-Profile)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rate-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rate Profile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rc-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RC Controls
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#receiver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Receiver
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#failsafe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Failsafe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#battery-voltage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Battery &amp; Voltage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arming" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arming
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rpm-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RPM Filter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esc-sensor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ESC Sensor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blackbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Blackbox
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#telemetry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Telemetry
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fbus-master-sbus-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FBUS Master / SBUS Output
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pilot-model-info" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pilot / Model Info
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Information
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="System Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        status
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        version
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tasks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mcu_id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mcu_id
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setpoint_info" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        setpoint_info
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#receiver-rc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Receiver &amp; RC
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Receiver &amp; RC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        aux
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rxfail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        rxfail
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        map
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature Management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        feature
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardware-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hardware Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hardware Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resource" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        resource
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        timer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dma
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        serial
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esc-programming" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ESC Programming
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ESC Programming">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dshotprog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dshotprog
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dshot_telemetry_info" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dshot_telemetry_info
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beacon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        beacon
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escprog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        escprog
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fbus-sport" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FBUS / S.Port
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FBUS / S.Port">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fbus_sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fbus_sensors
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#serial-passthrough" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Serial Passthrough
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Serial Passthrough">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#serialpassthrough" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        serialpassthrough
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjustment-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adjustment Functions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjustment Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adjfunc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        adjfunc
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#led-strip-colours" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LED Strip &amp; Colours
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LED Strip &amp; Colours">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#led" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        led
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        color
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mode_color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mode_color
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vtx-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VTX Control
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="VTX Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vtx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vtx
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vtx_info" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vtx_info
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vtxtable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vtxtable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GPS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GPS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gpspassthrough" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        gpspassthrough
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#board-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Board Information
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Board Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#board_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        board_name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#board_design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        board_design
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manufacturer_id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        manufacturer_id
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signature" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        signature
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reboot-dfu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reboot / DFU
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reboot / DFU">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bl
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dfu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dfu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        msc
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flash-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flash Memory
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Flash Memory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flash_info" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        flash_info
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flash_erase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        flash_erase
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gyro-diagnostics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gyro Diagnostics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gyro Diagnostics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gyroregisters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        gyroregisters
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sd-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SD Card
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SD Card">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sd_info" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sd_info
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backup-your-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backup your configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restore-from-a-backup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Restore from a backup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-a-servo-without-flying" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test a servo without flying
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-what-mixer-rules-are-active" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check what mixer rules are active
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-rpm-filtering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enable RPM filtering
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#switch-profile-and-confirm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Switch profile and confirm
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli-settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI Settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -3726,8 +5058,6 @@
       
         
       
-        
-      
     
     
     
@@ -3843,6 +5173,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../contributing/coding-style/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Coding Style
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../contributing/editing-the-docs/" class="md-nav__link">
         
   
@@ -3859,152 +5217,6 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../contributing/flow-charts/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Flow Charts
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../contributing/modeling-cross-coupling/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Modeling Cross-Coupling
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_7" >
-        
-          
-          <label class="md-nav__link" for="__nav_9_7" id="__nav_9_7_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Technical Reference
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9_7">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Technical Reference
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../contributing/tech/smartfuel/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    SmartFuel Internals
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -4038,6 +5250,409 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../contributing/tech/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical Reference
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9_7" id="__nav_9_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Technical Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/tech/parameter-groups/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parameter Groups
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/tech/configuration-format/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration Format
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/tech/atomic-barrier/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Atomic Barrier
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/tech/customizing-the-build/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Customizing the Build
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/tech/custom-boards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Custom Board Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/tech/blackbox-format/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blackbox Log Format
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/tech/smartfuel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SmartFuel Internals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/tech/hardware-debugging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware Debugging
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/tech/hardware-debugging-vscode-jlink/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Debugging with VS Code and J-Link
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/tech/test-coverage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test Coverage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/tech/modeling-cross-coupling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modeling Cross-Coupling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -4065,6 +5680,1279 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-the-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessing the CLI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Usage
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration Management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        diff
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dump" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dump
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        defaults
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        save
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#batch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        batch
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#profile-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Profile Management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Profile Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        profile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rateprofile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        rateprofile
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helicopter-configuration-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Helicopter Configuration Commands
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Helicopter Configuration Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mixer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mixer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        servo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#motor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        motor
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-set-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get / Set Variables
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Get / Set Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        set
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameter-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameter reference
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameter reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gyro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gyro
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accelerometer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accelerometer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#board-alignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Board Alignment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#motor_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Motor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mixer-swash" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mixer (Swash)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#governor-global" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Governor (Global)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#governor-per-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Governor (Per-Profile)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pid-gains-per-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PID Gains (Per-Profile)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rescue-mode-per-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rescue Mode (Per-Profile)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stability-modes-per-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stability Modes (Per-Profile)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rate-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rate Profile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rc-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RC Controls
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#receiver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Receiver
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#failsafe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Failsafe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#battery-voltage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Battery &amp; Voltage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arming" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arming
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rpm-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RPM Filter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esc-sensor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ESC Sensor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blackbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Blackbox
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#telemetry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Telemetry
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fbus-master-sbus-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FBUS Master / SBUS Output
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pilot-model-info" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pilot / Model Info
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Information
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="System Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        status
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        version
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tasks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mcu_id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mcu_id
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setpoint_info" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        setpoint_info
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#receiver-rc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Receiver &amp; RC
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Receiver &amp; RC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        aux
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rxfail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        rxfail
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        map
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature Management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        feature
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardware-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hardware Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hardware Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resource" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        resource
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        timer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dma
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        serial
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esc-programming" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ESC Programming
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ESC Programming">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dshotprog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dshotprog
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dshot_telemetry_info" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dshot_telemetry_info
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beacon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        beacon
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escprog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        escprog
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fbus-sport" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FBUS / S.Port
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FBUS / S.Port">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fbus_sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fbus_sensors
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#serial-passthrough" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Serial Passthrough
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Serial Passthrough">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#serialpassthrough" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        serialpassthrough
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjustment-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adjustment Functions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjustment Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adjfunc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        adjfunc
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#led-strip-colours" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LED Strip &amp; Colours
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LED Strip &amp; Colours">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#led" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        led
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        color
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mode_color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mode_color
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vtx-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VTX Control
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="VTX Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vtx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vtx
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vtx_info" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vtx_info
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vtxtable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vtxtable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GPS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GPS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gpspassthrough" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        gpspassthrough
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#board-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Board Information
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Board Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#board_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        board_name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#board_design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        board_design
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manufacturer_id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        manufacturer_id
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signature" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        signature
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reboot-dfu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reboot / DFU
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reboot / DFU">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bl
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dfu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dfu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        msc
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flash-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flash Memory
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Flash Memory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flash_info" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        flash_info
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flash_erase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        flash_erase
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gyro-diagnostics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gyro Diagnostics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gyro Diagnostics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gyroregisters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        gyroregisters
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sd-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SD Card
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SD Card">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sd_info" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sd_info
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backup-your-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backup your configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restore-from-a-backup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Restore from a backup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-a-servo-without-flying" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test a servo without flying
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-what-mixer-rules-are-active" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check what mixer rules are active
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-rpm-filtering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enable RPM filtering
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#switch-profile-and-confirm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Switch profile and confirm
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4089,12 +6977,2654 @@
 
 
 <h1 id="cli-command-reference">CLI Command Reference<a class="headerlink" href="#cli-command-reference" title="Permanent link">&para;</a></h1>
-<div class="admonition info">
-<p class="admonition-title">Being written</p>
-<p>This page is part of the new Rotorflight documentation and is still
-being written. In the meantime, ask on the
-<a href="https://discord.gg/FyfMF4RwSA">Rotorflight Discord</a>.</p>
+<p>The Rotorflight Command Line Interface (CLI) gives direct access to the flight controller's configuration and diagnostic functions. It is available through the <strong>CLI tab</strong> in Rotorflight Configurator, or via any serial terminal connected to a UART configured for MSP.</p>
+<h2 id="accessing-the-cli">Accessing the CLI<a class="headerlink" href="#accessing-the-cli" title="Permanent link">&para;</a></h2>
+<p><strong>Via Configurator:</strong> Click the <strong>CLI</strong> tab in the left-hand navigation. The CLI is ready immediately — no special activation is needed.</p>
+<p><strong>Via serial terminal:</strong> Connect to the UART at the configured baud rate (default 115200) and send a <code>#</code> character to activate the CLI.</p>
+<h2 id="basic-usage">Basic Usage<a class="headerlink" href="#basic-usage" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Key / Command</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>help</code></td>
+<td>List all available commands</td>
+</tr>
+<tr>
+<td><code>help &lt;search&gt;</code></td>
+<td>Search commands by name or description</td>
+</tr>
+<tr>
+<td><code>&lt;Tab&gt;</code></td>
+<td>Auto-complete command or argument</td>
+</tr>
+<tr>
+<td><code>save</code></td>
+<td>Save settings to EEPROM and reboot</td>
+</tr>
+<tr>
+<td><code>exit</code></td>
+<td>Exit CLI without saving (or power cycle)</td>
+</tr>
+</tbody>
+</table>
+<p>Lines beginning with <code>#</code> are treated as comments and ignored.</p>
+<hr />
+<h2 id="configuration-management">Configuration Management<a class="headerlink" href="#configuration-management" title="Permanent link">&para;</a></h2>
+<h3 id="diff"><code>diff</code><a class="headerlink" href="#diff" title="Permanent link">&para;</a></h3>
+<p>Lists all settings that differ from the firmware defaults. This is the recommended way to produce a backup because the output is compact and portable.</p>
+<div class="highlight"><pre><span></span><code>diff [master|profile|rates|hardware|all] {defaults|bare}
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Sub-option</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>(none)</em></td>
+<td>Current PID and rate profile only</td>
+</tr>
+<tr>
+<td><code>all</code></td>
+<td>All profiles</td>
+</tr>
+<tr>
+<td><code>master</code></td>
+<td>Global (non-profile) settings</td>
+</tr>
+<tr>
+<td><code>profile</code></td>
+<td>Current PID profile</td>
+</tr>
+<tr>
+<td><code>rates</code></td>
+<td>Current rate profile</td>
+</tr>
+<tr>
+<td><code>hardware</code></td>
+<td>Hardware-level settings (pin assignments, etc.)</td>
+</tr>
+<tr>
+<td><code>defaults</code></td>
+<td>Include values that match defaults</td>
+</tr>
+<tr>
+<td><code>bare</code></td>
+<td>Omit <code>#</code> comment headers — useful for scripting</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code># Recommended backup command
+diff all
+</code></pre></div>
+<h3 id="dump"><code>dump</code><a class="headerlink" href="#dump" title="Permanent link">&para;</a></h3>
+<p>Outputs every setting and its current value. The output is much larger than <code>diff</code> but is fully self-contained.</p>
+<div class="highlight"><pre><span></span><code>dump [master|profile|rates|hardware|all] {defaults|bare}
+</code></pre></div>
+<p>The sub-options are identical to those for <code>diff</code>.</p>
+<h3 id="defaults"><code>defaults</code><a class="headerlink" href="#defaults" title="Permanent link">&para;</a></h3>
+<p>Resets all settings back to firmware defaults and reboots.</p>
+<div class="highlight"><pre><span></span><code>defaults {show} {nosave} {bare} {group_id &lt;id&gt;}
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>(none)</em></td>
+<td>Reset to defaults and save/reboot</td>
+</tr>
+<tr>
+<td><code>nosave</code></td>
+<td>Reset in RAM only — do not save or reboot</td>
+</tr>
+<tr>
+<td><code>show</code></td>
+<td>Print the custom-defaults block without applying it</td>
+</tr>
+<tr>
+<td><code>bare</code></td>
+<td>Apply firmware defaults, ignoring any custom-defaults block</td>
+</tr>
+<tr>
+<td><code>group_id &lt;id&gt;</code></td>
+<td>Reset only the parameter group with this ID</td>
+</tr>
+</tbody>
+</table>
+<h3 id="save"><code>save</code><a class="headerlink" href="#save" title="Permanent link">&para;</a></h3>
+<p>Writes the current in-RAM configuration to EEPROM and reboots.</p>
+<div class="highlight"><pre><span></span><code>save
+</code></pre></div>
+<h3 id="batch"><code>batch</code><a class="headerlink" href="#batch" title="Permanent link">&para;</a></h3>
+<p>Groups multiple commands so that they are applied atomically. If any command inside the batch fails the batch is rolled back.</p>
+<div class="highlight"><pre><span></span><code>batch start
+&lt;commands&gt;
+batch end
+</code></pre></div>
+<hr />
+<h2 id="profile-management">Profile Management<a class="headerlink" href="#profile-management" title="Permanent link">&para;</a></h2>
+<h3 id="profile"><code>profile</code><a class="headerlink" href="#profile" title="Permanent link">&para;</a></h3>
+<p>Shows the active PID profile, or switches to a different one. Profiles are zero-indexed (0–2).</p>
+<div class="highlight"><pre><span></span><code>profile          # show current profile index
+profile &lt;index&gt;  # switch to profile 0, 1, or 2
+</code></pre></div>
+<h3 id="rateprofile"><code>rateprofile</code><a class="headerlink" href="#rateprofile" title="Permanent link">&para;</a></h3>
+<p>Shows the active rate profile, or switches to a different one. Rate profiles are zero-indexed (0–5).</p>
+<div class="highlight"><pre><span></span><code>rateprofile          # show current rate profile index
+rateprofile &lt;index&gt;  # switch to rate profile 0–5
+</code></pre></div>
+<hr />
+<h2 id="helicopter-configuration-commands">Helicopter Configuration Commands<a class="headerlink" href="#helicopter-configuration-commands" title="Permanent link">&para;</a></h2>
+<p>These commands are specific to Rotorflight helicopter configuration.</p>
+<h3 id="mixer"><code>mixer</code><a class="headerlink" href="#mixer" title="Permanent link">&para;</a></h3>
+<p>Configures the software mixer that routes stabilised flight controller outputs to physical servos and motors.</p>
+<div class="highlight"><pre><span></span><code>mixer status
+mixer reset
+
+mixer input
+mixer input reset
+mixer input &lt;input&gt; &lt;min&gt; &lt;max&gt; &lt;rate&gt;
+
+mixer limit
+mixer limit &lt;input&gt; &lt;min&gt; &lt;max&gt;
+
+mixer rate
+mixer rate &lt;input&gt; &lt;rate&gt;
+
+mixer rule
+mixer rule reset
+mixer rule &lt;index&gt; [set|add|mul] &lt;input&gt; &lt;output&gt; &lt;weight&gt; &lt;offset&gt; [&lt;modes&gt;]
+mixer rule &lt;index&gt; del
+
+mixer override
+mixer override off
+mixer override &lt;value&gt;
+mixer override &lt;input&gt; &lt;value&gt;|off
+</code></pre></div>
+<p><strong>Mixer input names:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SR</code> <code>SP</code> <code>SY</code> <code>SC</code> <code>ST</code></td>
+<td>Stabilised Roll / Pitch / Yaw / Collective / Throttle</td>
+</tr>
+<tr>
+<td><code>CR</code> <code>CP</code> <code>CY</code> <code>CC</code> <code>CT</code></td>
+<td>RC Command Roll / Pitch / Yaw / Collective / Throttle</td>
+</tr>
+<tr>
+<td><code>RR</code> <code>RP</code> <code>RY</code> <code>RC</code> <code>RT</code></td>
+<td>Raw RC Channel Roll / Pitch / Yaw / Collective / Throttle</td>
+</tr>
+<tr>
+<td><code>AUX1</code> <code>AUX2</code> <code>AUX3</code></td>
+<td>Auxiliary RC channels</td>
+</tr>
+<tr>
+<td><code>CH9</code>–<code>CH18</code></td>
+<td>RC channels 9–18</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Mixer output names:</strong> <code>S1</code>–<code>S26</code> (servos), <code>M1</code>–<code>M4</code> (motors)</p>
+<p><strong>Mixer rule operations:</strong> <code>set</code>, <code>add</code>, <code>mul</code></p>
+<h3 id="servo"><code>servo</code><a class="headerlink" href="#servo" title="Permanent link">&para;</a></h3>
+<p>Configures servo parameters and allows real-time override for testing.</p>
+<div class="highlight"><pre><span></span><code>servo status
+servo flags
+servo flags &lt;servo&gt; &lt;[+|-]FLAG&gt; ...
+
+servo &lt;servo&gt; &lt;center&gt; &lt;min&gt; &lt;max&gt; &lt;-scale&gt; &lt;+scale&gt; &lt;update_rate&gt; &lt;speed&gt; &lt;flags&gt;
+
+servo override
+servo override &lt;value&gt;|off
+servo override &lt;servo&gt; &lt;value&gt;|off
+</code></pre></div>
+<ul>
+<li><code>&lt;servo&gt;</code> is 1-based.</li>
+<li>Center, min, and max are in microseconds (typical: 1500, 1000, 2000).</li>
+<li><code>-scale</code> and <code>+scale</code> are percentages (0–200).</li>
+<li><code>update_rate</code> is in Hz.</li>
+<li><code>speed</code> is in µs/second (0 = unlimited).</li>
+</ul>
+<p><strong>Servo flags:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>REV</code></td>
+<td>Reverse servo direction</td>
+</tr>
+<tr>
+<td><code>GEO</code></td>
+<td>Apply geometric (trigonometric) correction</td>
+</tr>
+</tbody>
+</table>
+<p>Use <code>+FLAG</code> to set a flag, <code>-FLAG</code> to clear it:</p>
+<div class="highlight"><pre><span></span><code>servo flags 1 +REV -GEO
+</code></pre></div>
+<p><strong>Override range:</strong> 500–2500 µs; <code>off</code> to release override.</p>
+<h3 id="motor"><code>motor</code><a class="headerlink" href="#motor" title="Permanent link">&para;</a></h3>
+<p>Shows motor status and allows real-time throttle override for testing.</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Motor override commands spin the motor. <strong>Remove all propellers/blades before use.</strong></p>
 </div>
+<div class="highlight"><pre><span></span><code>motor status
+
+motor override
+motor override off
+motor override &lt;index&gt; &lt;value&gt;|off
+</code></pre></div>
+<ul>
+<li><code>&lt;index&gt;</code> is 1-based; use <code>0</code> or <code>all</code> to set all motors simultaneously.</li>
+<li><code>&lt;value&gt;</code> range: 1000–2000 (standard ESC range).</li>
+<li><code>off</code> releases the override and returns to normal control.</li>
+</ul>
+<hr />
+<h2 id="get-set-variables">Get / Set Variables<a class="headerlink" href="#get-set-variables" title="Permanent link">&para;</a></h2>
+<h3 id="set"><code>set</code><a class="headerlink" href="#set" title="Permanent link">&para;</a></h3>
+<p>Changes a configuration variable.</p>
+<div class="highlight"><pre><span></span><code>set                  # list all variables and current values
+set &lt;name&gt;=&lt;value&gt;   # set a specific variable
+</code></pre></div>
+<h3 id="get"><code>get</code><a class="headerlink" href="#get" title="Permanent link">&para;</a></h3>
+<p>Reads the current value of one or more variables. Partial name matching is supported — <code>get gov</code> will show all governor-related variables.</p>
+<div class="highlight"><pre><span></span><code>get              # list all variables with values and ranges
+get &lt;name&gt;       # show a specific variable (partial name match supported)
+</code></pre></div>
+<h3 id="parameter-reference">Parameter reference<a class="headerlink" href="#parameter-reference" title="Permanent link">&para;</a></h3>
+<p>The tables below cover the settings you are most likely to need, grouped by function. For <strong>every</strong> setting, with its exact type and range, see <a href="../cli-settings/">CLI Settings</a>, which is generated from the firmware source. Parameters marked <strong>[profile]</strong> are per-PID-profile; those marked <strong>[rates]</strong> are per-rate-profile. All others are global (master) settings.</p>
+<p>Use <code>get &lt;prefix&gt;</code> in the CLI to quickly filter a group — for example <code>get gov_</code> shows all governor parameters.</p>
+<hr />
+<h4 id="gyro">Gyro<a class="headerlink" href="#gyro" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Range / Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>gyro_hardware_lpf</code></td>
+<td><code>NORMAL</code> <code>OPTION_1</code> <code>OPTION_2</code></td>
+<td>Hardware low-pass filter setting</td>
+</tr>
+<tr>
+<td><code>gyro_rate_sync</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Sync gyro sample rate to PID loop</td>
+</tr>
+<tr>
+<td><code>gyro_calib_duration</code></td>
+<td>50–3000</td>
+<td>Gyro calibration duration (ms × 10)</td>
+</tr>
+<tr>
+<td><code>gyro_calib_noise_limit</code></td>
+<td>0–200</td>
+<td>Movement threshold that halts calibration</td>
+</tr>
+<tr>
+<td><code>gyro_decimation_hz</code></td>
+<td>0–max</td>
+<td>Gyro sample decimation frequency (Hz)</td>
+</tr>
+<tr>
+<td><code>gyro_lpf1_type</code></td>
+<td><code>NONE</code> <code>PT1</code> <code>PT2</code> <code>PT3</code> <code>BUTTER</code> <code>BESSEL</code> …</td>
+<td>First gyro LPF filter type</td>
+</tr>
+<tr>
+<td><code>gyro_lpf1_static_hz</code></td>
+<td>0–max</td>
+<td>First gyro LPF cutoff (Hz)</td>
+</tr>
+<tr>
+<td><code>gyro_lpf1_dyn_min_hz</code></td>
+<td>0–max</td>
+<td>First gyro dynamic LPF minimum (Hz)</td>
+</tr>
+<tr>
+<td><code>gyro_lpf1_dyn_max_hz</code></td>
+<td>0–max</td>
+<td>First gyro dynamic LPF maximum (Hz)</td>
+</tr>
+<tr>
+<td><code>gyro_lpf2_type</code></td>
+<td>(same as lpf1)</td>
+<td>Second gyro LPF filter type</td>
+</tr>
+<tr>
+<td><code>gyro_lpf2_static_hz</code></td>
+<td>0–max</td>
+<td>Second gyro LPF cutoff (Hz)</td>
+</tr>
+<tr>
+<td><code>gyro_notch1_hz</code></td>
+<td>0–max</td>
+<td>Static notch filter 1 centre (Hz)</td>
+</tr>
+<tr>
+<td><code>gyro_notch1_cutoff</code></td>
+<td>0–max</td>
+<td>Static notch filter 1 cutoff (Hz)</td>
+</tr>
+<tr>
+<td><code>gyro_notch2_hz</code></td>
+<td>0–max</td>
+<td>Static notch filter 2 centre (Hz)</td>
+</tr>
+<tr>
+<td><code>gyro_notch2_cutoff</code></td>
+<td>0–max</td>
+<td>Static notch filter 2 cutoff (Hz)</td>
+</tr>
+<tr>
+<td><code>gyro_overflow_detect</code></td>
+<td><code>OFF</code> <code>YAW</code> <code>ALL</code></td>
+<td>Gyro overflow detection axis</td>
+</tr>
+<tr>
+<td><code>dyn_notch_count</code></td>
+<td>0–max</td>
+<td>Number of dynamic notch filters</td>
+</tr>
+<tr>
+<td><code>dyn_notch_q</code></td>
+<td>10–100</td>
+<td>Dynamic notch Q factor</td>
+</tr>
+<tr>
+<td><code>dyn_notch_min_hz</code></td>
+<td>10–200</td>
+<td>Dynamic notch minimum frequency (Hz)</td>
+</tr>
+<tr>
+<td><code>dyn_notch_max_hz</code></td>
+<td>100–500</td>
+<td>Dynamic notch maximum frequency (Hz)</td>
+</tr>
+<tr>
+<td><code>gyro_1_sensor_align</code></td>
+<td><code>DEFAULT</code> <code>CW0</code> <code>CW90</code> <code>CW180</code> <code>CW270</code> …</td>
+<td>Physical orientation of gyro 1</td>
+</tr>
+<tr>
+<td><code>gyro_1_align_roll</code></td>
+<td>-3600–3600</td>
+<td>Custom roll alignment (tenths of degrees)</td>
+</tr>
+<tr>
+<td><code>gyro_1_align_pitch</code></td>
+<td>-3600–3600</td>
+<td>Custom pitch alignment</td>
+</tr>
+<tr>
+<td><code>gyro_1_align_yaw</code></td>
+<td>-3600–3600</td>
+<td>Custom yaw alignment</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="accelerometer">Accelerometer<a class="headerlink" href="#accelerometer" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Range / Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>acc_hardware</code></td>
+<td><code>AUTO</code> <code>NONE</code> <code>ADXL345</code> <code>MPU6050</code> …</td>
+<td>Accelerometer selection</td>
+</tr>
+<tr>
+<td><code>acc_lpf_hz</code></td>
+<td>0–400</td>
+<td>Accelerometer LPF cutoff (Hz)</td>
+</tr>
+<tr>
+<td><code>acc_trim_pitch</code></td>
+<td>-300–300</td>
+<td>Pitch trim offset (centidegrees)</td>
+</tr>
+<tr>
+<td><code>acc_trim_roll</code></td>
+<td>-300–300</td>
+<td>Roll trim offset (centidegrees)</td>
+</tr>
+<tr>
+<td><code>acc_calibration</code></td>
+<td>array[4]</td>
+<td>Accelerometer zero offsets + calibrated flag</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="board-alignment">Board Alignment<a class="headerlink" href="#board-alignment" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Range / Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>align_board_roll</code></td>
+<td>-180–360</td>
+<td>Board roll offset (degrees)</td>
+</tr>
+<tr>
+<td><code>align_board_pitch</code></td>
+<td>-180–360</td>
+<td>Board pitch offset (degrees)</td>
+</tr>
+<tr>
+<td><code>align_board_yaw</code></td>
+<td>-180–360</td>
+<td>Board yaw offset (degrees)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="motor_1">Motor<a class="headerlink" href="#motor_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Range / Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>motor_pwm_protocol</code></td>
+<td><code>PWM</code> <code>ONESHOT125</code> <code>DSHOT150</code> <code>DSHOT300</code> <code>DSHOT600</code> <code>CASTLE</code> <code>DISABLED</code> …</td>
+<td>ESC signal protocol</td>
+</tr>
+<tr>
+<td><code>motor_pwm_rate</code></td>
+<td>50–8000</td>
+<td>PWM output rate (Hz) — not used with DShot</td>
+</tr>
+<tr>
+<td><code>min_throttle</code></td>
+<td>1000–2000</td>
+<td>Minimum armed throttle command (µs)</td>
+</tr>
+<tr>
+<td><code>max_throttle</code></td>
+<td>1000–2000</td>
+<td>Maximum throttle command (µs)</td>
+</tr>
+<tr>
+<td><code>min_command</code></td>
+<td>1000–2000</td>
+<td>Disarmed/off throttle command (µs)</td>
+</tr>
+<tr>
+<td><code>use_unsynced_pwm</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Allow PWM rate independent of loop rate</td>
+</tr>
+<tr>
+<td><code>dshot_bidir</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Enable bidirectional DShot (required for RPM telemetry)</td>
+</tr>
+<tr>
+<td><code>dshot_burst</code></td>
+<td><code>OFF</code> <code>ON</code> <code>AUTO</code></td>
+<td>DShot burst mode</td>
+</tr>
+<tr>
+<td><code>dshot_bitbang</code></td>
+<td><code>OFF</code> <code>ON</code> <code>AUTO</code></td>
+<td>Use bit-bang DShot implementation</td>
+</tr>
+<tr>
+<td><code>motor_poles</code></td>
+<td>array[4]</td>
+<td>Pole count for each motor (for RPM calculation)</td>
+</tr>
+<tr>
+<td><code>motor_rpm_lpf</code></td>
+<td>array[4]</td>
+<td>LPF cutoff for each motor's RPM signal</td>
+</tr>
+<tr>
+<td><code>motor_rpm_factor</code></td>
+<td>array[4]</td>
+<td>RPM correction factor (signed, ×1000)</td>
+</tr>
+<tr>
+<td><code>main_rotor_gear_ratio</code></td>
+<td>array[2]</td>
+<td>Main rotor gear ratio as numerator/denominator</td>
+</tr>
+<tr>
+<td><code>tail_rotor_gear_ratio</code></td>
+<td>array[2]</td>
+<td>Tail rotor gear ratio as numerator/denominator</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="mixer-swash">Mixer (Swash)<a class="headerlink" href="#mixer-swash" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Range / Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>main_rotor_dir</code></td>
+<td><code>CW</code> <code>CCW</code></td>
+<td>Main rotor rotation direction</td>
+</tr>
+<tr>
+<td><code>tail_rotor_mode</code></td>
+<td><code>VARIABLE</code> <code>MOTORIZED</code> <code>BIDIRECTIONAL</code></td>
+<td>Tail rotor type</td>
+</tr>
+<tr>
+<td><code>tail_motor_idle</code></td>
+<td>0–250</td>
+<td>Idle throttle for tail motor (motorised tail)</td>
+</tr>
+<tr>
+<td><code>tail_center_trim</code></td>
+<td>-1000–1000</td>
+<td>Centre trim for tail servo</td>
+</tr>
+<tr>
+<td><code>swash_type</code></td>
+<td><code>NONE</code> <code>PASSTHROUGH</code> <code>CP120</code> <code>CP135</code> <code>CP140</code> <code>FP90L</code> <code>FP90V</code></td>
+<td>Swashplate geometry</td>
+</tr>
+<tr>
+<td><code>swash_ring</code></td>
+<td>0–100</td>
+<td>Cyclic ring limit (%)</td>
+</tr>
+<tr>
+<td><code>swash_phase</code></td>
+<td>-1800–1800</td>
+<td>Swash phase angle (tenths of degrees)</td>
+</tr>
+<tr>
+<td><code>swash_roll_trim</code></td>
+<td>-1000–1000</td>
+<td>Roll trim applied at swash</td>
+</tr>
+<tr>
+<td><code>swash_pitch_trim</code></td>
+<td>-1000–1000</td>
+<td>Pitch trim applied at swash</td>
+</tr>
+<tr>
+<td><code>swash_collective_trim</code></td>
+<td>-1000–1000</td>
+<td>Collective trim applied at swash</td>
+</tr>
+<tr>
+<td><code>swash_pitch_limit</code></td>
+<td>0–3000</td>
+<td>Maximum swash pitch travel</td>
+</tr>
+<tr>
+<td><code>swash_tta_precomp</code></td>
+<td>0–250</td>
+<td>Throttle-to-angle precompensation</td>
+</tr>
+<tr>
+<td><code>swash_geo_correction</code></td>
+<td>-125–125</td>
+<td>Geometric (sine) correction strength</td>
+</tr>
+<tr>
+<td><code>collective_tilt_correction_pos</code></td>
+<td>-100–100</td>
+<td>Collective-to-pitch coupling correction (positive collective)</td>
+</tr>
+<tr>
+<td><code>collective_tilt_correction_neg</code></td>
+<td>-100–100</td>
+<td>Collective-to-pitch coupling correction (negative collective)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="governor-global">Governor (Global)<a class="headerlink" href="#governor-global" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Range / Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>gov_mode</code></td>
+<td><code>OFF</code> <code>LIMIT</code> <code>DIRECT</code> <code>ELECTRIC</code> <code>NITRO</code></td>
+<td>Governor operating mode</td>
+</tr>
+<tr>
+<td><code>gov_throttle_type</code></td>
+<td><code>NORMAL</code> <code>SWITCH</code> <code>FUNCTION</code></td>
+<td>Throttle input interpretation</td>
+</tr>
+<tr>
+<td><code>gov_startup_time</code></td>
+<td>0–600</td>
+<td>Motor startup time (tenths of seconds)</td>
+</tr>
+<tr>
+<td><code>gov_spoolup_time</code></td>
+<td>0–600</td>
+<td>Spool-up ramp time (tenths of seconds)</td>
+</tr>
+<tr>
+<td><code>gov_tracking_time</code></td>
+<td>0–600</td>
+<td>Time to reach target headspeed after spoolup</td>
+</tr>
+<tr>
+<td><code>gov_recovery_time</code></td>
+<td>0–600</td>
+<td>Recovery ramp time after a dip</td>
+</tr>
+<tr>
+<td><code>gov_spooldown_time</code></td>
+<td>0–600</td>
+<td>Spooldown ramp time (tenths of seconds)</td>
+</tr>
+<tr>
+<td><code>gov_throttle_hold_timeout</code></td>
+<td>0–250</td>
+<td>Timeout before autorotation mode exits</td>
+</tr>
+<tr>
+<td><code>gov_autorotation_timeout</code></td>
+<td>0–250</td>
+<td>Autorotation entry hold timeout</td>
+</tr>
+<tr>
+<td><code>gov_handover_throttle</code></td>
+<td>10–100</td>
+<td>Throttle level at which governor takes over (%)</td>
+</tr>
+<tr>
+<td><code>gov_idle_throttle</code></td>
+<td>0–250</td>
+<td>Idle throttle in LIMIT mode</td>
+</tr>
+<tr>
+<td><code>gov_auto_throttle</code></td>
+<td>0–250</td>
+<td>Automatic collective-follow throttle</td>
+</tr>
+<tr>
+<td><code>gov_bypass_throttle</code></td>
+<td>array[GOV_CURVE_POINTS]</td>
+<td>Throttle curve for DIRECT/NITRO mode</td>
+</tr>
+<tr>
+<td><code>gov_pwr_filter</code></td>
+<td>0–250</td>
+<td>Power input filter cutoff</td>
+</tr>
+<tr>
+<td><code>gov_rpm_filter</code></td>
+<td>0–250</td>
+<td>RPM input filter cutoff</td>
+</tr>
+<tr>
+<td><code>gov_tta_filter</code></td>
+<td>0–250</td>
+<td>Throttle-to-angle filter cutoff</td>
+</tr>
+<tr>
+<td><code>gov_ff_filter</code></td>
+<td>0–250</td>
+<td>Feedforward filter cutoff</td>
+</tr>
+<tr>
+<td><code>gov_d_filter</code></td>
+<td>0–250</td>
+<td>D-term filter cutoff</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="governor-per-profile">Governor (Per-Profile)<a class="headerlink" href="#governor-per-profile" title="Permanent link">&para;</a></h4>
+<p>These are part of the PID profile and differ per profile.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Range / Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>gov_headspeed</code></td>
+<td>0–50000</td>
+<td>Target headspeed (RPM) <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>gov_gain</code></td>
+<td>0–250</td>
+<td>Overall governor gain <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>gov_p_gain</code></td>
+<td>0–250</td>
+<td>Proportional gain <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>gov_i_gain</code></td>
+<td>0–250</td>
+<td>Integral gain <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>gov_d_gain</code></td>
+<td>0–250</td>
+<td>Derivative gain <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>gov_f_gain</code></td>
+<td>0–250</td>
+<td>Feedforward gain <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>gov_p_limit</code></td>
+<td>0–100</td>
+<td>P-term output limit (%) <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>gov_i_limit</code></td>
+<td>0–100</td>
+<td>I-term output limit (%) <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>gov_d_limit</code></td>
+<td>0–100</td>
+<td>D-term output limit (%) <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>gov_f_limit</code></td>
+<td>0–100</td>
+<td>Feedforward output limit (%) <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>gov_tta_gain</code></td>
+<td>0–250</td>
+<td>Throttle-to-angle gain <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>gov_tta_limit</code></td>
+<td>0–250</td>
+<td>TTA output limit <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>gov_yaw_ff_weight</code></td>
+<td>0–250</td>
+<td>Yaw torque feedforward weight <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>gov_cyclic_ff_weight</code></td>
+<td>0–250</td>
+<td>Cyclic load feedforward weight <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>gov_collective_ff_weight</code></td>
+<td>0–250</td>
+<td>Collective load feedforward weight <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>gov_max_throttle</code></td>
+<td>10–100</td>
+<td>Maximum governor output throttle (%) <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>gov_min_throttle</code></td>
+<td>10–100</td>
+<td>Minimum governor output throttle (%) <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>gov_fallback_drop</code></td>
+<td>0–50</td>
+<td>Throttle reduction during RPM fallback <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>gov_collective_curve</code></td>
+<td>5–40</td>
+<td>Collective feedforward curve shape <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>gov_dyn_min_throttle</code></td>
+<td>0–100</td>
+<td>Dynamic minimum throttle level <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>gov_use_fallback_precomp</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Enable fallback precompensation <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>gov_use_pid_spoolup</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Use PID output during spoolup <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>gov_use_voltage_comp</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Enable battery voltage compensation <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>gov_use_dyn_min_throttle</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Enable dynamic minimum throttle <strong>[profile]</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="pid-gains-per-profile">PID Gains (Per-Profile)<a class="headerlink" href="#pid-gains-per-profile" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Range / Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pid_mode</code></td>
+<td>0–9</td>
+<td>PID controller mode <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>pitch_p_gain</code></td>
+<td>0–2000</td>
+<td>Pitch P gain <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>pitch_i_gain</code></td>
+<td>0–2000</td>
+<td>Pitch I gain <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>pitch_d_gain</code></td>
+<td>0–2000</td>
+<td>Pitch D gain <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>pitch_f_gain</code></td>
+<td>0–2000</td>
+<td>Pitch feedforward gain <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>pitch_b_gain</code></td>
+<td>0–2000</td>
+<td>Pitch B-term (boost) gain <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>pitch_o_gain</code></td>
+<td>0–2000</td>
+<td>Pitch offset gain <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>roll_p_gain</code></td>
+<td>0–2000</td>
+<td>Roll P gain <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>roll_i_gain</code></td>
+<td>0–2000</td>
+<td>Roll I gain <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>roll_d_gain</code></td>
+<td>0–2000</td>
+<td>Roll D gain <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>roll_f_gain</code></td>
+<td>0–2000</td>
+<td>Roll feedforward gain <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>roll_b_gain</code></td>
+<td>0–2000</td>
+<td>Roll B-term (boost) gain <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>roll_o_gain</code></td>
+<td>0–2000</td>
+<td>Roll offset gain <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>yaw_p_gain</code></td>
+<td>0–2000</td>
+<td>Yaw P gain <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>yaw_i_gain</code></td>
+<td>0–2000</td>
+<td>Yaw I gain <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>yaw_d_gain</code></td>
+<td>0–2000</td>
+<td>Yaw D gain <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>yaw_f_gain</code></td>
+<td>0–2000</td>
+<td>Yaw feedforward gain <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>yaw_b_gain</code></td>
+<td>0–2000</td>
+<td>Yaw B-term (boost) gain <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>pitch_d_cutoff</code></td>
+<td>0–250</td>
+<td>Pitch D-term filter cutoff <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>pitch_b_cutoff</code></td>
+<td>0–250</td>
+<td>Pitch B-term filter cutoff <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>pitch_gyro_cutoff</code></td>
+<td>0–250</td>
+<td>Pitch gyro pre-filter cutoff <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>roll_d_cutoff</code></td>
+<td>0–250</td>
+<td>Roll D-term filter cutoff <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>roll_b_cutoff</code></td>
+<td>0–250</td>
+<td>Roll B-term filter cutoff <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>roll_gyro_cutoff</code></td>
+<td>0–250</td>
+<td>Roll gyro pre-filter cutoff <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>yaw_d_cutoff</code></td>
+<td>0–250</td>
+<td>Yaw D-term filter cutoff <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>yaw_b_cutoff</code></td>
+<td>0–250</td>
+<td>Yaw B-term filter cutoff <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>yaw_gyro_cutoff</code></td>
+<td>0–250</td>
+<td>Yaw gyro pre-filter cutoff <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>yaw_cw_stop_gain</code></td>
+<td>25–250</td>
+<td>Stop gain for clockwise yaw rotation <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>yaw_ccw_stop_gain</code></td>
+<td>25–250</td>
+<td>Stop gain for counter-clockwise yaw rotation <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>yaw_precomp_cutoff</code></td>
+<td>0–250</td>
+<td>Yaw precompensation filter cutoff <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>yaw_cyclic_ff_gain</code></td>
+<td>0–250</td>
+<td>Yaw cyclic feedforward gain <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>yaw_collective_ff_gain</code></td>
+<td>0–250</td>
+<td>Yaw collective feedforward gain <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>yaw_inertia_precomp_gain</code></td>
+<td>0–250</td>
+<td>Yaw inertia precompensation gain <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>yaw_inertia_precomp_cutoff</code></td>
+<td>0–250</td>
+<td>Yaw inertia precompensation cutoff <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>pitch_collective_ff_gain</code></td>
+<td>0–250</td>
+<td>Pitch collective feedforward gain <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>cyclic_cross_coupling_gain</code></td>
+<td>0–250</td>
+<td>Cyclic cross-coupling compensation gain <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>cyclic_cross_coupling_ratio</code></td>
+<td>0–200</td>
+<td>Roll-to-pitch coupling ratio <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>cyclic_cross_coupling_cutoff</code></td>
+<td>1–250</td>
+<td>Cross-coupling filter cutoff <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>error_limit</code></td>
+<td>array[3]</td>
+<td>Max error accumulation per axis (Roll/Pitch/Yaw) <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>offset_limit</code></td>
+<td>array[2]</td>
+<td>Max offset per axis (Roll/Pitch) <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>error_decay_time_ground</code></td>
+<td>0–250</td>
+<td>I-term decay speed on the ground <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>error_decay_time_cyclic</code></td>
+<td>0–250</td>
+<td>I-term decay speed in air (cyclic) <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>error_decay_time_yaw</code></td>
+<td>0–250</td>
+<td>I-term decay speed in air (yaw) <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>error_decay_limit_cyclic</code></td>
+<td>0–250</td>
+<td>I-term decay lower limit (cyclic) <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>error_decay_limit_yaw</code></td>
+<td>0–250</td>
+<td>I-term decay lower limit (yaw) <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>error_decay_gain_cyclic</code></td>
+<td>0–250</td>
+<td>Scales cyclic I-term decay with stick setpoint, to stop wind-up during cyclic inputs; 0 = off. <em>New in 2.4.</em></td>
+</tr>
+<tr>
+<td><code>iterm_relax_type</code></td>
+<td><code>OFF</code> <code>RP</code> <code>RPY</code></td>
+<td>I-term relax axis selection <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>iterm_relax_level</code></td>
+<td>array[3]</td>
+<td>I-term relax level per axis <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>iterm_relax_cutoff</code></td>
+<td>array[3]</td>
+<td>I-term relax filter cutoff per axis <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>offset_flood_relax_level</code></td>
+<td>10–250</td>
+<td>Offset flood relaxation level <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>offset_flood_relax_cutoff</code></td>
+<td>1–100</td>
+<td>Offset flood relaxation filter cutoff <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>pid_process_denom</code></td>
+<td>1–16</td>
+<td>PID loop denominator (divides gyro rate)</td>
+</tr>
+<tr>
+<td><code>filter_process_denom</code></td>
+<td>0–16</td>
+<td>Filter task denominator</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="rescue-mode-per-profile">Rescue Mode (Per-Profile)<a class="headerlink" href="#rescue-mode-per-profile" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Range / Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rescue_mode</code></td>
+<td><code>OFF</code> <code>CLIMB</code> <code>ALT_HOLD</code></td>
+<td>Rescue mode type <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>rescue_flip</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Enable auto-flip during rescue <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>rescue_flip_gain</code></td>
+<td>5–250</td>
+<td>Flip authority gain <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>rescue_level_gain</code></td>
+<td>5–250</td>
+<td>Levelling authority gain <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>rescue_pull_up_time</code></td>
+<td>0–250</td>
+<td>Pull-up phase duration (tenths of seconds) <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>rescue_climb_time</code></td>
+<td>0–250</td>
+<td>Climb phase duration <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>rescue_flip_time</code></td>
+<td>0–250</td>
+<td>Flip phase duration <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>rescue_exit_time</code></td>
+<td>0–250</td>
+<td>Exit/handback phase duration <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>rescue_pull_up_collective</code></td>
+<td>0–1000</td>
+<td>Collective during pull-up <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>rescue_climb_collective</code></td>
+<td>0–1000</td>
+<td>Collective during climb <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>rescue_hover_collective</code></td>
+<td>0–1000</td>
+<td>Collective at hover <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>rescue_hover_altitude</code></td>
+<td>0–10000</td>
+<td>Target hover altitude (cm) <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>rescue_alt_p_gain</code></td>
+<td>0–10000</td>
+<td>Altitude hold P gain <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>rescue_alt_i_gain</code></td>
+<td>0–10000</td>
+<td>Altitude hold I gain <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>rescue_alt_d_gain</code></td>
+<td>0–10000</td>
+<td>Altitude hold D gain <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>rescue_max_sp_rate</code></td>
+<td>1–1000</td>
+<td>Max setpoint rate during rescue <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>rescue_max_sp_accel</code></td>
+<td>1–10000</td>
+<td>Max setpoint acceleration during rescue <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>rescue_max_collective</code></td>
+<td>1–1000</td>
+<td>Max collective during rescue <strong>[profile]</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="stability-modes-per-profile">Stability Modes (Per-Profile)<a class="headerlink" href="#stability-modes-per-profile" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Range / Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>angle_level_strength</code></td>
+<td>0–200</td>
+<td>Self-level authority in Angle mode <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>angle_level_limit</code></td>
+<td>10–90</td>
+<td>Max tilt in Angle mode (degrees) <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>horizon_level_strength</code></td>
+<td>0–200</td>
+<td>Self-level authority in Horizon mode <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>horizon_transition</code></td>
+<td>0–200</td>
+<td>Stick range over which Horizon transitions <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>horizon_tilt_effect</code></td>
+<td>0–250</td>
+<td>Tilt suppression in Horizon mode <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>horizon_tilt_expert_mode</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Expert tilt calculation mode <strong>[profile]</strong></td>
+</tr>
+<tr>
+<td><code>horizon_angle_limit</code></td>
+<td>10–90</td>
+<td>Horizon mode maximum angle. <em>New in 2.4.</em></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="rate-profile">Rate Profile<a class="headerlink" href="#rate-profile" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Range / Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rateprofile_name</code></td>
+<td>string</td>
+<td>Rate profile label <strong>[rates]</strong></td>
+</tr>
+<tr>
+<td><code>rates_type</code></td>
+<td><code>NONE</code> <code>BETAFLIGHT</code> <code>RACEFLIGHT</code> <code>KISS</code> <code>ACTUAL</code> <code>QUICK</code> <code>ROTORFLIGHT</code></td>
+<td>Rate algorithm <strong>[rates]</strong></td>
+</tr>
+<tr>
+<td><code>roll_rc_rate</code></td>
+<td>1–255</td>
+<td>Roll RC rate <strong>[rates]</strong></td>
+</tr>
+<tr>
+<td><code>pitch_rc_rate</code></td>
+<td>1–255</td>
+<td>Pitch RC rate <strong>[rates]</strong></td>
+</tr>
+<tr>
+<td><code>yaw_rc_rate</code></td>
+<td>1–255</td>
+<td>Yaw RC rate <strong>[rates]</strong></td>
+</tr>
+<tr>
+<td><code>collective_rc_rate</code></td>
+<td>1–255</td>
+<td>Collective RC rate <strong>[rates]</strong></td>
+</tr>
+<tr>
+<td><code>roll_expo</code></td>
+<td>0–100</td>
+<td>Roll expo <strong>[rates]</strong></td>
+</tr>
+<tr>
+<td><code>pitch_expo</code></td>
+<td>0–100</td>
+<td>Pitch expo <strong>[rates]</strong></td>
+</tr>
+<tr>
+<td><code>yaw_expo</code></td>
+<td>0–100</td>
+<td>Yaw expo <strong>[rates]</strong></td>
+</tr>
+<tr>
+<td><code>collective_expo</code></td>
+<td>0–100</td>
+<td>Collective expo <strong>[rates]</strong></td>
+</tr>
+<tr>
+<td><code>roll_srate</code></td>
+<td>0–255</td>
+<td>Roll super-rate <strong>[rates]</strong></td>
+</tr>
+<tr>
+<td><code>pitch_srate</code></td>
+<td>0–255</td>
+<td>Pitch super-rate <strong>[rates]</strong></td>
+</tr>
+<tr>
+<td><code>yaw_srate</code></td>
+<td>0–255</td>
+<td>Yaw super-rate <strong>[rates]</strong></td>
+</tr>
+<tr>
+<td><code>collective_srate</code></td>
+<td>0–255</td>
+<td>Collective super-rate <strong>[rates]</strong></td>
+</tr>
+<tr>
+<td><code>roll_accel_limit</code></td>
+<td>0–50000</td>
+<td>Roll acceleration limit (deg/s²) <strong>[rates]</strong></td>
+</tr>
+<tr>
+<td><code>pitch_accel_limit</code></td>
+<td>0–50000</td>
+<td>Pitch acceleration limit <strong>[rates]</strong></td>
+</tr>
+<tr>
+<td><code>yaw_accel_limit</code></td>
+<td>0–50000</td>
+<td>Yaw acceleration limit <strong>[rates]</strong></td>
+</tr>
+<tr>
+<td><code>collective_accel_limit</code></td>
+<td>0–50000</td>
+<td>Collective acceleration limit <strong>[rates]</strong></td>
+</tr>
+<tr>
+<td><code>roll_response</code></td>
+<td>0–250</td>
+<td>Roll response time filter <strong>[rates]</strong></td>
+</tr>
+<tr>
+<td><code>pitch_response</code></td>
+<td>0–250</td>
+<td>Pitch response time filter <strong>[rates]</strong></td>
+</tr>
+<tr>
+<td><code>yaw_response</code></td>
+<td>0–250</td>
+<td>Yaw response time filter <strong>[rates]</strong></td>
+</tr>
+<tr>
+<td><code>collective_response</code></td>
+<td>0–250</td>
+<td>Collective response time filter <strong>[rates]</strong></td>
+</tr>
+<tr>
+<td><code>cyclic_ring</code></td>
+<td>0–250</td>
+<td>Cyclic ring limit <strong>[rates]</strong></td>
+</tr>
+<tr>
+<td><code>roll_level_expo</code></td>
+<td>0–100</td>
+<td>Roll level-mode expo <strong>[rates]</strong></td>
+</tr>
+<tr>
+<td><code>pitch_level_expo</code></td>
+<td>0–100</td>
+<td>Pitch level-mode expo <strong>[rates]</strong></td>
+</tr>
+<tr>
+<td><code>setpoint_boost_gain</code></td>
+<td>array[4]</td>
+<td>Setpoint boost gain per axis <strong>[rates]</strong></td>
+</tr>
+<tr>
+<td><code>setpoint_boost_cutoff</code></td>
+<td>array[4]</td>
+<td>Setpoint boost cutoff per axis <strong>[rates]</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="rc-controls">RC Controls<a class="headerlink" href="#rc-controls" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Range / Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rc_center</code></td>
+<td>1200–1700</td>
+<td>RC channel centre value (µs)</td>
+</tr>
+<tr>
+<td><code>rc_deflection</code></td>
+<td>250–750</td>
+<td>RC channel half-deflection (µs)</td>
+</tr>
+<tr>
+<td><code>rc_min_throttle</code></td>
+<td>0–2100</td>
+<td>RC throttle minimum (µs)</td>
+</tr>
+<tr>
+<td><code>rc_max_throttle</code></td>
+<td>0–2100</td>
+<td>RC throttle maximum (µs)</td>
+</tr>
+<tr>
+<td><code>rc_smoothness</code></td>
+<td>0–250</td>
+<td>RC input smoothing strength</td>
+</tr>
+<tr>
+<td><code>rc_threshold</code></td>
+<td>array[4]</td>
+<td>Dead-zone threshold per axis</td>
+</tr>
+<tr>
+<td><code>deadband</code></td>
+<td>0–100</td>
+<td>Cyclic stick deadband (µs)</td>
+</tr>
+<tr>
+<td><code>yaw_deadband</code></td>
+<td>0–100</td>
+<td>Yaw stick deadband (µs)</td>
+</tr>
+<tr>
+<td><code>rx_pulse_min</code></td>
+<td>750–2250</td>
+<td>Minimum valid RC pulse width (µs)</td>
+</tr>
+<tr>
+<td><code>rx_pulse_max</code></td>
+<td>750–2250</td>
+<td>Maximum valid RC pulse width (µs)</td>
+</tr>
+<tr>
+<td><code>airborne_mode</code></td>
+<td><code>CONSERVATIVE</code> <code>STICK_RESPONSE</code></td>
+<td>How take-off is detected. <code>STICK_RESPONSE</code> also uses the helicopter's response to the sticks and vertical acceleration. <em>New in 2.4.</em></td>
+</tr>
+<tr>
+<td><code>airborne_gyro_threshold</code></td>
+<td>1–100</td>
+<td>Gyro response threshold for <code>STICK_RESPONSE</code> detection. <em>New in 2.4.</em></td>
+</tr>
+<tr>
+<td><code>airborne_acc_threshold</code></td>
+<td>5–50</td>
+<td>Vertical acceleration threshold for <code>STICK_RESPONSE</code> detection. <em>New in 2.4.</em></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="receiver">Receiver<a class="headerlink" href="#receiver" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Range / Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>serialrx_provider</code></td>
+<td><code>SBUS</code> <code>CRSF</code> <code>FBUS</code> <code>IBUS</code> <code>SRXL2</code> <code>GHST</code> …</td>
+<td>Serial RX protocol</td>
+</tr>
+<tr>
+<td><code>serialrx_inverted</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Invert serial RX signal</td>
+</tr>
+<tr>
+<td><code>serialrx_halfduplex</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Use half-duplex UART</td>
+</tr>
+<tr>
+<td><code>rssi_channel</code></td>
+<td>0–18</td>
+<td>AUX channel carrying RSSI (0 = disabled)</td>
+</tr>
+<tr>
+<td><code>rssi_scale</code></td>
+<td>1–255</td>
+<td>RSSI scale factor</td>
+</tr>
+<tr>
+<td><code>rssi_offset</code></td>
+<td>-100–100</td>
+<td>RSSI offset</td>
+</tr>
+<tr>
+<td><code>rssi_invert</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Invert RSSI value</td>
+</tr>
+<tr>
+<td><code>sbus_baud_fast</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Use 200 kbps SBUS instead of 100 kbps</td>
+</tr>
+<tr>
+<td><code>crsf_use_rx_snr</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Use SNR for RSSI in CRSF</td>
+</tr>
+<tr>
+<td><code>crsf_telemetry_mode</code></td>
+<td><code>NATIVE</code> <code>CUSTOM</code></td>
+<td>CRSF telemetry mode</td>
+</tr>
+<tr>
+<td><code>crsf_telemetry_link_rate</code></td>
+<td>0–50000</td>
+<td>Custom CRSF telemetry link rate</td>
+</tr>
+<tr>
+<td><code>crsf_telemetry_link_ratio</code></td>
+<td>0–50000</td>
+<td>Custom CRSF telemetry link ratio</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="failsafe">Failsafe<a class="headerlink" href="#failsafe" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Range / Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>failsafe_delay</code></td>
+<td>1–200</td>
+<td>Time before Stage 1 activates (tenths of seconds)</td>
+</tr>
+<tr>
+<td><code>failsafe_off_delay</code></td>
+<td>0–200</td>
+<td>Time before Stage 2 activates after Stage 1</td>
+</tr>
+<tr>
+<td><code>failsafe_throttle</code></td>
+<td>900–2100</td>
+<td>Throttle value during failsafe (µs)</td>
+</tr>
+<tr>
+<td><code>failsafe_switch_mode</code></td>
+<td><code>STAGE1</code> <code>KILL</code> <code>STAGE2</code></td>
+<td>Behaviour when failsafe switch is used</td>
+</tr>
+<tr>
+<td><code>failsafe_throttle_low_delay</code></td>
+<td>0–300</td>
+<td>Delay before allowing throttle-low arming after failsafe</td>
+</tr>
+<tr>
+<td><code>failsafe_procedure</code></td>
+<td><code>AUTO-LAND</code> <code>DROP</code> <code>GPS-RESCUE</code></td>
+<td>Failsafe procedure</td>
+</tr>
+<tr>
+<td><code>failsafe_recovery_delay</code></td>
+<td>0–200</td>
+<td>Hold time after signal returns before exit (tenths of s)</td>
+</tr>
+<tr>
+<td><code>failsafe_stick_threshold</code></td>
+<td>0–50</td>
+<td>Stick movement threshold to confirm recovery</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="battery-voltage">Battery &amp; Voltage<a class="headerlink" href="#battery-voltage" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Range / Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bat_profile</code></td>
+<td>0–5</td>
+<td>Active battery profile (shown as 1–6 elsewhere)</td>
+</tr>
+<tr>
+<td><code>battery_cell_count</code></td>
+<td>array of 6</td>
+<td>Cell count per battery profile (0 = auto-detect)</td>
+</tr>
+<tr>
+<td><code>vbat_max_cell_voltage</code></td>
+<td>array of 6</td>
+<td>Maximum cell voltage per profile, in 0.01 V (used for cell count detection)</td>
+</tr>
+<tr>
+<td><code>vbat_full_cell_voltage</code></td>
+<td>array of 6</td>
+<td>Full cell voltage per profile, in 0.01 V</td>
+</tr>
+<tr>
+<td><code>vbat_min_cell_voltage</code></td>
+<td>array of 6</td>
+<td>Empty cell voltage per profile, in 0.01 V</td>
+</tr>
+<tr>
+<td><code>vbat_warning_cell_voltage</code></td>
+<td>array of 6</td>
+<td>Warning cell voltage per profile, in 0.01 V</td>
+</tr>
+<tr>
+<td><code>vbat_hysteresis</code></td>
+<td>0–250</td>
+<td>Voltage alarm hysteresis</td>
+</tr>
+<tr>
+<td><code>vbat_detect_cell_voltage</code></td>
+<td>0–2000</td>
+<td>Voltage below which battery is considered absent</td>
+</tr>
+<tr>
+<td><code>vbat_scale</code></td>
+<td>1–4095</td>
+<td>ADC voltage divider scale</td>
+</tr>
+<tr>
+<td><code>vbat_divider</code></td>
+<td>1–255</td>
+<td>ADC voltage divider value</td>
+</tr>
+<tr>
+<td><code>vbat_multiplier</code></td>
+<td>1–255</td>
+<td>ADC voltage multiplier</td>
+</tr>
+<tr>
+<td><code>vbat_cutoff</code></td>
+<td>0–250</td>
+<td>ADC reading cutoff filter</td>
+</tr>
+<tr>
+<td><code>vbec_scale</code> / <code>vbec_divider</code> / <code>vbec_multiplier</code></td>
+<td>—</td>
+<td>BEC voltage ADC calibration</td>
+</tr>
+<tr>
+<td><code>vbus_scale</code> / <code>vbus_divider</code> / <code>vbus_multiplier</code></td>
+<td>—</td>
+<td>Bus voltage ADC calibration</td>
+</tr>
+<tr>
+<td><code>vext_scale</code> / <code>vext_divider</code> / <code>vext_multiplier</code></td>
+<td>—</td>
+<td>External voltage ADC calibration</td>
+</tr>
+<tr>
+<td><code>ibata_scale</code></td>
+<td>-16000–16000</td>
+<td>Battery current sensor scale</td>
+</tr>
+<tr>
+<td><code>ibata_offset</code></td>
+<td>-32000–32000</td>
+<td>Battery current sensor offset</td>
+</tr>
+<tr>
+<td><code>current_meter</code></td>
+<td><code>NONE</code> <code>ADC</code> <code>ESC</code> <code>FBUS</code> <code>CRSF</code></td>
+<td>Current sensor source</td>
+</tr>
+<tr>
+<td><code>battery_meter</code></td>
+<td><code>NONE</code> <code>ADC</code> <code>ESC</code> <code>FBUS</code> <code>CRSF</code></td>
+<td>Voltage sensor source</td>
+</tr>
+<tr>
+<td><code>bat_capacity</code></td>
+<td>array of 6</td>
+<td>Battery capacity per profile (mAh)</td>
+</tr>
+<tr>
+<td><code>smartfuel</code></td>
+<td><code>OFF</code> <code>VOLTAGE</code> <code>CURRENT</code> <code>COMBINED</code></td>
+<td><a href="../../setup/smartfuel/">SmartFuel</a> mode</td>
+</tr>
+<tr>
+<td><code>smartfuel_voltage_drop_rate</code></td>
+<td>0–250</td>
+<td>Fastest fall of the per-cell voltage estimate, mV/s</td>
+</tr>
+<tr>
+<td><code>smartfuel_charge_drop_rate</code></td>
+<td>0–250</td>
+<td>Fastest fall of the displayed charge once armed, 0.01 %/s</td>
+</tr>
+<tr>
+<td><code>smartfuel_sag_gain</code></td>
+<td>0–100</td>
+<td>Expected sag at full stick load, 0.01 V per cell</td>
+</tr>
+<tr>
+<td><code>vbat_lpf_hz</code></td>
+<td>0–255</td>
+<td>Voltage LPF cutoff (Hz)</td>
+</tr>
+<tr>
+<td><code>ibat_lpf_hz</code></td>
+<td>0–255</td>
+<td>Current LPF cutoff (Hz)</td>
+</tr>
+<tr>
+<td><code>use_vbat_alerts</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Enable voltage alerts</td>
+</tr>
+<tr>
+<td><code>use_cbat_alerts</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Enable capacity alerts</td>
+</tr>
+<tr>
+<td><code>cbat_alert_percent</code></td>
+<td>0–100</td>
+<td>Capacity remaining alert threshold (%)</td>
+</tr>
+<tr>
+<td><code>vbat_cutoff_percent</code></td>
+<td>0–100</td>
+<td>Cutoff warning at this % of cells</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="arming">Arming<a class="headerlink" href="#arming" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Range / Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>auto_disarm_delay</code></td>
+<td>0–60</td>
+<td>Auto-disarm after this many seconds on the ground (0 = off)</td>
+</tr>
+<tr>
+<td><code>gyro_cal_on_first_arm</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Calibrate gyro on first arm</td>
+</tr>
+<tr>
+<td><code>pwr_on_arm_grace</code></td>
+<td>0–30</td>
+<td>Seconds after power-on in which arming is allowed without gyro check</td>
+</tr>
+<tr>
+<td><code>enable_stick_arming</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Enable stick-based arm/disarm</td>
+</tr>
+<tr>
+<td><code>enable_stick_commands</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Enable stick-combo commands</td>
+</tr>
+<tr>
+<td><code>wiggle_strength</code></td>
+<td>0–100</td>
+<td>Swash wiggle amplitude (%)</td>
+</tr>
+<tr>
+<td><code>wiggle_frequency</code></td>
+<td>2–50</td>
+<td>Swash wiggle frequency (Hz)</td>
+</tr>
+<tr>
+<td><code>wiggle_enable_ready</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Wiggle when ready to arm</td>
+</tr>
+<tr>
+<td><code>wiggle_enable_armed</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Wiggle on arm</td>
+</tr>
+<tr>
+<td><code>wiggle_enable_error</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Wiggle on arming error</td>
+</tr>
+<tr>
+<td><code>wiggle_enable_fatal</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Wiggle on fatal error</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="rpm-filter">RPM Filter<a class="headerlink" href="#rpm-filter" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Range / Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>gyro_rpm_notch_preset</code></td>
+<td>0–3</td>
+<td>RPM filter preset (0 = custom)</td>
+</tr>
+<tr>
+<td><code>gyro_rpm_notch_min_hz</code></td>
+<td>1–100</td>
+<td>Minimum notch frequency (Hz)</td>
+</tr>
+<tr>
+<td><code>gyro_rpm_notch_source_pitch</code></td>
+<td>array</td>
+<td>RPM source for each pitch notch</td>
+</tr>
+<tr>
+<td><code>gyro_rpm_notch_center_pitch</code></td>
+<td>array</td>
+<td>Centre offset for each pitch notch</td>
+</tr>
+<tr>
+<td><code>gyro_rpm_notch_q_pitch</code></td>
+<td>array</td>
+<td>Q factor for each pitch notch</td>
+</tr>
+<tr>
+<td><code>gyro_rpm_notch_source_roll</code></td>
+<td>array</td>
+<td>RPM source for each roll notch</td>
+</tr>
+<tr>
+<td><code>gyro_rpm_notch_center_roll</code></td>
+<td>array</td>
+<td>Centre offset for each roll notch</td>
+</tr>
+<tr>
+<td><code>gyro_rpm_notch_q_roll</code></td>
+<td>array</td>
+<td>Q factor for each roll notch</td>
+</tr>
+<tr>
+<td><code>gyro_rpm_notch_source_yaw</code></td>
+<td>array</td>
+<td>RPM source for each yaw notch</td>
+</tr>
+<tr>
+<td><code>gyro_rpm_notch_center_yaw</code></td>
+<td>array</td>
+<td>Centre offset for each yaw notch</td>
+</tr>
+<tr>
+<td><code>gyro_rpm_notch_q_yaw</code></td>
+<td>array</td>
+<td>Q factor for each yaw notch</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="esc-sensor">ESC Sensor<a class="headerlink" href="#esc-sensor" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Range / Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>esc_sensor_protocol</code></td>
+<td><code>OFF</code> <code>BLHELI32</code> <code>HOBBYWINGV4</code> <code>HOBBYWINGV5</code> <code>SCORPION</code> <code>KONTRONIK</code> <code>OMPHOBBY</code> <code>ZTW</code> <code>APD</code> <code>OPENYGE</code> <code>FLYROTOR</code> <code>GRAUPNER</code> <code>XDFLY</code> <code>FBUS</code> <code>RECORD</code></td>
+<td>ESC telemetry protocol</td>
+</tr>
+<tr>
+<td><code>esc_sensor_halfduplex</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Half-duplex UART mode</td>
+</tr>
+<tr>
+<td><code>esc_sensor_update_hz</code></td>
+<td>4–500</td>
+<td>Polling rate (Hz)</td>
+</tr>
+<tr>
+<td><code>esc_sensor_current_offset</code></td>
+<td>0–16000</td>
+<td>Current zero offset</td>
+</tr>
+<tr>
+<td><code>esc_sensor_filter_cutoff</code></td>
+<td>0–250</td>
+<td>Output LPF cutoff</td>
+</tr>
+<tr>
+<td><code>esc_sensor_voltage_correction</code></td>
+<td>-100–125</td>
+<td>Voltage scaling correction (%)</td>
+</tr>
+<tr>
+<td><code>esc_sensor_current_correction</code></td>
+<td>-100–125</td>
+<td>Current scaling correction (%)</td>
+</tr>
+<tr>
+<td><code>esc_sensor_consumption_correction</code></td>
+<td>-100–125</td>
+<td>Consumption scaling correction (%)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="blackbox">Blackbox<a class="headerlink" href="#blackbox" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Range / Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>blackbox_mode</code></td>
+<td><code>OFF</code> <code>NORMAL</code> <code>ARMED</code> <code>SWITCH</code></td>
+<td>When to record</td>
+</tr>
+<tr>
+<td><code>blackbox_device</code></td>
+<td><code>NONE</code> <code>SPIFLASH</code> <code>SDCARD</code> <code>SERIAL</code></td>
+<td>Storage device</td>
+</tr>
+<tr>
+<td><code>blackbox_rate_denom</code></td>
+<td>1–8000</td>
+<td>Logging rate denominator (1 = full rate)</td>
+</tr>
+<tr>
+<td><code>blackbox_grace_period</code></td>
+<td>0–60</td>
+<td>Seconds to log after disarm</td>
+</tr>
+<tr>
+<td><code>blackbox_log_command</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Log RC commands</td>
+</tr>
+<tr>
+<td><code>blackbox_log_setpoint</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Log setpoints</td>
+</tr>
+<tr>
+<td><code>blackbox_log_mixer</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Log mixer outputs</td>
+</tr>
+<tr>
+<td><code>blackbox_log_pid</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Log PID terms</td>
+</tr>
+<tr>
+<td><code>blackbox_log_gyro</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Log filtered gyro</td>
+</tr>
+<tr>
+<td><code>blackbox_log_gyro_raw</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Log raw gyro</td>
+</tr>
+<tr>
+<td><code>blackbox_log_attitude</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Log attitude (roll/pitch/yaw angles)</td>
+</tr>
+<tr>
+<td><code>blackbox_log_motors</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Log motor outputs</td>
+</tr>
+<tr>
+<td><code>blackbox_log_servos</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Log servo outputs</td>
+</tr>
+<tr>
+<td><code>blackbox_log_rpm</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Log RPM data</td>
+</tr>
+<tr>
+<td><code>blackbox_log_battery</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Log battery voltage and current</td>
+</tr>
+<tr>
+<td><code>blackbox_log_governor</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Log governor state</td>
+</tr>
+<tr>
+<td><code>blackbox_log_esc</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Log ESC telemetry</td>
+</tr>
+<tr>
+<td><code>blackbox_log_rssi</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Log RSSI</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="telemetry">Telemetry<a class="headerlink" href="#telemetry" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Range / Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tlm_inverted</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Invert telemetry signal</td>
+</tr>
+<tr>
+<td><code>tlm_halfduplex</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Half-duplex telemetry UART</td>
+</tr>
+<tr>
+<td><code>report_cell_voltage</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Report per-cell voltage via telemetry</td>
+</tr>
+<tr>
+<td><code>telemetry_sensors</code></td>
+<td>array</td>
+<td>Sensor IDs to include in telemetry</td>
+</tr>
+<tr>
+<td><code>telemetry_interval</code></td>
+<td>array</td>
+<td>Interval per sensor slot (ms)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="fbus-master-sbus-output">FBUS Master / SBUS Output<a class="headerlink" href="#fbus-master-sbus-output" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Range / Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fbus_master_frame_rate</code></td>
+<td>25–550</td>
+<td>FBUS master output rate (Hz)</td>
+</tr>
+<tr>
+<td><code>fbus_master_pinswap</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Swap TX/RX pins</td>
+</tr>
+<tr>
+<td><code>fbus_master_inverted</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Invert FBUS output</td>
+</tr>
+<tr>
+<td><code>fbus_master_telemetry_rate</code></td>
+<td>min–max</td>
+<td>Telemetry polling rate (Hz)</td>
+</tr>
+<tr>
+<td><code>fbus_master_discovery_ms</code></td>
+<td>min–max</td>
+<td>Sensor discovery window (ms)</td>
+</tr>
+<tr>
+<td><code>fbus_master_forwarded_sensors</code></td>
+<td>array</td>
+<td>Sensor IDs to forward</td>
+</tr>
+<tr>
+<td><code>sbus_out_frame_rate</code></td>
+<td>25–250</td>
+<td>SBUS output frame rate (Hz)</td>
+</tr>
+<tr>
+<td><code>sbus_out_pinswap</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Swap TX/RX pins</td>
+</tr>
+<tr>
+<td><code>sbus_out_inverted</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Invert SBUS output</td>
+</tr>
+<tr>
+<td><code>sport_master_pinswap</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Swap TX/RX pins on S.Port master</td>
+</tr>
+<tr>
+<td><code>sport_master_inverted</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Invert S.Port master signal</td>
+</tr>
+<tr>
+<td><code>bus_servo_source_type</code></td>
+<td>array</td>
+<td>Source type for each bus servo channel</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="pilot-model-info">Pilot / Model Info<a class="headerlink" href="#pilot-model-info" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Range / Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>string</td>
+<td>Craft name (shown in OSD and telemetry)</td>
+</tr>
+<tr>
+<td><code>display_name</code></td>
+<td>string</td>
+<td>Display name</td>
+</tr>
+<tr>
+<td><code>model_id</code></td>
+<td>0–99</td>
+<td>Model slot number</td>
+</tr>
+<tr>
+<td><code>model_param1_type</code> … <code>model_param3_type</code></td>
+<td><code>NONE</code> <code>TIMER1</code> … <code>GV9</code></td>
+<td>Type of custom model parameter</td>
+</tr>
+<tr>
+<td><code>model_param1_value</code> … <code>model_param3_value</code></td>
+<td>any int16</td>
+<td>Value of custom model parameter</td>
+</tr>
+<tr>
+<td><code>model_set_name</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Broadcast model name in telemetry</td>
+</tr>
+<tr>
+<td><code>model_tell_capacity</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Broadcast battery capacity in telemetry</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="system">System<a class="headerlink" href="#system" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Range / Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>debug_mode</code></td>
+<td>(see <code>get debug_mode</code>)</td>
+<td>Debug variable output slot selection</td>
+</tr>
+<tr>
+<td><code>debug_axis</code></td>
+<td>0–255</td>
+<td>Axis selection for debug output</td>
+</tr>
+<tr>
+<td><code>task_statistics</code></td>
+<td><code>OFF</code> <code>ON</code></td>
+<td>Track per-task timing statistics</td>
+</tr>
+<tr>
+<td><code>scheduler_relax_rx</code></td>
+<td>0–500</td>
+<td>RX task determinism relaxation</td>
+</tr>
+<tr>
+<td><code>scheduler_relax_osd</code></td>
+<td>0–500</td>
+<td>OSD task determinism relaxation</td>
+</tr>
+<tr>
+<td><code>serial_update_rate_hz</code></td>
+<td>100–2000</td>
+<td>Serial port update rate</td>
+</tr>
+<tr>
+<td><code>reboot_character</code></td>
+<td>48–126</td>
+<td>ASCII character that triggers CLI entry on serial port</td>
+</tr>
+<tr>
+<td><code>imu_dcm_kp</code></td>
+<td>0–32000</td>
+<td>DCM complementary filter proportional gain</td>
+</tr>
+<tr>
+<td><code>imu_dcm_ki</code></td>
+<td>0–32000</td>
+<td>DCM complementary filter integral gain</td>
+</tr>
+<tr>
+<td><code>timezone_offset_minutes</code></td>
+<td>-840–840</td>
+<td>UTC offset for RTC clock</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="system-information">System Information<a class="headerlink" href="#system-information" title="Permanent link">&para;</a></h2>
+<h3 id="status"><code>status</code><a class="headerlink" href="#status" title="Permanent link">&para;</a></h3>
+<p>Displays a snapshot of the flight controller state: MCU type, clock speed, stack usage, EEPROM usage, detected sensors, active features, and armed/disarmed status.</p>
+<div class="highlight"><pre><span></span><code>status
+</code></pre></div>
+<h3 id="version"><code>version</code><a class="headerlink" href="#version" title="Permanent link">&para;</a></h3>
+<p>Prints firmware version, build date, and target name.</p>
+<div class="highlight"><pre><span></span><code>version
+</code></pre></div>
+<h3 id="tasks"><code>tasks</code><a class="headerlink" href="#tasks" title="Permanent link">&para;</a></h3>
+<p>Prints the scheduler task list with timing statistics (execution time, max, average, interval).</p>
+<div class="highlight"><pre><span></span><code>tasks
+</code></pre></div>
+<h3 id="mcu_id"><code>mcu_id</code><a class="headerlink" href="#mcu_id" title="Permanent link">&para;</a></h3>
+<p>Prints the unique hardware ID of the microcontroller.</p>
+<div class="highlight"><pre><span></span><code>mcu_id
+</code></pre></div>
+<h3 id="setpoint_info"><code>setpoint_info</code><a class="headerlink" href="#setpoint_info" title="Permanent link">&para;</a></h3>
+<p>Shows the current operational parameters of the setpoint smoothing filters.</p>
+<div class="highlight"><pre><span></span><code>setpoint_info
+</code></pre></div>
+<hr />
+<h2 id="receiver-rc">Receiver &amp; RC<a class="headerlink" href="#receiver-rc" title="Permanent link">&para;</a></h2>
+<h3 id="aux"><code>aux</code><a class="headerlink" href="#aux" title="Permanent link">&para;</a></h3>
+<p>Configures flight mode activation ranges on auxiliary RC channels.</p>
+<div class="highlight"><pre><span></span><code>aux &lt;index&gt; &lt;mode&gt; &lt;aux&gt; &lt;start&gt; &lt;end&gt; &lt;logic&gt;
+</code></pre></div>
+<ul>
+<li><code>&lt;aux&gt;</code> is 0-based (AUX1 = 0).</li>
+<li><code>&lt;start&gt;</code> and <code>&lt;end&gt;</code> are channel values in µs (900–2100).</li>
+<li><code>&lt;logic&gt;</code>: 0 = normal, 1 = AND with previous range.</li>
+</ul>
+<h3 id="rxfail"><code>rxfail</code><a class="headerlink" href="#rxfail" title="Permanent link">&para;</a></h3>
+<p>Shows or sets per-channel failsafe behaviour.</p>
+<div class="highlight"><pre><span></span><code>rxfail                           # show all channel failsafe settings
+rxfail &lt;channel&gt; &lt;mode&gt; [value]  # set failsafe for a channel
+</code></pre></div>
+<p>Modes: <code>a</code> (auto), <code>h</code> (hold), <code>s</code> (set to value).</p>
+<h3 id="map"><code>map</code><a class="headerlink" href="#map" title="Permanent link">&para;</a></h3>
+<p>Shows or sets the RC channel input mapping.</p>
+<div class="highlight"><pre><span></span><code>map           # show current mapping
+map &lt;AETR&gt;    # set mapping (A=aileron/roll, E=elevator/pitch, T=throttle, R=rudder/yaw)
+</code></pre></div>
+<hr />
+<h2 id="feature-management">Feature Management<a class="headerlink" href="#feature-management" title="Permanent link">&para;</a></h2>
+<h3 id="feature"><code>feature</code><a class="headerlink" href="#feature" title="Permanent link">&para;</a></h3>
+<p>Enables or disables firmware features.</p>
+<div class="highlight"><pre><span></span><code>feature list         # list all features and their state
+feature &lt;name&gt;       # enable a feature
+feature -&lt;name&gt;      # disable a feature
+</code></pre></div>
+<p>Available features include: <code>RX_PPM</code>, <code>RX_SERIAL</code>, <code>SOFTSERIAL</code>, <code>GPS</code>, <code>RANGEFINDER</code>, <code>TELEMETRY</code>, <code>RX_PARALLEL_PWM</code>, <code>RX_MSP</code>, <code>RSSI_ADC</code>, <code>LED_STRIP</code>, <code>DASHBOARD</code>, <code>OSD</code>, <code>CMS</code>, <code>RX_SPI</code>, <code>GOVERNOR</code>, <code>ESC_SENSOR</code>, <code>FREQ_SENSOR</code>, <code>DYN_NOTCH</code>, <code>RPM_FILTER</code>.</p>
+<hr />
+<h2 id="hardware-configuration">Hardware Configuration<a class="headerlink" href="#hardware-configuration" title="Permanent link">&para;</a></h2>
+<h3 id="resource"><code>resource</code><a class="headerlink" href="#resource" title="Permanent link">&para;</a></h3>
+<p>Shows or reassigns pin/peripheral resources.</p>
+<div class="highlight"><pre><span></span><code>resource                              # list all assigned resources
+resource show [all]                   # detailed resource listing
+resource &lt;name&gt; &lt;index&gt; &lt;pin&gt;|none    # assign a resource to a pin
+</code></pre></div>
+<p>Pin format: <code>A01</code>, <code>B04</code>, <code>C13</code>, etc.</p>
+<h3 id="timer"><code>timer</code><a class="headerlink" href="#timer" title="Permanent link">&para;</a></h3>
+<p>Shows or reassigns timer channels.</p>
+<div class="highlight"><pre><span></span><code>timer                                         # list configured timers
+timer list                                    # list all timers
+timer show                                    # show timer assignments
+timer &lt;pin&gt; list                              # list options for a pin
+timer &lt;pin&gt; [af&lt;n&gt;|none]                      # assign alternate function
+</code></pre></div>
+<h3 id="dma"><code>dma</code><a class="headerlink" href="#dma" title="Permanent link">&para;</a></h3>
+<p>Shows or reassigns DMA streams/channels (on targets that support DMA remapping).</p>
+<div class="highlight"><pre><span></span><code>dma show
+dma list
+dma &lt;device&gt; &lt;index&gt; list
+dma &lt;device&gt; &lt;index&gt; [&lt;option&gt;|none]
+</code></pre></div>
+<h3 id="serial"><code>serial</code><a class="headerlink" href="#serial" title="Permanent link">&para;</a></h3>
+<p>Shows or configures serial port functions, baud rates, and modes.</p>
+<div class="highlight"><pre><span></span><code>serial    # list all serial port configurations
+serial &lt;identifier&gt; &lt;function&gt; &lt;mspBaud&gt; &lt;gpsBaud&gt; &lt;teleBaud&gt; &lt;blackboxBaud&gt;
+</code></pre></div>
+<hr />
+<h2 id="esc-programming">ESC Programming<a class="headerlink" href="#esc-programming" title="Permanent link">&para;</a></h2>
+<h3 id="dshotprog"><code>dshotprog</code><a class="headerlink" href="#dshotprog" title="Permanent link">&para;</a></h3>
+<p>Sends DShot ESC commands.</p>
+<div class="highlight"><pre><span></span><code>dshotprog &lt;index&gt; &lt;command&gt;+
+</code></pre></div>
+<p><code>&lt;index&gt;</code> selects the motor (1-based); <code>&lt;command&gt;</code> is a DShot command number.</p>
+<h3 id="dshot_telemetry_info"><code>dshot_telemetry_info</code><a class="headerlink" href="#dshot_telemetry_info" title="Permanent link">&para;</a></h3>
+<p>Displays DShot telemetry statistics (if DShot telemetry is enabled).</p>
+<div class="highlight"><pre><span></span><code>dshot_telemetry_info
+</code></pre></div>
+<h3 id="beacon"><code>beacon</code><a class="headerlink" href="#beacon" title="Permanent link">&para;</a></h3>
+<p>Enables or disables the DShot beacon for specific arming conditions.</p>
+<div class="highlight"><pre><span></span><code>beacon list
+beacon [&lt;-&gt;&lt;name&gt;]
+</code></pre></div>
+<h3 id="escprog"><code>escprog</code><a class="headerlink" href="#escprog" title="Permanent link">&para;</a></h3>
+<p>Passes through serial data to an ESC for programming (BLHeli/BLHeli_32/Kira configurator).</p>
+<div class="highlight"><pre><span></span><code>escprog &lt;mode&gt; &lt;index&gt;
+</code></pre></div>
+<p>Modes: <code>sk</code> (SimonK), <code>bl</code> (BLHeli), <code>ki</code> (Kira), <code>cc</code> (Castle Creations).</p>
+<hr />
+<h2 id="fbus-sport">FBUS / S.Port<a class="headerlink" href="#fbus-sport" title="Permanent link">&para;</a></h2>
+<h3 id="fbus_sensors"><code>fbus_sensors</code><a class="headerlink" href="#fbus_sensors" title="Permanent link">&para;</a></h3>
+<p>Shows all sensor IDs observed on the FBUS/S.Port bus. Useful for diagnosing sensor connections.</p>
+<div class="highlight"><pre><span></span><code>fbus_sensors         # show detected sensors
+fbus_sensors clear   # clear the sensor list
+</code></pre></div>
+<hr />
+<h2 id="serial-passthrough">Serial Passthrough<a class="headerlink" href="#serial-passthrough" title="Permanent link">&para;</a></h2>
+<h3 id="serialpassthrough"><code>serialpassthrough</code><a class="headerlink" href="#serialpassthrough" title="Permanent link">&para;</a></h3>
+<p>Bridges a hardware UART directly to the USB VCP (or another UART). Used for ESC passthrough programming when the ESC is connected to a UART on the FC.</p>
+<div class="highlight"><pre><span></span><code>serialpassthrough &lt;id1&gt; [&lt;baud1&gt;] [&lt;mode1&gt;] [none|&lt;dtr pinio&gt;|reset] [&lt;id2&gt;] [&lt;baud2&gt;] [&lt;mode2&gt;]
+</code></pre></div>
+<ul>
+<li><code>&lt;id&gt;</code> is the serial port identifier number.</li>
+<li><code>&lt;mode&gt;</code> is a combination of <code>rx</code>, <code>tx</code> characters (e.g. <code>rxtx</code>).</li>
+<li>DTR pinio: a PINIO number used to assert DTR for BLHeli passthrough.</li>
+</ul>
+<hr />
+<h2 id="adjustment-functions">Adjustment Functions<a class="headerlink" href="#adjustment-functions" title="Permanent link">&para;</a></h2>
+<h3 id="adjfunc"><code>adjfunc</code><a class="headerlink" href="#adjfunc" title="Permanent link">&para;</a></h3>
+<p>Configures an inflight adjustment mapping — a range on an AUX channel that trims or switches a parameter.</p>
+<div class="highlight"><pre><span></span><code>adjfunc &lt;index&gt; &lt;func&gt; &lt;enable_ch&gt; &lt;ena_start&gt; &lt;ena_end&gt; &lt;adj_ch&gt; &lt;dec_start&gt; &lt;dec_end&gt; &lt;inc_start&gt; &lt;inc_end&gt; &lt;step&gt; &lt;min&gt; &lt;max&gt;
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>index</code></td>
+<td>Slot number (0-based)</td>
+</tr>
+<tr>
+<td><code>func</code></td>
+<td>Adjustment function ID</td>
+</tr>
+<tr>
+<td><code>enable_ch</code></td>
+<td>AUX channel that gates this adjustment (0-based; 0xFF = always active)</td>
+</tr>
+<tr>
+<td><code>ena_start</code> / <code>ena_end</code></td>
+<td>Channel value range (µs) that enables this slot</td>
+</tr>
+<tr>
+<td><code>adj_ch</code></td>
+<td>AUX channel that provides the increment/decrement signal</td>
+</tr>
+<tr>
+<td><code>dec_start</code> / <code>dec_end</code></td>
+<td>Channel value range that decrements the value</td>
+</tr>
+<tr>
+<td><code>inc_start</code> / <code>inc_end</code></td>
+<td>Channel value range that increments the value</td>
+</tr>
+<tr>
+<td><code>step</code></td>
+<td>Amount to change per activation</td>
+</tr>
+<tr>
+<td><code>min</code> / <code>max</code></td>
+<td>Clamping limits for the adjusted parameter</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="led-strip-colours">LED Strip &amp; Colours<a class="headerlink" href="#led-strip-colours" title="Permanent link">&para;</a></h2>
+<p>These commands are only available when <code>LED_STRIP</code> is enabled.</p>
+<h3 id="led"><code>led</code><a class="headerlink" href="#led" title="Permanent link">&para;</a></h3>
+<p>Configures individual LED positions and functions.</p>
+<div class="highlight"><pre><span></span><code>led
+led &lt;index&gt; &lt;x,y:function:color:direction&gt;
+</code></pre></div>
+<h3 id="color"><code>color</code><a class="headerlink" href="#color" title="Permanent link">&para;</a></h3>
+<p>Configures the colour palette used by LED strip animations.</p>
+<div class="highlight"><pre><span></span><code>color
+color &lt;index&gt; &lt;hue,saturation,value&gt;
+</code></pre></div>
+<h3 id="mode_color"><code>mode_color</code><a class="headerlink" href="#mode_color" title="Permanent link">&para;</a></h3>
+<p>Sets the colours used for each flight mode in LED strip status mode.</p>
+<div class="highlight"><pre><span></span><code>mode_color
+mode_color &lt;mode&gt; &lt;direction&gt; &lt;colorIndex&gt;
+</code></pre></div>
+<hr />
+<h2 id="vtx-control">VTX Control<a class="headerlink" href="#vtx-control" title="Permanent link">&para;</a></h2>
+<h3 id="vtx"><code>vtx</code><a class="headerlink" href="#vtx" title="Permanent link">&para;</a></h3>
+<p>Configures VTX band/channel/power switching on AUX channel ranges.</p>
+<div class="highlight"><pre><span></span><code>vtx
+vtx &lt;index&gt; &lt;aux_channel&gt; &lt;vtx_band&gt; &lt;vtx_channel&gt; &lt;vtx_power&gt; &lt;start_range&gt; &lt;end_range&gt;
+</code></pre></div>
+<h3 id="vtx_info"><code>vtx_info</code><a class="headerlink" href="#vtx_info" title="Permanent link">&para;</a></h3>
+<p>Dumps the current VTX power table.</p>
+<div class="highlight"><pre><span></span><code>vtx_info
+</code></pre></div>
+<h3 id="vtxtable"><code>vtxtable</code><a class="headerlink" href="#vtxtable" title="Permanent link">&para;</a></h3>
+<p>Configures the VTX frequency table.</p>
+<div class="highlight"><pre><span></span><code>vtxtable &lt;band&gt; &lt;bandname&gt; &lt;bandletter&gt; [FACTORY|CUSTOM] &lt;freq&gt; ...
+</code></pre></div>
+<hr />
+<h2 id="gps">GPS<a class="headerlink" href="#gps" title="Permanent link">&para;</a></h2>
+<h3 id="gpspassthrough"><code>gpspassthrough</code><a class="headerlink" href="#gpspassthrough" title="Permanent link">&para;</a></h3>
+<p>Connects the GPS UART directly to the USB VCP for direct communication with the GPS module.</p>
+<div class="highlight"><pre><span></span><code>gpspassthrough
+</code></pre></div>
+<hr />
+<h2 id="board-information">Board Information<a class="headerlink" href="#board-information" title="Permanent link">&para;</a></h2>
+<h3 id="board_name"><code>board_name</code><a class="headerlink" href="#board_name" title="Permanent link">&para;</a></h3>
+<p>Gets or sets the board model name stored in firmware.</p>
+<div class="highlight"><pre><span></span><code>board_name
+board_name &lt;name&gt;
+</code></pre></div>
+<h3 id="board_design"><code>board_design</code><a class="headerlink" href="#board_design" title="Permanent link">&para;</a></h3>
+<p>Gets or sets the board design identifier.</p>
+<div class="highlight"><pre><span></span><code>board_design
+board_design &lt;name&gt;
+</code></pre></div>
+<h3 id="manufacturer_id"><code>manufacturer_id</code><a class="headerlink" href="#manufacturer_id" title="Permanent link">&para;</a></h3>
+<p>Gets or sets the manufacturer ID.</p>
+<div class="highlight"><pre><span></span><code>manufacturer_id
+manufacturer_id &lt;id&gt;
+</code></pre></div>
+<h3 id="signature"><code>signature</code><a class="headerlink" href="#signature" title="Permanent link">&para;</a></h3>
+<p>Gets or sets the board type signature.</p>
+<div class="highlight"><pre><span></span><code>signature
+signature &lt;hex-signature&gt;
+</code></pre></div>
+<hr />
+<h2 id="reboot-dfu">Reboot / DFU<a class="headerlink" href="#reboot-dfu" title="Permanent link">&para;</a></h2>
+<h3 id="bl"><code>bl</code><a class="headerlink" href="#bl" title="Permanent link">&para;</a></h3>
+<p>Reboots into the bootloader.</p>
+<div class="highlight"><pre><span></span><code>bl        # reboot into ROM bootloader
+bl rom    # explicitly select ROM bootloader
+bl flash  # select flash-based bootloader (if present)
+</code></pre></div>
+<h3 id="dfu"><code>dfu</code><a class="headerlink" href="#dfu" title="Permanent link">&para;</a></h3>
+<p>Reboots into DFU mode (STM32 USB DFU) for firmware flashing.</p>
+<div class="highlight"><pre><span></span><code>dfu
+</code></pre></div>
+<h3 id="msc"><code>msc</code><a class="headerlink" href="#msc" title="Permanent link">&para;</a></h3>
+<p>Switches the flight controller into USB Mass Storage mode so the SD card appears as a drive.</p>
+<div class="highlight"><pre><span></span><code>msc                         # enter MSC mode
+msc &lt;timezone_offset_min&gt;   # enter MSC mode with RTC timezone offset
+</code></pre></div>
+<hr />
+<h2 id="flash-memory">Flash Memory<a class="headerlink" href="#flash-memory" title="Permanent link">&para;</a></h2>
+<p>These commands are available when onboard flash memory (Blackbox storage) is present.</p>
+<h3 id="flash_info"><code>flash_info</code><a class="headerlink" href="#flash_info" title="Permanent link">&para;</a></h3>
+<p>Shows the flash chip type, size, and used/free space.</p>
+<div class="highlight"><pre><span></span><code>flash_info
+</code></pre></div>
+<h3 id="flash_erase"><code>flash_erase</code><a class="headerlink" href="#flash_erase" title="Permanent link">&para;</a></h3>
+<p>Erases the entire flash chip (clears all Blackbox logs).</p>
+<div class="highlight"><pre><span></span><code>flash_erase
+</code></pre></div>
+<hr />
+<h2 id="gyro-diagnostics">Gyro Diagnostics<a class="headerlink" href="#gyro-diagnostics" title="Permanent link">&para;</a></h2>
+<h3 id="gyroregisters"><code>gyroregisters</code><a class="headerlink" href="#gyroregisters" title="Permanent link">&para;</a></h3>
+<p>Dumps the raw register contents of the gyro IC. Useful for diagnosing hardware issues.</p>
+<div class="highlight"><pre><span></span><code>gyroregisters
+</code></pre></div>
+<hr />
+<h2 id="sd-card">SD Card<a class="headerlink" href="#sd-card" title="Permanent link">&para;</a></h2>
+<h3 id="sd_info"><code>sd_info</code><a class="headerlink" href="#sd_info" title="Permanent link">&para;</a></h3>
+<p>Shows SD card type, capacity, and filesystem state.</p>
+<div class="highlight"><pre><span></span><code>sd_info
+</code></pre></div>
+<hr />
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
+<h3 id="backup-your-configuration">Backup your configuration<a class="headerlink" href="#backup-your-configuration" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>diff all
+</code></pre></div>
+<p>Click <strong>Save to File</strong> in Configurator to store the output.</p>
+<h3 id="restore-from-a-backup">Restore from a backup<a class="headerlink" href="#restore-from-a-backup" title="Permanent link">&para;</a></h3>
+<p>Open the backup file using <strong>Load from File</strong> in Configurator, then click <strong>Execute</strong>. Once complete:</p>
+<div class="highlight"><pre><span></span><code>save
+</code></pre></div>
+<h3 id="test-a-servo-without-flying">Test a servo without flying<a class="headerlink" href="#test-a-servo-without-flying" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>servo override 1 1200    # push servo 1 to 1200 µs
+servo override 1 1800    # push servo 1 to 1800 µs
+servo override off       # release all servo overrides
+</code></pre></div>
+<h3 id="check-what-mixer-rules-are-active">Check what mixer rules are active<a class="headerlink" href="#check-what-mixer-rules-are-active" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>mixer rule
+</code></pre></div>
+<h3 id="enable-rpm-filtering">Enable RPM filtering<a class="headerlink" href="#enable-rpm-filtering" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>feature RPM_FILTER
+save
+</code></pre></div>
+<h3 id="switch-profile-and-confirm">Switch profile and confirm<a class="headerlink" href="#switch-profile-and-confirm" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>profile 1
+profile
+</code></pre></div>
 
 
 
@@ -4149,13 +9679,13 @@ being written. In the meantime, ask on the
         
         
           
-          <a href="../telemetry/" class="md-footer__link md-footer__link--next" aria-label="Next: Telemetry Sensors">
+          <a href="../cli-settings/" class="md-footer__link md-footer__link--next" aria-label="Next: CLI Settings">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Telemetry Sensors
+                CLI Settings
               </div>
             </div>
             <div class="md-footer__button md-icon">

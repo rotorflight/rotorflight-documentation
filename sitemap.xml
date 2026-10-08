@@ -121,6 +121,10 @@
          <lastmod>2026-10-08</lastmod>
     </url>
     <url>
+         <loc>https://doc.rotorflight.org/contributing/coding-style/</loc>
+         <lastmod>2026-10-08</lastmod>
+    </url>
+    <url>
          <loc>https://doc.rotorflight.org/contributing/developers/</loc>
          <lastmod>2026-10-08</lastmod>
     </url>
@@ -129,19 +133,55 @@
          <lastmod>2026-10-08</lastmod>
     </url>
     <url>
-         <loc>https://doc.rotorflight.org/contributing/flow-charts/</loc>
-         <lastmod>2026-10-08</lastmod>
-    </url>
-    <url>
-         <loc>https://doc.rotorflight.org/contributing/modeling-cross-coupling/</loc>
-         <lastmod>2026-10-08</lastmod>
-    </url>
-    <url>
          <loc>https://doc.rotorflight.org/contributing/support/</loc>
          <lastmod>2026-10-08</lastmod>
     </url>
     <url>
+         <loc>https://doc.rotorflight.org/contributing/tech/</loc>
+         <lastmod>2026-10-08</lastmod>
+    </url>
+    <url>
+         <loc>https://doc.rotorflight.org/contributing/tech/atomic-barrier/</loc>
+         <lastmod>2026-10-08</lastmod>
+    </url>
+    <url>
+         <loc>https://doc.rotorflight.org/contributing/tech/blackbox-format/</loc>
+         <lastmod>2026-10-08</lastmod>
+    </url>
+    <url>
+         <loc>https://doc.rotorflight.org/contributing/tech/configuration-format/</loc>
+         <lastmod>2026-10-08</lastmod>
+    </url>
+    <url>
+         <loc>https://doc.rotorflight.org/contributing/tech/custom-boards/</loc>
+         <lastmod>2026-10-08</lastmod>
+    </url>
+    <url>
+         <loc>https://doc.rotorflight.org/contributing/tech/customizing-the-build/</loc>
+         <lastmod>2026-10-08</lastmod>
+    </url>
+    <url>
+         <loc>https://doc.rotorflight.org/contributing/tech/hardware-debugging-vscode-jlink/</loc>
+         <lastmod>2026-10-08</lastmod>
+    </url>
+    <url>
+         <loc>https://doc.rotorflight.org/contributing/tech/hardware-debugging/</loc>
+         <lastmod>2026-10-08</lastmod>
+    </url>
+    <url>
+         <loc>https://doc.rotorflight.org/contributing/tech/modeling-cross-coupling/</loc>
+         <lastmod>2026-10-08</lastmod>
+    </url>
+    <url>
+         <loc>https://doc.rotorflight.org/contributing/tech/parameter-groups/</loc>
+         <lastmod>2026-10-08</lastmod>
+    </url>
+    <url>
          <loc>https://doc.rotorflight.org/contributing/tech/smartfuel/</loc>
+         <lastmod>2026-10-08</lastmod>
+    </url>
+    <url>
+         <loc>https://doc.rotorflight.org/contributing/tech/test-coverage/</loc>
          <lastmod>2026-10-08</lastmod>
     </url>
     <url>
@@ -278,6 +318,10 @@
     </url>
     <url>
          <loc>https://doc.rotorflight.org/reference/cli-reference/</loc>
+         <lastmod>2026-10-08</lastmod>
+    </url>
+    <url>
+         <loc>https://doc.rotorflight.org/reference/cli-settings/</loc>
          <lastmod>2026-10-08</lastmod>
     </url>
     <url>
