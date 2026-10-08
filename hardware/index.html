@@ -3065,10 +3065,6 @@
       
         
       
-        
-      
-        
-      
     
     
     
@@ -3166,7 +3162,7 @@
   <span class="md-ellipsis">
     
   
-    FrSky 007
+    FrSky VANTAC RF007
   
 
     
@@ -3194,7 +3190,7 @@
   <span class="md-ellipsis">
     
   
-    FlyDragon F722
+    FlyDragon
   
 
     
@@ -3222,7 +3218,7 @@
   <span class="md-ellipsis">
     
   
-    Flywing HELI-F405
+    Flywing HELI405
   
 
     
@@ -3299,35 +3295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="goosky-s2/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    GooSky S2
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="matek-g474-heli/" class="md-nav__link">
+      <a href="matek-g474/" class="md-nav__link">
         
   
   
@@ -3335,34 +3303,6 @@
     
   
     Matek G474-HELI
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="matek-g474-hlite/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Matek G474-HLITE
   
 
     
@@ -3410,34 +3350,9 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="manufacturers/" class="md-nav__link">
         
-          
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_12" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="manufacturers/" class="md-nav__link ">
-              
   
   
   <span class="md-ellipsis">
@@ -3451,87 +3366,7 @@
   
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_7_12" id="__nav_7_12_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_12_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_12">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    For Manufacturers
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="manufacturers/design-requirements/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Design Requirements
-  
-
-    
-  </span>
-  
-  
-
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="manufacturers/reference-design/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Reference Design
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -4220,6 +4055,47 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rotorflight-flight-controllers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rotorflight flight controllers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#betaflight-flight-controllers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Betaflight flight controllers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#making-a-flight-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Making a flight controller?
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4244,12 +4120,109 @@
 
 
 <h1 id="hardware">Hardware<a class="headerlink" href="#hardware" title="Permanent link">&para;</a></h1>
-<div class="admonition info">
-<p class="admonition-title">Being written</p>
-<p>This page is part of the new Rotorflight documentation and is still
-being written. In the meantime, ask on the
-<a href="https://discord.gg/FyfMF4RwSA">Rotorflight Discord</a>.</p>
+<p>Rotorflight runs on purpose-built helicopter flight controllers, and on most
+Betaflight flight controllers with STM32 F4, F7, G4 or H7 processors.</p>
+<h2 id="rotorflight-flight-controllers">Rotorflight flight controllers<a class="headerlink" href="#rotorflight-flight-controllers" title="Permanent link">&para;</a></h2>
+<p>These are made for Rotorflight: servo and ESC headers, an RPM input and
+labelled ports, all set up out of the box. Choose the <strong>Board</strong> name below
+when <a href="../getting-started/flashing-the-firmware/">flashing</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Flight controller</th>
+<th>Board</th>
+<th>MCU</th>
+<th>Built-in receiver</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="radiomaster-nexus/">Radiomaster Nexus</a></td>
+<td><code>NEXUS_F7</code></td>
+<td>F722</td>
+<td>--</td>
+</tr>
+<tr>
+<td><a href="radiomaster-nexus/#nexus-x-and-nexus-xr">Radiomaster Nexus X</a></td>
+<td><code>NEXUS_X</code></td>
+<td>F722</td>
+<td>--</td>
+</tr>
+<tr>
+<td><a href="radiomaster-nexus/#nexus-x-and-nexus-xr">Radiomaster Nexus XR</a></td>
+<td><code>NEXUS_XR</code></td>
+<td>F722</td>
+<td>ExpressLRS</td>
+</tr>
+<tr>
+<td><a href="frsky-007/">FrSky VANTAC RF007</a></td>
+<td><code>VANTAC_RF007</code></td>
+<td>F722</td>
+<td>FrSky Archer+ or TW</td>
+</tr>
+<tr>
+<td><a href="flydragon-f722/">FlyDragon F722 V2.2</a></td>
+<td><code>FLYDRAGON_V2_2</code></td>
+<td>F722</td>
+<td>ExpressLRS</td>
+</tr>
+<tr>
+<td><a href="flydragon-f722/#flydragon-pro">FlyDragon PRO</a></td>
+<td><code>FLYDRAGON_PRO42688</code> / <code>FLYDRAGON_PRO6000</code></td>
+<td>F722</td>
+<td>ExpressLRS</td>
+</tr>
+<tr>
+<td><a href="flywing-heli-f405/">Flywing HELI405</a></td>
+<td><code>FLYWING_HELI405</code> (servo tail), <code>FLYWING_HELI405M</code> (motorised tail)</td>
+<td>F405</td>
+<td>--</td>
+</tr>
+<tr>
+<td><a href="goosky-f701/">GooSky F701-ELRS</a></td>
+<td><code>GOOSKY_F701</code></td>
+<td>F722</td>
+<td>ExpressLRS</td>
+</tr>
+<tr>
+<td><a href="goosky-f4mini/">GooSky F4 Mini</a></td>
+<td><code>GOOSKY_F4MINI</code></td>
+<td>F405</td>
+<td>--</td>
+</tr>
+<tr>
+<td><a href="matek-g474/">Matek G474-HELI / G474-HLITE</a></td>
+<td><code>MATEKG474HELI</code></td>
+<td>G474</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
+<p>Older FlyDragon versions (<code>FLYDRAGON_V1</code>, <code>FLYDRAGON_V2</code>) are also
+supported.</p>
+<div class="admonition tip">
+<p class="admonition-title">Repurposing outputs</p>
+<p>Every one of these can be remapped -- for a motorised tail, an extra
+servo, an LED strip -- with the <a href="../configurator/tabs/remap-fc/">Remap FC</a>
+tab (2.4) or the CLI snippets on each board's page.</p>
 </div>
+<h2 id="betaflight-flight-controllers">Betaflight flight controllers<a class="headerlink" href="#betaflight-flight-controllers" title="Permanent link">&para;</a></h2>
+<p>Most Betaflight flight controllers work, but they're built for multirotors:
+their outputs must be <a href="../setup/remapping/">remapped</a> for servos, and
+you'll be soldering. See <a href="betaflight-diy/">Betaflight FC (DIY)</a>.</p>
+<p>Look for:</p>
+<ul>
+<li>an F4, F7, G4 or H7 processor (F7 / H7 preferred: more UARTs, and
+  inversion for SBUS and F.Port);</li>
+<li>enough outputs for 4 servos and 1-2 motors, plus a pad for the RPM input;</li>
+<li>a blackbox flash chip;</li>
+<li>a gyro that copes with helicopter vibration -- soft-mount boards with
+  sensitive gyros such as the MPU-6500.</li>
+</ul>
+<p>Boards with a built-in <strong>SPI</strong> receiver (rather than a UART receiver) are
+generally not usable.</p>
+<h2 id="making-a-flight-controller">Making a flight controller?<a class="headerlink" href="#making-a-flight-controller" title="Permanent link">&para;</a></h2>
+<p>See <a href="manufacturers/">For Manufacturers</a>.</p>
 
 
 
