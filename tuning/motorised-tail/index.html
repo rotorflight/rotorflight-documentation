@@ -2779,10 +2779,6 @@
       
         
       
-        
-      
-        
-      
     
     
     
@@ -2901,34 +2897,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../feedforward/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Feedforward
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../governor/" class="md-nav__link">
         
   
@@ -3022,6 +2990,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Motorised Tail & TTA
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -3038,6 +3024,64 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tail-torque-assist-tta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tail Torque Assist (TTA)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tail Torque Assist (TTA)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tuning-tta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tuning TTA
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3059,34 +3103,6 @@
     
   
     Rescue
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../examples/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Tuning Examples
   
 
     
@@ -4290,6 +4306,53 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tail-torque-assist-tta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tail Torque Assist (TTA)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tail Torque Assist (TTA)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tuning-tta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tuning TTA
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4314,12 +4377,63 @@
 
 
 <h1 id="motorised-tail-tta">Motorised Tail &amp; TTA<a class="headerlink" href="#motorised-tail-tta" title="Permanent link">&para;</a></h1>
-<div class="admonition info">
-<p class="admonition-title">Being written</p>
-<p>This page is part of the new Rotorflight documentation and is still
-being written. In the meantime, ask on the
-<a href="https://discord.gg/FyfMF4RwSA">Rotorflight Discord</a>.</p>
-</div>
+<p>Small helicopters often drive the tail rotor with its own motor instead of
+a variable-pitch tail. A motorised tail has plenty of authority in one
+direction -- spin the tail motor faster -- but little in the other: the
+slowest it can go is idle, and a fixed-pitch rotor can't push the other way.</p>
+<h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
+<p>On the <a href="../../configurator/tabs/mixer/#tail-rotor-settings">Mixer</a> tab, set
+<strong>Tail rotor type</strong> to <em>Motorised</em>. The tail ESC goes on motor output 2.</p>
+<ul>
+<li><strong>Yaw calibration</strong>: leave at 100%.</li>
+<li><strong>Motor idle throttle</strong>: just high enough that the tail motor keeps
+  turning reliably.</li>
+<li><strong>Yaw center offset</strong>: the tail throttle for a zero-yaw hover, so the
+  controller starts from the right place.</li>
+</ul>
+<p>Set the tail ESC's protocol on the <a href="../../configurator/tabs/motors/">Motors</a>
+tab, and give it an RPM signal (a second frequency input or bidirectional
+DShot) so it shows up in logs and can be used for TTA. Turn off the tail
+ESC's braking -- see <a href="../../setup/blheli-s-to-bluejay/">BLHeli_S to Bluejay</a>.</p>
+<h2 id="tail-torque-assist-tta">Tail Torque Assist (TTA)<a class="headerlink" href="#tail-torque-assist-tta" title="Permanent link">&para;</a></h2>
+<p>When the tail motor is already at idle and the helicopter needs more yaw in
+that direction, <strong>TTA</strong> briefly <em>raises the main rotor headspeed</em>. More
+headspeed means more main rotor torque, which turns the helicopter the way
+the tail can't. It needs the <a href="../../setup/governor/">governor</a>.</p>
+<p>Settings, on the <a href="../../configurator/tabs/profiles/#tail-rotor-settings">Profiles</a>
+tab:</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th style="text-align: center;">Default</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TTA gain</strong></td>
+<td style="text-align: center;">0 (off)</td>
+<td>How strongly TTA raises the headspeed. Typically 50-150.</td>
+</tr>
+<tr>
+<td><strong>TTA limit</strong> [%]</td>
+<td style="text-align: center;">20</td>
+<td>The most headspeed increase allowed. Typically 20-50%.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tuning-tta">Tuning TTA<a class="headerlink" href="#tuning-tta" title="Permanent link">&para;</a></h3>
+<p>Push the helicopter into a situation where it runs out of tail authority:</p>
+<ul>
+<li>fly <strong>backwards fast</strong>, tail into the wind;</li>
+<li><strong>tail slides</strong> and <strong>backward loops</strong>.</li>
+</ul>
+<p>If the helicopter suddenly swings round -- sometimes up to 180° -- raise the
+TTA gain. Repeat until the swing is mostly gone.</p>
+<p>You may never remove it completely. On some helicopters the main motor
+simply doesn't have the spare power to provide the torque needed.</p>
+<p>Tune the <a href="../governor/">governor</a> with TTA off first, then bring TTA in.</p>
 
 
 

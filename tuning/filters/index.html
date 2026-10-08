@@ -16,7 +16,7 @@
         <link rel="prev" href="../process/">
       
       
-        <link rel="next" href="../feedforward/">
+        <link rel="next" href="../governor/">
       
       
         
@@ -2779,10 +2779,6 @@
       
         
       
-        
-      
-        
-      
     
     
     
@@ -2882,6 +2878,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Filter Tuning
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -2899,34 +2913,91 @@
 
       </a>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../feedforward/" class="md-nav__link">
         
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-  <span class="md-ellipsis">
+  
     
   
-    Feedforward
   
-
-    
-  </span>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-a-test-flight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. A test flight
+      
+    </span>
+  </a>
   
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-read-the-spectrum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Read the spectrum
+      
+    </span>
+  </a>
   
-
-      </a>
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-identify-the-peaks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Identify the peaks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-adjust" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Adjust
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3d-flying" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3D flying
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overspeed-and-autorotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overspeed and autorotation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -3059,34 +3130,6 @@
     
   
     Rescue
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../examples/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Tuning Examples
   
 
     
@@ -4290,6 +4333,80 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-a-test-flight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. A test flight
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-read-the-spectrum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Read the spectrum
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-identify-the-peaks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Identify the peaks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-adjust" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Adjust
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3d-flying" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3D flying
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overspeed-and-autorotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overspeed and autorotation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4314,12 +4431,88 @@
 
 
 <h1 id="filter-tuning">Filter Tuning<a class="headerlink" href="#filter-tuning" title="Permanent link">&para;</a></h1>
-<div class="admonition info">
-<p class="admonition-title">Being written</p>
-<p>This page is part of the new Rotorflight documentation and is still
-being written. In the meantime, ask on the
-<a href="https://discord.gg/FyfMF4RwSA">Rotorflight Discord</a>.</p>
-</div>
+<p>Filters keep vibration out of the control loop. Too little filtering lets
+vibration through to the servos -- buzzing, heat, and a tune you can't push.
+Too much adds delay -- a soft helicopter that can't take high gains. The aim
+is filtering <em>just strong enough</em> to remove the peaks.</p>
+<p>Start with the <a href="../../setup/rpm-filters/">RPM filter</a> at Medium, one lowpass
+filter around 100 Hz and the dynamic filter with a few notches -- the
+defaults. Then check with a log.</p>
+<h2 id="1-a-test-flight">1. A test flight<a class="headerlink" href="#1-a-test-flight" title="Permanent link">&para;</a></h2>
+<p>Take off at the highest headspeed you'll use and hover for a minute or two,
+then fly a little forward flight. If you see or hear fast vibration on the
+first hover, land at once and investigate before going on.</p>
+<p>Log at a high rate (1 kHz or more), with <strong>Raw Gyro</strong> and <strong>Gyro</strong> ticked
+on the <a href="../../configurator/tabs/blackbox/">Blackbox</a> tab.</p>
+<h2 id="2-read-the-spectrum">2. Read the spectrum<a class="headerlink" href="#2-read-the-spectrum" title="Permanent link">&para;</a></h2>
+<p>In the <a href="https://blackbox.rotorflight.org">Blackbox Explorer</a>:</p>
+<ol>
+<li>Find a steady stretch at constant headspeed. Mark its start with <strong>I</strong>
+   and its end with <strong>O</strong>.</li>
+<li>Show the <strong>filtered gyro</strong> for roll, pitch and yaw, and open the
+   <strong>spectrum</strong> (frequency analyser).</li>
+</ol>
+<p>A well-filtered helicopter shows large values at the far left (the
+helicopter's real movement), low values everywhere else, and <strong>no sharp
+peaks</strong> -- maybe some small bumps between 40 and 80 Hz.</p>
+<h2 id="3-identify-the-peaks">3. Identify the peaks<a class="headerlink" href="#3-identify-the-peaks" title="Permanent link">&para;</a></h2>
+<p>Divide each peak's frequency by the main rotor and tail rotor frequencies:</p>
+<blockquote>
+<p>main rotor frequency = headspeed ÷ 60   (2400 rpm → 40 Hz)</p>
+<p>tail rotor frequency = main rotor frequency × tail gear ratio</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Peak at</th>
+<th>Is</th>
+<th>Do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A whole multiple of the main rotor frequency</td>
+<td>A main rotor harmonic</td>
+<td>Raise the RPM filter strength, or add that harmonic with custom notches.</td>
+</tr>
+<tr>
+<td>A multiple of the tail rotor frequency</td>
+<td>A tail rotor harmonic</td>
+<td>As above, for the tail.</td>
+</tr>
+<tr>
+<td>The motor frequency</td>
+<td>Motor vibration</td>
+<td>Make sure the motor notch is on (Medium and High have it).</td>
+</tr>
+<tr>
+<td>A fixed frequency that doesn't move with headspeed</td>
+<td>A frame resonance -- skids, fin, boom, belt</td>
+<td>Check the helicopter mechanically first. If it can't be fixed, add a <strong>notch filter</strong> centred on it.</td>
+</tr>
+</tbody>
+</table>
+<p>A broad <strong>bump</strong> at the 1× or 2× main rotor frequency usually means
+<strong>blade tracking or balance</strong> is off. Check the blades before adding filters.</p>
+<h2 id="4-adjust">4. Adjust<a class="headerlink" href="#4-adjust" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Widen a notch by lowering its <strong>Q</strong> -- but not below 2.0, which adds a lot
+  of delay.</li>
+<li>The <strong>lowpass</strong> filter shouldn't go below about 60 Hz; below 80 Hz only if
+  you really need it. Lower it only if there's a broad "grass" of noise at
+  60-80 Hz, especially during manoeuvres.</li>
+<li>With RPM filtering working well, the <strong>dynamic filter</strong> needs only 2-4
+  notches.</li>
+</ul>
+<h2 id="3d-flying">3D flying<a class="headerlink" href="#3d-flying" title="Permanent link">&para;</a></h2>
+<p>3D raises vibration, especially at the main rotor's 2× harmonic. Check a
+log of 3D flight too. Peaks that only appear there may need a wider notch
+(lower Q) on the 2× harmonic. A tall "grass" floor is usually fine.</p>
+<h2 id="overspeed-and-autorotation">Overspeed and autorotation<a class="headerlink" href="#overspeed-and-autorotation" title="Permanent link">&para;</a></h2>
+<p>The RPM filter follows the <strong>motor</strong> RPM. When a one-way bearing lets the
+rotor turn faster than the motor -- in an autorotation, or the governor easing
+off in a dive -- the notches are briefly in the wrong place. The dynamic
+filter covers that gap; keep a couple of its notches on.</p>
 
 
 
@@ -4374,13 +4567,13 @@ being written. In the meantime, ask on the
         
         
           
-          <a href="../feedforward/" class="md-footer__link md-footer__link--next" aria-label="Next: Feedforward">
+          <a href="../governor/" class="md-footer__link md-footer__link--next" aria-label="Next: Governor Tuning">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Feedforward
+                Governor Tuning
               </div>
             </div>
             <div class="md-footer__button md-icon">

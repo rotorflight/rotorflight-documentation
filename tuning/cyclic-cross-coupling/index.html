@@ -2779,10 +2779,6 @@
       
         
       
-        
-      
-        
-      
     
     
     
@@ -2901,34 +2897,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../feedforward/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Feedforward
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../governor/" class="md-nav__link">
         
   
@@ -2994,6 +2962,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cyclic Cross-Coupling
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -3010,6 +2996,69 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-it-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What it is
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Settings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tuning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tuning
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constant-cross-coupling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constant cross-coupling
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3059,34 +3108,6 @@
     
   
     Rescue
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../examples/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Tuning Examples
   
 
     
@@ -4290,6 +4311,58 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-it-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What it is
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Settings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tuning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tuning
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constant-cross-coupling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constant cross-coupling
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4314,12 +4387,67 @@
 
 
 <h1 id="cyclic-cross-coupling">Cyclic Cross-Coupling<a class="headerlink" href="#cyclic-cross-coupling" title="Permanent link">&para;</a></h1>
-<div class="admonition info">
-<p class="admonition-title">Being written</p>
-<p>This page is part of the new Rotorflight documentation and is still
-being written. In the meantime, ask on the
-<a href="https://discord.gg/FyfMF4RwSA">Rotorflight Discord</a>.</p>
-</div>
+<h2 id="what-it-is">What it is<a class="headerlink" href="#what-it-is" title="Permanent link">&para;</a></h2>
+<p>Give a hard pitch input and the helicopter also rolls a little. The frame,
+heavy around the pitch axis, lags behind the rotor disc; the difference
+loads the rotor, and through gyroscopic precession that load comes out as a
+roll. You can see it:</p>
+<ul>
+<li>at the <strong>stops of tic-tocs</strong>, as the centre of the rotor rotating a little;</li>
+<li>in a hover, by <strong>shaking the elevator stick</strong> back and forth -- the
+  helicopter tilts in roll and drifts in yaw.</li>
+</ul>
+<p><strong>Cyclic cross-coupling compensation</strong> feeds a little of the pitch command
+(how fast it's changing) into roll, so the two effects cancel.</p>
+<h2 id="settings">Settings<a class="headerlink" href="#settings" title="Permanent link">&para;</a></h2>
+<p>On the <a href="../../configurator/tabs/profiles/#main-rotor-settings">Profiles</a> tab:</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th style="text-align: center;">Default</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cyclic Cross-Coupling</strong></td>
+<td style="text-align: center;">on</td>
+<td>Enables it.</td>
+</tr>
+<tr>
+<td><strong>Cross-Coupling Gain</strong></td>
+<td style="text-align: center;">50</td>
+<td>Strength of the pitch-to-roll compensation.</td>
+</tr>
+<tr>
+<td><strong>Cross-Coupling Ratio</strong> [%]</td>
+<td style="text-align: center;">0</td>
+<td>Adds the opposite (roll-to-pitch) compensation, as a percentage of the pitch-to-roll.</td>
+</tr>
+<tr>
+<td><strong>Cross-Coupling Cutoff</strong> [Hz]</td>
+<td style="text-align: center;">2.5</td>
+<td>How fast the compensation acts.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tuning">Tuning<a class="headerlink" href="#tuning" title="Permanent link">&para;</a></h2>
+<p>Tune this early, while the gains are still soft and the coupling is easy to
+see.</p>
+<ol>
+<li>Hover and shake the elevator stick, or fly tic-tocs.</li>
+<li>If the helicopter rolls, raise the <strong>gain</strong> in small steps until the roll
+   is gone, or until raising it stops making a difference.</li>
+<li>Check with piro-flips: cross-coupling compensation changes how the
+   helicopter responds at different points of the piro-flip, so increase it
+   gradually to get used to the feel.</li>
+</ol>
+<p>Stiffer main rotor dampers usually need <em>less</em> gain.</p>
+<h2 id="constant-cross-coupling">Constant cross-coupling<a class="headerlink" href="#constant-cross-coupling" title="Permanent link">&para;</a></h2>
+<p>Very hard dampers, a very low headspeed or some head designs can leave the
+blades' flapping hinge off-centre. Then the coupling is constant rather than
+only during pitch changes. The <strong>ratio</strong> setting can help with that.</p>
 
 
 

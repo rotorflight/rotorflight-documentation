@@ -2779,10 +2779,6 @@
       
         
       
-        
-      
-        
-      
     
     
     
@@ -2881,34 +2877,6 @@
     
   
     Filter Tuning
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="feedforward/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Feedforward
   
 
     
@@ -3049,34 +3017,6 @@
     
   
     Rescue
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="examples/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Tuning Examples
   
 
     
@@ -4280,6 +4220,69 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#before-you-tune" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before you tune
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-too-high-looks-like" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What "too high" looks like
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The order
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools-that-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tools that help
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The settings
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4304,12 +4307,85 @@
 
 
 <h1 id="tuning">Tuning<a class="headerlink" href="#tuning" title="Permanent link">&para;</a></h1>
-<div class="admonition info">
-<p class="admonition-title">Being written</p>
-<p>This page is part of the new Rotorflight documentation and is still
-being written. In the meantime, ask on the
-<a href="https://discord.gg/FyfMF4RwSA">Rotorflight Discord</a>.</p>
-</div>
+<p>Rotorflight's defaults are chosen to be safe and flyable on any properly
+set-up helicopter. Most helicopters hover and fly well on them -- but they're
+deliberately conservative, so with some tuning yours will feel more
+locked-in and precise.</p>
+<h2 id="before-you-tune">Before you tune<a class="headerlink" href="#before-you-tune" title="Permanent link">&para;</a></h2>
+<p>Tuning only works on a helicopter that's set up correctly. Check first:</p>
+<ul>
+<li>[ ] The <a href="../setup/mixer/">mixer is calibrated</a>: commanded blade angles
+      match real ones. The defaults assume this.</li>
+<li>[ ] The <a href="../setup/rpm-filters/">RPM filter</a> is working, and a
+      <a href="filters/">Blackbox log</a> shows a clean gyro. <strong>Don't raise D on an
+      unfiltered helicopter</strong> -- it will cook servos.</li>
+<li>[ ] The headspeed is steady -- <a href="governor/">tune the governor</a> first if
+      it isn't.</li>
+<li>[ ] No slop: worn ball links, a sticky tail pitch slider or a loose servo
+      arm can't be tuned out, and make the helicopter wag or wobble whatever
+      the gains.</li>
+<li>[ ] Blackbox logging is on, so you can see what happened.</li>
+</ul>
+<h2 id="what-too-high-looks-like">What "too high" looks like<a class="headerlink" href="#what-too-high-looks-like" title="Permanent link">&para;</a></h2>
+<p>Raise a gain until the helicopter starts to misbehave, then back off. How
+hard you test depends on how you fly:</p>
+<table>
+<thead>
+<tr>
+<th>You fly</th>
+<th>Test with</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sport</td>
+<td>Sharp stick taps; fast forward flight with a sudden stop; hard climb-outs</td>
+</tr>
+<tr>
+<td>Aerobatics</td>
+<td>Flips and rolls with crisp stops; tic-tocs</td>
+</tr>
+<tr>
+<td>3D</td>
+<td>Everything above, at full rates and collective; piro-flips; fast backwards flight</td>
+</tr>
+</tbody>
+</table>
+<p>Fast wobbles (5-8 Hz -- a shudder) come from <strong>P</strong> or <strong>D</strong> too high. Slow
+oscillations (around 1 Hz -- a wallow) come from <strong>I</strong> too high, or P too low.</p>
+<h2 id="the-order">The order<a class="headerlink" href="#the-order" title="Permanent link">&para;</a></h2>
+<p>Follow <a href="process/">Tuning Process</a>:</p>
+<ol>
+<li>Cyclic cross-coupling and collective-to-pitch compensation, while the
+   gains are still soft and the effects are easy to see.</li>
+<li>Cyclic <strong>P</strong>, then <strong>D</strong>, then <strong>I</strong>.</li>
+<li>Cyclic <strong>F</strong>, then <strong>B</strong> if you want a sharper feel.</li>
+<li>The tail: P, D, I, then the stop gains and precompensation.</li>
+<li><a href="high-speed-integral/">High Speed Integral</a> for fast forward flight.</li>
+</ol>
+<p>Change <strong>one thing at a time</strong>, and keep notes. A profile per tune
+(<a href="../setup/profile-switching/">Profile Switching</a>) lets you compare two in
+the same flight.</p>
+<h2 id="tools-that-help">Tools that help<a class="headerlink" href="#tools-that-help" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Blackbox</strong> -- logs show what your eyes can't: whether I is doing the
+  work F should, whether a stop overshoots, where the noise is. Open logs in
+  the <a href="https://blackbox.rotorflight.org">Blackbox Explorer</a>.</li>
+<li><strong><a href="../configurator/tabs/adjustments/">Adjustments</a></strong> -- sweep a gain on
+  a knob in flight, then read the value off afterwards.</li>
+<li><strong>The Lua suites</strong> -- change gains at the field between flights.</li>
+<li><strong>Tune Advisor</strong> <em>(2.4, Ethos suite)</em> -- the flight controller measures
+  how the helicopter follows your sticks in rate flight; after each flight
+  the radio combines your recent flights and suggests one change per axis --
+  for example F and rates when it turns faster or slower than asked, or
+  I-term relax for bounce-back after stops. See
+  <em>Flight Tuning → Tune Advisor</em> in the Ethos suite.</li>
+<li><strong><a href="../configurator/tabs/presets/">Presets</a></strong> -- complete tunes for
+  popular helicopters, as a starting point.</li>
+</ul>
+<h2 id="the-settings">The settings<a class="headerlink" href="#the-settings" title="Permanent link">&para;</a></h2>
+<p>Each setting is explained on the <a href="../configurator/tabs/profiles/">Profiles</a>
+tab page, with a "Why these defaults" section and a symptom table.</p>
 
 
 

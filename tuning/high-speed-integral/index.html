@@ -2779,10 +2779,6 @@
       
         
       
-        
-      
-        
-      
     
     
     
@@ -2901,34 +2897,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../feedforward/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Feedforward
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../governor/" class="md-nav__link">
         
   
@@ -2966,6 +2934,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    High Speed Integral
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -2982,6 +2968,69 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-it-does" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What it does
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Settings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tuning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tuning
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-tic-tocs-are-tricky" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why tic-tocs are tricky
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3059,34 +3108,6 @@
     
   
     Rescue
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../examples/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Tuning Examples
   
 
     
@@ -4290,6 +4311,58 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-it-does" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What it does
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Settings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tuning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tuning
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-tic-tocs-are-tricky" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why tic-tocs are tricky
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4314,12 +4387,81 @@
 
 
 <h1 id="high-speed-integral">High Speed Integral<a class="headerlink" href="#high-speed-integral" title="Permanent link">&para;</a></h1>
-<div class="admonition info">
-<p class="admonition-title">Being written</p>
-<p>This page is part of the new Rotorflight documentation and is still
-being written. In the meantime, ask on the
-<a href="https://discord.gg/FyfMF4RwSA">Rotorflight Discord</a>.</p>
-</div>
+<p><strong>In short:</strong> HSI keeps the helicopter's attitude steady in fast flight and
+on big collective changes. The default works for most helicopters; raise it
+if the helicopter balloons, dives or bobbles in fast passes; lower it if it
+bobbles at the stops of tic-tocs.</p>
+<h2 id="what-it-does">What it does<a class="headerlink" href="#what-it-does" title="Permanent link">&para;</a></h2>
+<p>A rotor disc moving fast through the air produces more lift on the
+advancing side and the front than at rest. In fast forward flight with
+positive collective the helicopter tends to pitch up; with negative
+collective, the opposite. The effect depends on both airspeed and
+collective -- and it reverses when the collective does.</p>
+<p>The <strong>HSI offset</strong> (the <em>O</em> term) is an integral that works in proportion to
+the collective. It builds up the correction needed for the current flight
+condition, and because it scales with collective, the correction reverses
+automatically when you reverse the collective. On other flybarless systems
+you may have seen this as the swashplate "arching" when you move the
+collective with the helicopter tilted.</p>
+<h2 id="settings">Settings<a class="headerlink" href="#settings" title="Permanent link">&para;</a></h2>
+<p>On the <a href="../../configurator/tabs/profiles/#pid-controller-settings">Profiles</a>
+tab, for roll and pitch:</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th style="text-align: center;">Default</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>HSI Offset Gain</strong> (O)</td>
+<td style="text-align: center;">50</td>
+<td>How strongly the offset builds.</td>
+</tr>
+<tr>
+<td><strong>HSI Offset Limit</strong></td>
+<td style="text-align: center;">90°</td>
+<td>The most offset allowed.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tuning">Tuning<a class="headerlink" href="#tuning" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>You see</th>
+<th>Try</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pitches up or dives in fast forward flight</td>
+<td>Raise HSI gain</td>
+</tr>
+<tr>
+<td>Attitude jumps on big collective changes at speed</td>
+<td>Raise HSI gain</td>
+</tr>
+<tr>
+<td>Bobbles or restless at high collective</td>
+<td>Lower HSI gain</td>
+</tr>
+<tr>
+<td>Bobbles at the stops of tic-tocs</td>
+<td>Lower HSI gain</td>
+</tr>
+</tbody>
+</table>
+<p>A good test: tilt into fast forward flight at high collective and jab the
+elevator. Raise the gain until it starts to bobble, then back off.</p>
+<h2 id="why-tic-tocs-are-tricky">Why tic-tocs are tricky<a class="headerlink" href="#why-tic-tocs-are-tricky" title="Permanent link">&para;</a></h2>
+<p>HSI works best when the correction needed reverses together with the
+collective. In tic-tocs, a small error also reverses at every stop -- so a
+high HSI gain can start to treat it as a correction, and bobble. Rotorflight
+transfers HSI into the normal I-term when large cyclic inputs are given,
+which limits this; if it still happens, lower the gain.</p>
 
 
 

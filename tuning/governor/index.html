@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://doc.rotorflight.org/tuning/governor/">
       
       
-        <link rel="prev" href="../feedforward/">
+        <link rel="prev" href="../filters/">
       
       
         <link rel="next" href="../high-speed-integral/">
@@ -2779,10 +2779,6 @@
       
         
       
-        
-      
-        
-      
     
     
     
@@ -2898,34 +2894,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../feedforward/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Feedforward
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -2937,6 +2905,24 @@
       
         
       
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governor Tuning
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -2954,6 +2940,91 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preparation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-collective-precompensation-and-f" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Collective precompensation and F
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-i-gain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. I-gain
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-p-gain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. P-gain
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-d-gain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. D-gain
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#symptoms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Symptoms
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3059,34 +3130,6 @@
     
   
     Rescue
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../examples/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Tuning Examples
   
 
     
@@ -4290,6 +4333,80 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preparation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-collective-precompensation-and-f" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Collective precompensation and F
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-i-gain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. I-gain
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-p-gain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. P-gain
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-d-gain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. D-gain
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#symptoms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Symptoms
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4314,12 +4431,91 @@
 
 
 <h1 id="governor-tuning">Governor Tuning<a class="headerlink" href="#governor-tuning" title="Permanent link">&para;</a></h1>
-<div class="admonition info">
-<p class="admonition-title">Being written</p>
-<p>This page is part of the new Rotorflight documentation and is still
-being written. In the meantime, ask on the
-<a href="https://discord.gg/FyfMF4RwSA">Rotorflight Discord</a>.</p>
+<p>The goal: a steady headspeed through any manoeuvre, without surging or
+hunting. Ideally the <strong>precompensation</strong> (feedforward) does most of the
+work -- adding throttle <em>before</em> the headspeed sags -- with <strong>P</strong> making quick
+corrections and <strong>I</strong> holding the headspeed over time.</p>
+<p>You need the governor set up and working first -- see
+<a href="../../setup/governor-setup/">Governor Setup</a>. The gains are per profile, on
+the <a href="../../configurator/tabs/profiles/#governor-settings">Profiles</a> tab.</p>
+<div class="admonition note">
+<p class="admonition-title">A governor can be too good</p>
+<p>A well-tuned governor delivers a lot of torque, and the tail has to
+counter all of it. If the tail can't hold during hard collective, the
+answer may be a softer governor, less collective, or more tail authority
+(bigger tail blades, a higher tail ratio) -- not more tail gain.</p>
 </div>
+<h2 id="preparation">Preparation<a class="headerlink" href="#preparation" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Motorised tail: set <strong>TTA gain</strong> to 0 while tuning the governor.</li>
+<li>On the <a href="../../configurator/tabs/blackbox/">Blackbox</a> tab, log at 1 kHz with
+  the <strong>Governor</strong> field on, and <strong>Debug mode</strong> <code>GOVERNOR</code> for extra detail.</li>
+<li>Change one gain at a time. With the Lua suite you can change gains at the
+  field between flights; an efficient routine is to fly three or four values
+  around the default for one gain, logging each, then compare.</li>
+</ul>
+<p>The test manoeuvre: hard <strong>pitch pumps</strong> -- full positive, full negative,
+repeated -- and fast climb-outs. Look at the headspeed trace in the log.</p>
+<h2 id="1-collective-precompensation-and-f">1. Collective precompensation and F<a class="headerlink" href="#1-collective-precompensation-and-f" title="Permanent link">&para;</a></h2>
+<p><strong>Collective</strong> precomp (default 50) adds throttle as collective rises; the
+<strong>Feedforward Gain</strong> (default 10) scales all the precompensation together.</p>
+<ul>
+<li>Headspeed <strong>drops</strong> on each pump: raise collective precomp (or F).</li>
+<li>Headspeed <strong>rises</strong> above target on each pump: lower it.</li>
+</ul>
+<p>Try steps of about 10. Then tune <strong>Cyclic</strong> and <strong>Yaw</strong> precomp the same
+way, with hard cyclic and pirouettes.</p>
+<h2 id="2-i-gain">2. I-gain<a class="headerlink" href="#2-i-gain" title="Permanent link">&para;</a></h2>
+<p>Raise <strong>I</strong> (default 50) until a slow oscillation in headspeed appears --
+during or after the pumps -- then reduce it by about a third. Steps of about
+25.</p>
+<h2 id="3-p-gain">3. P-gain<a class="headerlink" href="#3-p-gain" title="Permanent link">&para;</a></h2>
+<p>Raise <strong>P</strong> (default 40) until fast oscillations appear, then reduce it by
+about a third. Steps of about 10.</p>
+<p>If the headspeed surges or hunts overall, <strong>Master Gain</strong> (default 40)
+scales P, I and D together.</p>
+<h2 id="4-d-gain">4. D-gain<a class="headerlink" href="#4-d-gain" title="Permanent link">&para;</a></h2>
+<p>Usually not needed. Larger helicopters, with heavy rotors, may benefit from
+a little.</p>
+<h2 id="symptoms">Symptoms<a class="headerlink" href="#symptoms" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>You see</th>
+<th>Try</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Headspeed sags on collective, recovers slowly</td>
+<td>Raise collective precomp / F, then I</td>
+</tr>
+<tr>
+<td>Headspeed overshoots after a pump</td>
+<td>Lower precomp, or lower P</td>
+</tr>
+<tr>
+<td>Slow headspeed wander, ~1 Hz</td>
+<td>Lower I</td>
+</tr>
+<tr>
+<td>Fast headspeed oscillation, audible surging</td>
+<td>Lower P or Master Gain</td>
+</tr>
+<tr>
+<td>Throttle near 100% in a hover</td>
+<td>Headspeed too high for the power system -- lower it or change gearing</td>
+</tr>
+<tr>
+<td>Motor bogs, then overspeeds in descents</td>
+<td>Turn on <strong>Dynamic Minimum Throttle</strong></td>
+</tr>
+<tr>
+<td>Pack sag makes headspeed fall late in the flight</td>
+<td>Turn on <strong>Voltage Compensation</strong> (needs Battery ADC)</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -4357,7 +4553,7 @@ being written. In the meantime, ask on the
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../feedforward/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Feedforward">
+          <a href="../filters/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Filter Tuning">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -4367,7 +4563,7 @@ being written. In the meantime, ask on the
                 Previous
               </span>
               <div class="md-ellipsis">
-                Feedforward
+                Filter Tuning
               </div>
             </div>
           </a>

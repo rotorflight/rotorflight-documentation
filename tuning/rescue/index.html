@@ -16,7 +16,7 @@
         <link rel="prev" href="../motorised-tail/">
       
       
-        <link rel="next" href="../examples/">
+        <link rel="next" href="../../hardware/">
       
       
         
@@ -2779,10 +2779,6 @@
       
         
       
-        
-      
-        
-      
     
     
     
@@ -2881,34 +2877,6 @@
     
   
     Filter Tuning
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../feedforward/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Feedforward
   
 
     
@@ -3050,6 +3018,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rescue
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -3067,34 +3053,69 @@
 
       </a>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../examples/" class="md-nav__link">
         
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-  <span class="md-ellipsis">
+  
     
   
-    Tuning Examples
   
-
-    
-  </span>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setting-it-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setting it up
+      
+    </span>
+  </a>
   
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-happens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What happens
+      
+    </span>
+  </a>
   
-
-      </a>
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-the-collective-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setting the collective values
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test it
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -4290,6 +4311,58 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setting-it-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setting it up
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-happens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What happens
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-the-collective-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setting the collective values
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test it
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4314,11 +4387,85 @@
 
 
 <h1 id="rescue">Rescue<a class="headerlink" href="#rescue" title="Permanent link">&para;</a></h1>
-<div class="admonition info">
-<p class="admonition-title">Being written</p>
-<p>This page is part of the new Rotorflight documentation and is still
-being written. In the meantime, ask on the
-<a href="https://discord.gg/FyfMF4RwSA">Rotorflight Discord</a>.</p>
+<p>Rescue is a panic button. Flip the RESCUE switch and the flight controller
+levels the helicopter -- flipping it upright first if it's inverted --
+pulls up, climbs, and then holds a hover until you take over.</p>
+<p>It needs the accelerometer <a href="../../configurator/tabs/setup/#calibrate-accelerometer">calibrated</a>
+and turned on.</p>
+<h2 id="setting-it-up">Setting it up<a class="headerlink" href="#setting-it-up" title="Permanent link">&para;</a></h2>
+<ol>
+<li>On the <a href="../../configurator/tabs/modes/">Modes</a> tab, put <strong>RESCUE</strong> on a
+   switch -- a momentary or spring-loaded switch works well, so it ends
+   when you let go.</li>
+<li>On the <a href="../../configurator/tabs/profiles/#rescue-settings">Profiles</a> tab,
+   turn on <strong>Enable Rescue</strong> in each profile you want it in.</li>
+<li>Choose <strong>Flip to upright</strong>: <em>Flip</em> (the default) rights an inverted
+   helicopter; <em>No-Flip</em> recovers in whatever orientation it's in.</li>
+</ol>
+<p>The flight controller won't arm while the rescue switch is on.</p>
+<h2 id="what-happens">What happens<a class="headerlink" href="#what-happens" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Lasts</th>
+<th>Collective</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Pull-up</strong></td>
+<td>Pull-up Time (0.3 s)</td>
+<td>Pull-up Collective (65%)</td>
+</tr>
+<tr>
+<td><strong>Flip</strong> (if inverted and Flip is on)</td>
+<td>Until upright, or Flip Fail Time (2 s)</td>
+<td>--</td>
+</tr>
+<tr>
+<td><strong>Climb</strong></td>
+<td>Climb Time (1 s)</td>
+<td>Climb Collective (45%)</td>
+</tr>
+<tr>
+<td><strong>Hover</strong></td>
+<td>Until you release the switch</td>
+<td>Hover Collective (35%)</td>
+</tr>
+<tr>
+<td><strong>Exit</strong></td>
+<td>Exit Time (0.5 s)</td>
+<td>Collective changes smoothed, so a sudden negative stick can't drive it into the ground</td>
+</tr>
+</tbody>
+</table>
+<p>With a barometer, <strong>Enable Altitude Hold</strong> makes the hover hold a set
+altitude, using the altitude PID settings.</p>
+<h2 id="setting-the-collective-values">Setting the collective values<a class="headerlink" href="#setting-the-collective-values" title="Permanent link">&para;</a></h2>
+<p>The defaults are percentages of your collective range, for a typical sport
+setup. Check them for your helicopter:</p>
+<ul>
+<li><strong>Hover Collective</strong> -- set it to what your helicopter actually needs to
+  hover. Too low and it sinks during rescue; too high and it climbs away.</li>
+<li><strong>Climb Collective</strong> -- enough for a firm climb.</li>
+<li><strong>Pull-up Collective</strong> -- a strong initial pull to arrest a descent.</li>
+</ul>
+<p><strong>Leveling Gain</strong>, <strong>Flip-to-Upright Gain</strong> and the <strong>Max Levelling Rate</strong>
+and <strong>Acceleration</strong> set how aggressively it rights itself. Larger
+helicopters may need slower rates.</p>
+<h2 id="test-it">Test it<a class="headerlink" href="#test-it" title="Permanent link">&para;</a></h2>
+<p>Test at a safe height, with plenty of room, starting the right way up:</p>
+<ol>
+<li>Climb high, put the helicopter in a gentle bank, and flip the switch.
+   It should level, climb and settle into a hover.</li>
+<li>Adjust the hover collective until the hover holds height.</li>
+<li>Only then try it from steeper attitudes, and inverted.</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Rescue needs height. From low down, inverted, a flip and pull-up may
+not finish before the ground arrives.</p>
 </div>
 
 
@@ -4374,13 +4521,13 @@ being written. In the meantime, ask on the
         
         
           
-          <a href="../examples/" class="md-footer__link md-footer__link--next" aria-label="Next: Tuning Examples">
+          <a href="../../hardware/" class="md-footer__link md-footer__link--next" aria-label="Next: Hardware">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Tuning Examples
+                Hardware
               </div>
             </div>
             <div class="md-footer__button md-icon">
