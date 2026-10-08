@@ -163,19 +163,14 @@ nav:
   - Hardware:
       - hardware/index.md
       - Radiomaster Nexus: hardware/radiomaster-nexus.md
-      - FrSky 007: hardware/frsky-007.md
-      - FlyDragon F722: hardware/flydragon-f722.md
-      - Flywing HELI-F405: hardware/flywing-heli-f405.md
+      - FrSky VANTAC RF007: hardware/frsky-007.md
+      - FlyDragon: hardware/flydragon-f722.md
+      - Flywing HELI405: hardware/flywing-heli-f405.md
       - GooSky F701: hardware/goosky-f701.md
       - GooSky F4 Mini: hardware/goosky-f4mini.md
-      - GooSky S2: hardware/goosky-s2.md
-      - Matek G474-HELI: hardware/matek-g474-heli.md
-      - Matek G474-HLITE: hardware/matek-g474-hlite.md
+      - Matek G474-HELI: hardware/matek-g474.md
       - Betaflight FC (DIY): hardware/betaflight-diy.md
-      - For Manufacturers:
-          - hardware/manufacturers/index.md
-          - Design Requirements: hardware/manufacturers/design-requirements.md
-          - Reference Design: hardware/manufacturers/reference-design.md
+      - For Manufacturers: hardware/manufacturers.md
   - Reference:
       - reference/index.md
       - CLI Command Reference: reference/cli-reference.md
