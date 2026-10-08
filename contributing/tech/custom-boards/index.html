@@ -3975,6 +3975,8 @@
       
         
       
+        
+      
     
     
     
@@ -4256,6 +4258,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../governor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governor Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../smartfuel/" class="md-nav__link">
         
   
@@ -4470,7 +4500,7 @@
 <h2 id="custom-board-configuration-using-cli">Custom Board Configuration Using CLI<a class="headerlink" href="#custom-board-configuration-using-cli" title="Permanent link">&para;</a></h2>
 <p>Warning: This section covers beyond the normal use-case for Betaflight. It's recommended that you use a pre-made target configuration for a flight controller that has been thoroughly tested before. Those configurations can be found in the <a href="https://github.com/betaflight/unified-targets/tree/master/configs/default">unified targets list</a>.</p>
 <p>However, Betaflight can provide support for custom-made flight controllers, assuming it contains supported hardware. Before using Betaflight at all, it's highly recommended that you, first, check to make sure your MCU and your peripherals are supported. Checking the <a href="https://github.com/betaflight/betaflight/wiki/Supported-Sensors">Supported Sensors</a> and <a href="https://github.com/betaflight/betaflight/wiki/Hardware-Reference">Hardware Reference</a> wiki pages are good places to look. Betaflight is supported across many STM32 processors. Second, thoroughly test the functionality of your hardware by programming your board in an IDE (i.e. STMCube) or using any other hardware debugging methods/tools. </p>
-<p>Assuming your hardware is supported and you've thoroughly tested your peripherals, flash generic firmware into your board. It's recommended to flash betaflight firmware using the configurator and <a href="https://github.com/betaflight/betaflight/blob/master/docs/USB%20Flashing.md">USB Flashing</a>. </p>
+<p>Assuming your hardware is supported and you've thoroughly tested your peripherals, flash the unified firmware for your MCU with the Configurator -- see <a href="../../../getting-started/flashing-the-firmware/">Flashing the Firmware</a>.</p>
 <p>To create your own configuration, you must first use the <code>resource</code> command in the command line interface to map your peripheral pins on your controller. Use the CLI documentation linked above and other wiki pages for command reference. Then, you use the <code>set</code> command to set the bus type, i2c address, lowpass filter frequency/type, baro_hardware, gyro_hardware, etc. This will mainly be dependent on your hardware and will involve a lot of trial and error. Use the <code>save</code> command to save your configuration and reboot the controller. If your hardware is not detected, then you need to modify or create more settings in the CLI to accurately describe your hardware to Betaflight to detect it. Use your custom board's and respective peripherals' datasheets and schematics to help you.</p>
 <p>Alongside <code>resource</code> and <code>set</code> commands, there are <code>timer</code> and <code>dma</code> commands. For certain functions, such as battery voltage monitoring and motor output, you need to associate a timer and/or a Direct Memory Access (DMA) channel to those pins for those to work.
 - <code># timer</code>

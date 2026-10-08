@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://doc.rotorflight.org/contributing/tech/hardware-debugging/">
+        <link rel="canonical" href="https://doc.rotorflight.org/contributing/tech/governor/">
       
       
-        <link rel="prev" href="../smartfuel/">
+        <link rel="prev" href="../blackbox-format/">
       
       
-        <link rel="next" href="../hardware-debugging-vscode-jlink/">
+        <link rel="next" href="../smartfuel/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Hardware Debugging - Rotorflight Documentation</title>
+        <title>Governor Reference - Rotorflight Documentation</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#hardware-debugging" class="md-skip">
+        <a href="#governor-reference" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Hardware Debugging
+              Governor Reference
             
           </span>
         </div>
@@ -4201,10 +4201,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../governor/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governor Reference
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -4220,6 +4247,989 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Operation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#governor-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Governor Modes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Governor Modes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#governor-mode-off" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Governor Mode OFF
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#governor-mode-limit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Governor Mode LIMIT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#governor-mode-direct" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Governor Mode DIRECT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#governor-mode-electric" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Governor Mode ELECTRIC
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#governor-mode-nitro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Governor Mode NITRO
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#throttle-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Throttle Channel
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Throttle Channel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#handover-throttle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Handover Throttle
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#throttle-channel-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Throttle Channel Types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Throttle Channel Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#throttle-type-normal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Throttle Type NORMAL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#throttle-type-switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Throttle Type SWITCH
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#throttle-type-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Throttle Type FUNCTION
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-throttle-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output Throttle Settings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Output Throttle Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#idle-throttle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Idle Throttle
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autorotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autorotation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Autorotation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#auto-timeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auto Timeout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto-throttle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auto Throttle
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#states" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        States
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="States">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state-throttle_off" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State THROTTLE_OFF
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-throttle_idle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State THROTTLE_IDLE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-throttle_hold" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State THROTTLE_HOLD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-spoolup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State SPOOLUP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-recovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State RECOVERY
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-active" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State ACTIVE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-fallback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State FALLBACK
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-autorotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State AUTOROTATION
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-bailout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State BAILOUT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-bypass" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State BYPASS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Settings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#global-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Global settings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Global settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#governor-mode-gov_mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Governor Mode gov_mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#throttle-channel-type-gov_throttle_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Throttle Channel Type gov_throttle_type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#startup-time-gov_startup_time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Startup time gov_startup_time
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spoolup-time-gov_spoolup_time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spoolup time gov_spoolup_time
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tracking-time-gov_tracking_time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tracking time gov_tracking_time
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recovery-time-gov_recovery_time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recovery time gov_recovery_time
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spooldown-time-gov_spooldown_time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spooldown time gov_spooldown_time
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#throttle-hold-timeout-gov_throttle_hold_timeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Throttle Hold timeout gov_throttle_hold_timeout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autorotation-timeout-gov_autorotation_timeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autorotation timeout gov_autorotation_timeout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handover-throttle-gov_handover_throttle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Handover Throttle gov_handover_throttle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#idle-throttle-value-gov_idle_throttle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Idle throttle value gov_idle_throttle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autorotation-throttle-value-gov_auto_throttle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autorotation throttle value gov_auto_throttle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voltage-filter-gov_pwr_filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Voltage Filter gov_pwr_filter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rpm-filter-gov_rpm_filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RPM Filter gov_rpm_filter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tta-filter-gov_tta_filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TTA Filter gov_tta_filter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feedforward-filter-gov_ff_filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feedforward Filter gov_ff_filter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-term-filter-gov_d_filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D-term Filter gov_d_filter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#throttle-curve-for-bypass-gov_bypass_throttle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Throttle Curve for BYPASS gov_bypass_throttle
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#profile-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Profile Settings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Profile Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#target-headspeed-gov_headspeed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Target headspeed gov_headspeed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minimum-throttle-while-active-gov_min_throttle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Minimum throttle while active gov_min_throttle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maximum-throttle-used-gov_max_throttle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maximum throttle used gov_max_throttle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#master-gain-gov_gain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Master Gain gov_gain
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p-gain-gov_p_gain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        P-Gain gov_p_gain
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-gain-gov_i_gain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I-Gain gov_i_gain
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-gain-gov_d_gain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D-Gain gov_d_gain
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#f-gain-gov_f_gain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        F-gain gov_f_gain
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p-limits-gov_p_limit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        P-limits gov_p_limit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-limit-gov_i_limit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I-limit gov_i_limit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-limit-gov_d_limit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D-limit gov_d_limit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#f-limit-gov_f_limit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        F-limit gov_f_limit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yaw-precomp-weight-gov_yaw_ff_weight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Yaw Precomp Weight gov_yaw_ff_weight
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cyclic-precomp-weight-gov_cyclic_ff_weight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cyclic Precomp Weight gov_cyclic_ff_weight
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collective-precomp-weight-gov_collective_ff_weight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Collective Precomp Weight gov_collective_ff_weight
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collective-precomp-curve-gov_collective_curve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Collective Precomp Curve gov_collective_curve
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-throttle-minimum-gov_dyn_min_throttle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dynamic Throttle Minimum gov_dyn_min_throttle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tta-gain-gov_tta_gain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TTA-gain gov_tta_gain
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tta-limit-gov_tta_limit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TTA-limit gov_tta_limit
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#profile-flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Profile Flags
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Profile Flags">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flag-gov_use_voltage_comp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flag gov_use_voltage_comp
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flag-gov_use_pid_spoolup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flag gov_use_pid_spoolup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flag-gov_use_dyn_min_throttle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flag gov_use_dyn_min_throttle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flag-gov_use_fallback_precomp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flag gov_use_fallback_precomp
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mode-switches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mode Switches
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mode Switches">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fallback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FALLBACK
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suspend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SUSPEND
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bypass" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BYPASS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple-one-headspeed-electric" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simple One Headspeed (electric)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simple-throttle-on-stick-electric" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simple Throttle-on-Stick (electric)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -4257,37 +5267,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Hardware Debugging
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../hardware-debugging/" class="md-nav__link">
         
   
   
@@ -4303,261 +5286,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#hardware" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Hardware
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Hardware">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#j-link-devices" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        J-Link devices
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="J-Link devices">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#segger-j-link-edu-edu-version-for-hobbyists-and-educational-use" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Segger J-Link EDU EDU version, for hobbyists and educational use.
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#usb-minijtag-j-link-jtagswd-debuggeremulator" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        USB-MiniJTAG J-Link JTAG/SWD Debugger/Emulator
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="USB-MiniJTAG J-Link JTAG/SWD Debugger/Emulator">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#arm-jtag-20-10-adapter" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ARM-JTAG-20-10 adapter
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cjmcu-stm32-singlechip-development-board-jlink-downloader-jlink-arm-programmer" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        CJMCU-STM32 Singlechip Development Board Jlink Downloader Jlink ARM Programmer
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stlink-v2-devices" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        STLink V2 devices
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="STLink V2 devices">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cepark-stlink-v2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        CEPark STLink V2
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#compilation-options" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Compilation options
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#osx" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OSX
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="OSX">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#install-openocd-via-brew" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Install OpenOCD via Brew
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gdb-debug-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GDB debug server
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="GDB debug server">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#j-link" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        J-Link
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="J-Link">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#windows" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Windows
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#openocd" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OpenOCD
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="OpenOCD">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#windows_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Windows
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#osxlinux" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OSX/Linux
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -4689,34 +5417,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#hardware" class="md-nav__link">
+  <a href="#basic-operation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Hardware
+        Basic Operation
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Hardware">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#j-link-devices" class="md-nav__link">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#governor-modes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        J-Link devices
+        Governor Modes
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="J-Link devices">
+    <nav class="md-nav" aria-label="Governor Modes">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#segger-j-link-edu-edu-version-for-hobbyists-and-educational-use" class="md-nav__link">
+  <a href="#governor-mode-off" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Segger J-Link EDU EDU version, for hobbyists and educational use.
+        Governor Mode OFF
       
     </span>
   </a>
@@ -4724,22 +5451,542 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#usb-minijtag-j-link-jtagswd-debuggeremulator" class="md-nav__link">
+  <a href="#governor-mode-limit" class="md-nav__link">
     <span class="md-ellipsis">
       
-        USB-MiniJTAG J-Link JTAG/SWD Debugger/Emulator
+        Governor Mode LIMIT
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="USB-MiniJTAG J-Link JTAG/SWD Debugger/Emulator">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#governor-mode-direct" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Governor Mode DIRECT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#governor-mode-electric" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Governor Mode ELECTRIC
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#governor-mode-nitro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Governor Mode NITRO
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#throttle-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Throttle Channel
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Throttle Channel">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#arm-jtag-20-10-adapter" class="md-nav__link">
+  <a href="#handover-throttle" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ARM-JTAG-20-10 adapter
+        Handover Throttle
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#throttle-channel-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Throttle Channel Types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Throttle Channel Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#throttle-type-normal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Throttle Type NORMAL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#throttle-type-switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Throttle Type SWITCH
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#throttle-type-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Throttle Type FUNCTION
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-throttle-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output Throttle Settings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Output Throttle Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#idle-throttle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Idle Throttle
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autorotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autorotation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Autorotation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#auto-timeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auto Timeout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto-throttle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auto Throttle
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#states" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        States
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="States">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state-throttle_off" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State THROTTLE_OFF
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-throttle_idle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State THROTTLE_IDLE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-throttle_hold" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State THROTTLE_HOLD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-spoolup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State SPOOLUP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-recovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State RECOVERY
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-active" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State ACTIVE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-fallback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State FALLBACK
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-autorotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State AUTOROTATION
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-bailout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State BAILOUT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-bypass" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State BYPASS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Settings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#global-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Global settings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Global settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#governor-mode-gov_mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Governor Mode gov_mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#throttle-channel-type-gov_throttle_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Throttle Channel Type gov_throttle_type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#startup-time-gov_startup_time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Startup time gov_startup_time
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spoolup-time-gov_spoolup_time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spoolup time gov_spoolup_time
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tracking-time-gov_tracking_time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tracking time gov_tracking_time
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recovery-time-gov_recovery_time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recovery time gov_recovery_time
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spooldown-time-gov_spooldown_time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spooldown time gov_spooldown_time
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#throttle-hold-timeout-gov_throttle_hold_timeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Throttle Hold timeout gov_throttle_hold_timeout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autorotation-timeout-gov_autorotation_timeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autorotation timeout gov_autorotation_timeout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handover-throttle-gov_handover_throttle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Handover Throttle gov_handover_throttle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#idle-throttle-value-gov_idle_throttle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Idle throttle value gov_idle_throttle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autorotation-throttle-value-gov_auto_throttle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autorotation throttle value gov_auto_throttle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voltage-filter-gov_pwr_filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Voltage Filter gov_pwr_filter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rpm-filter-gov_rpm_filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RPM Filter gov_rpm_filter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tta-filter-gov_tta_filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TTA Filter gov_tta_filter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feedforward-filter-gov_ff_filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feedforward Filter gov_ff_filter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-term-filter-gov_d_filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D-term Filter gov_d_filter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#throttle-curve-for-bypass-gov_bypass_throttle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Throttle Curve for BYPASS gov_bypass_throttle
       
     </span>
   </a>
@@ -4752,10 +5999,220 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#cjmcu-stm32-singlechip-development-board-jlink-downloader-jlink-arm-programmer" class="md-nav__link">
+  <a href="#profile-settings" class="md-nav__link">
     <span class="md-ellipsis">
       
-        CJMCU-STM32 Singlechip Development Board Jlink Downloader Jlink ARM Programmer
+        Profile Settings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Profile Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#target-headspeed-gov_headspeed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Target headspeed gov_headspeed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minimum-throttle-while-active-gov_min_throttle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Minimum throttle while active gov_min_throttle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maximum-throttle-used-gov_max_throttle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maximum throttle used gov_max_throttle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#master-gain-gov_gain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Master Gain gov_gain
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p-gain-gov_p_gain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        P-Gain gov_p_gain
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-gain-gov_i_gain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I-Gain gov_i_gain
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-gain-gov_d_gain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D-Gain gov_d_gain
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#f-gain-gov_f_gain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        F-gain gov_f_gain
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p-limits-gov_p_limit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        P-limits gov_p_limit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-limit-gov_i_limit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I-limit gov_i_limit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-limit-gov_d_limit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D-limit gov_d_limit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#f-limit-gov_f_limit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        F-limit gov_f_limit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yaw-precomp-weight-gov_yaw_ff_weight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Yaw Precomp Weight gov_yaw_ff_weight
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cyclic-precomp-weight-gov_cyclic_ff_weight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cyclic Precomp Weight gov_cyclic_ff_weight
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collective-precomp-weight-gov_collective_ff_weight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Collective Precomp Weight gov_collective_ff_weight
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collective-precomp-curve-gov_collective_curve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Collective Precomp Curve gov_collective_curve
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-throttle-minimum-gov_dyn_min_throttle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dynamic Throttle Minimum gov_dyn_min_throttle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tta-gain-gov_tta_gain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TTA-gain gov_tta_gain
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tta-limit-gov_tta_limit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TTA-limit gov_tta_limit
       
     </span>
   </a>
@@ -4768,22 +6225,105 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#stlink-v2-devices" class="md-nav__link">
+  <a href="#profile-flags" class="md-nav__link">
     <span class="md-ellipsis">
       
-        STLink V2 devices
+        Profile Flags
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="STLink V2 devices">
+    <nav class="md-nav" aria-label="Profile Flags">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#cepark-stlink-v2" class="md-nav__link">
+  <a href="#flag-gov_use_voltage_comp" class="md-nav__link">
     <span class="md-ellipsis">
       
-        CEPark STLink V2
+        Flag gov_use_voltage_comp
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flag-gov_use_pid_spoolup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flag gov_use_pid_spoolup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flag-gov_use_dyn_min_throttle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flag gov_use_dyn_min_throttle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flag-gov_use_fallback_precomp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flag gov_use_fallback_precomp
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mode-switches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mode Switches
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mode Switches">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fallback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FALLBACK
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suspend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SUSPEND
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bypass" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BYPASS
       
     </span>
   </a>
@@ -4801,33 +6341,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#compilation-options" class="md-nav__link">
+  <a href="#examples" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Compilation options
+        Examples
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#osx" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OSX
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="OSX">
+    <nav class="md-nav" aria-label="Examples">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#install-openocd-via-brew" class="md-nav__link">
+  <a href="#simple-one-headspeed-electric" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Install OpenOCD via Brew
+        Simple One Headspeed (electric)
       
     </span>
   </a>
@@ -4835,86 +6364,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#gdb-debug-server" class="md-nav__link">
+  <a href="#simple-throttle-on-stick-electric" class="md-nav__link">
     <span class="md-ellipsis">
       
-        GDB debug server
+        Simple Throttle-on-Stick (electric)
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="GDB debug server">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#j-link" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        J-Link
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="J-Link">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#windows" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Windows
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#openocd" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OpenOCD
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="OpenOCD">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#windows_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Windows
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#osxlinux" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OSX/Linux
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -4940,7 +6396,7 @@
 
 
   
-    <a href="https://github.com/rotorflight/rotorflight-documentation/edit/main/docs/contributing/tech/hardware-debugging.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/rotorflight/rotorflight-documentation/edit/main/docs/contributing/tech/governor.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -4948,69 +6404,345 @@
   
 
 
-<!-- Ported from rotorflight-firmware docs/development/Hardware Debugging.md. -->
-<h1 id="hardware-debugging">Hardware debugging<a class="headerlink" href="#hardware-debugging" title="Permanent link">&para;</a></h1>
-<p>The code can be compiled with debugging information, you can then upload a debug version to a board via a JLink/St-Link debug adapter and step through the code in your IDE.</p>
-<p>For a VS Code set-up, see <a href="../hardware-debugging-vscode-jlink/">Debugging with VS Code and J-Link</a>.</p>
-<p>A guide for visual studio can be found here:
-http://visualgdb.com/tutorials/arm/st-link/</p>
-<p>This video is also helpful in understanding the proces:
-https://www.youtube.com/watch?v=kjvqySyNw20</p>
-<h2 id="hardware">Hardware<a class="headerlink" href="#hardware" title="Permanent link">&para;</a></h2>
-<p>Various debugging hardware solutions exist, the Segger J-Link clones are cheap and are known to work on Windows with both the Naze and Olimexino platforms.</p>
-<h3 id="j-link-devices">J-Link devices<a class="headerlink" href="#j-link-devices" title="Permanent link">&para;</a></h3>
-<p>Segger make excellent debuggers and debug software.</p>
-<p>The Segger J-Link GDB server can be obtained from here.</p>
-<p>http://www.segger.com/jlink-software.html</p>
-<h4 id="segger-j-link-edu-edu-version-for-hobbyists-and-educational-use">Segger J-Link EDU EDU version, for hobbyists and educational use.<a class="headerlink" href="#segger-j-link-edu-edu-version-for-hobbyists-and-educational-use" title="Permanent link">&para;</a></h4>
-<p><img alt="Segger J-Link EDU" src="../img/j-link-edu.jpg" /></p>
-<p>https://www.segger.com/j-link-edu.html</p>
-<h4 id="usb-minijtag-j-link-jtagswd-debuggeremulator">USB-MiniJTAG J-Link JTAG/SWD Debugger/Emulator<a class="headerlink" href="#usb-minijtag-j-link-jtagswd-debuggeremulator" title="Permanent link">&para;</a></h4>
-<p>http://www.hotmcu.com/usbminijtag-jlink-jtagswd-debuggeremula%E2%80%8Btor-p-29.html?cPath=3_25&amp;zenid=fdefvpnod186umrhsek225dc10</p>
-<p><img alt="THAOYU USB-MiniJTAG" src="../img/THAOYU-USB-MiniJTAG.jpg" /></p>
-<h5 id="arm-jtag-20-10-adapter">ARM-JTAG-20-10 adapter<a class="headerlink" href="#arm-jtag-20-10-adapter" title="Permanent link">&para;</a></h5>
-<p>https://www.olimex.com/Products/ARM/JTAG/ARM-JTAG-20-10/
-http://uk.farnell.com/jsp/search/productdetail.jsp?sku=2144328</p>
-<p><img alt="OLIMEX ARM JTAG ADAPTER" src="../img/OLIMEX-ARM-JTAG-ADAPTER-2144328-40.jpg" /></p>
-<h4 id="cjmcu-stm32-singlechip-development-board-jlink-downloader-jlink-arm-programmer">CJMCU-STM32 Singlechip Development Board Jlink Downloader Jlink ARM Programmer<a class="headerlink" href="#cjmcu-stm32-singlechip-development-board-jlink-downloader-jlink-arm-programmer" title="Permanent link">&para;</a></h4>
-<p><img alt="CJMCU-STM32 Jlink ARM Programmer Front" src="../img/cjmcu-jlink-front.jpg" /></p>
-<p><img alt="CJMCU-STM32 Jlink ARM Programmer Back" src="../img/cjmcu-jlink-back.jpg" /></p>
-<p>http://www.goodluckbuy.com/cjmcu-stm32-singlechip-development-board-jlink-downloader-jlink-arm-programmer.html</p>
-<h3 id="stlink-v2-devices">STLink V2 devices<a class="headerlink" href="#stlink-v2-devices" title="Permanent link">&para;</a></h3>
-<p>STLink V2 devices can be used too, via OpenOCD.</p>
-<h4 id="cepark-stlink-v2">CEPark STLink V2<a class="headerlink" href="#cepark-stlink-v2" title="Permanent link">&para;</a></h4>
-<p><img alt="CEPark STLink V2" src="../img/cepark-stlink-v2-front.jpg" /></p>
-<p>http://www.goodluckbuy.com/cepark-stlink-st-link-v2-emulator-programmer-stm8-stm32-downloader.html</p>
-<h2 id="compilation-options">Compilation options<a class="headerlink" href="#compilation-options" title="Permanent link">&para;</a></h2>
-<ol>
-<li>Use <code>make DEBUG=INFO ...</code> to build with debug information for gdb to load, without affecting the code optimization.</li>
-<li>Use <code>make DEBUG=GDB ...</code> to build with reduced optimization to preserve debugging (-Og).</li>
-</ol>
-<p>You may find that if you compile all the files with <code>DEBUG=GDB</code> on that the program is too big to fit on the target device.  If this happens you have some options:</p>
-<ul>
-<li>Compile all files with normal optimization (<code>make clean</code>, <code>make DEBUG=INFO ...</code>), then re-save or <code>touch</code> the files you want to be able to step though and then run <code>make DEBUG=GDB ...</code>.  This will then re-compile the files you're interested in debugging with debugging symbols and you will get a smaller binary file which should then fit on the device.</li>
-<li>You could use a development board such as an PORT103R, development boards often have more flash rom.</li>
-</ul>
-<h2 id="osx">OSX<a class="headerlink" href="#osx" title="Permanent link">&para;</a></h2>
-<h3 id="install-openocd-via-brew">Install OpenOCD via Brew<a class="headerlink" href="#install-openocd-via-brew" title="Permanent link">&para;</a></h3>
-<p>ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</p>
-<p>brew install openocd</p>
-<h3 id="gdb-debug-server">GDB debug server<a class="headerlink" href="#gdb-debug-server" title="Permanent link">&para;</a></h3>
-<h4 id="j-link">J-Link<a class="headerlink" href="#j-link" title="Permanent link">&para;</a></h4>
-<h5 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h5>
-<p>Run the Launch the J-Link GDB Server program and configure using UI. </p>
-<h4 id="openocd">OpenOCD<a class="headerlink" href="#openocd" title="Permanent link">&para;</a></h4>
-<h5 id="windows_1">Windows<a class="headerlink" href="#windows_1" title="Permanent link">&para;</a></h5>
-<p>STM32F103 targets</p>
-<pre><code>"C:\Program Files (x86)\UTILS\openocd-0.8.0\bin-x64\openocd-x64-0.8.0.exe" -f interface/stlink-v2.cfg -f target/stm32f1x_stlink.cfg
-</code></pre>
-<p>STM32F30x targets</p>
-<pre><code>"C:\Program Files (x86)\UTILS\openocd-0.8.0\bin-x64\openocd-x64-0.8.0.exe" -f scripts\board\stm32f3discovery.cfg
-</code></pre>
-<h5 id="osxlinux">OSX/Linux<a class="headerlink" href="#osxlinux" title="Permanent link">&para;</a></h5>
-<p>STM32F30x targets</p>
-<pre><code>  openocd -f /usr/share/openocd/scripts/board/stm32vldiscovery.cfg
-</code></pre>
+<h1 id="governor-reference">Governor Reference<a class="headerlink" href="#governor-reference" title="Permanent link">&para;</a></h1>
+<p>The governor's design, states and every setting in detail. For setting up
+and tuning it, see <a href="../../../setup/governor/">Governor</a>,
+<a href="../../../setup/governor-setup/">Governor Setup</a> and
+<a href="../../../tuning/governor/">Governor Tuning</a>.</p>
+<p>The purpose of the governor is to keep the headspeed constant, regardless of the flight
+conditions, amount of collective applied, the battery voltage level, and so on.</p>
+<p>It is also ensuring safe operation by limiting the spool up and down speeds,
+and dealing with failure situations.</p>
+<h2 id="basic-operation">Basic Operation<a class="headerlink" href="#basic-operation" title="Permanent link">&para;</a></h2>
+<p>The Rotorflight RF Governor offers a variety of features, providing flexibility
+for both traditional throttle-curve setups and modern switch-based (flight-mode)
+setups. It fully supports electric helicopters as well as nitro/IC (glow) engines.</p>
+<h2 id="governor-modes">Governor Modes<a class="headerlink" href="#governor-modes" title="Permanent link">&para;</a></h2>
+<p>The governor mode controls what type of governor is used - if any.</p>
+<h3 id="governor-mode-off">Governor Mode <code>OFF</code><a class="headerlink" href="#governor-mode-off" title="Permanent link">&para;</a></h3>
+<p>The governor is completely disabled. The input throttle is used as the output throttle.</p>
+<h3 id="governor-mode-limit">Governor Mode <code>LIMIT</code><a class="headerlink" href="#governor-mode-limit" title="Permanent link">&para;</a></h3>
+<p>The governor is completely disabled. The input throttle is used as the output throttle,
+with <code>gov_idle_throttle</code>, <code>gov_min_throttle</code> and <code>gov_max_throttle</code> applied.</p>
+<h3 id="governor-mode-direct">Governor Mode <code>DIRECT</code><a class="headerlink" href="#governor-mode-direct" title="Permanent link">&para;</a></h3>
+<p>The input throttle is used directly, but with limits and slow spoolup features.
+The speed governing function is disabled. This mode is intended for use with ESCs
+that have their own built-in governor but no slow spoolup, or with traditional
+throttle curves in the transmitter.</p>
+<p>This mode does not require an RPM signal.</p>
+<h3 id="governor-mode-electric">Governor Mode <code>ELECTRIC</code><a class="headerlink" href="#governor-mode-electric" title="Permanent link">&para;</a></h3>
+<p>Full Rotorflight governor functionality is enabled, optimised for electric motors.
+The governor actively maintains the requested headspeed throughout the flight.</p>
+<p>Requires an RPM signal from the ESC or a separate RPM sensor.</p>
+<h3 id="governor-mode-nitro">Governor Mode <code>NITRO</code><a class="headerlink" href="#governor-mode-nitro" title="Permanent link">&para;</a></h3>
+<p>Full Rotorflight governor functionality is enabled, optimised for nitro/IC engines.</p>
+<p>Requires a magnetic RPM sensor mounted on the engine or main gear.</p>
+<h2 id="throttle-channel">Throttle Channel<a class="headerlink" href="#throttle-channel" title="Permanent link">&para;</a></h2>
+<p>The throttle channel is the main control for the motor and the governor.</p>
+<p>The throttle channel has a defined <em>active range</em>, in which the motor is running.
+Below this active range, the motor remains stopped.
+The microsecond values for the active range are configured in the Receiver settings
+and represented as 0%-100% in the governor.</p>
+<p><strong>Example</strong> with 1100µs-1900µs active range in ELRS:
+<div class="highlight"><pre><span></span><code> ┌ stop ┐┌──────────────────────── active ─────────────────────────────┐
+
+         0%                                                          100%
+ ├┄┄┄┄┄┄┄┾━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┽┄┄┄┄┄┄┄┤
+988    1100                                                          1900    2012
+</code></pre></div></p>
+<p><strong>Note!</strong> In order to arm, the throttle channel must be within the <em>stop</em> range.</p>
+<h3 id="handover-throttle">Handover Throttle<a class="headerlink" href="#handover-throttle" title="Permanent link">&para;</a></h3>
+<p>The handover throttle is a point in the active range, above which the governer
+is allowed to operate. Throttle values below this point are considered <em>idle</em>.</p>
+<p><strong>Example</strong> with a 25% handover point:
+<div class="highlight"><pre><span></span><code>        ┌───── idle ─────┬────────── governor enabled ─────────────────┐
+
+        0%              25%                                          100%
+ ├┄┄┄┄┄┄┾━━━━━━━━━━━━━━━━┿━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┽┄┄┄┄┄┄┄┤
+</code></pre></div></p>
+<p><strong>Note!</strong> In Nitro/IC, the clutch <em>must</em> engage below the handover point, i.e. in
+the idle region.</p>
+<h2 id="throttle-channel-types">Throttle Channel Types<a class="headerlink" href="#throttle-channel-types" title="Permanent link">&para;</a></h2>
+<p>Rotorflight provides three throttle channel types, allowing the user to freely
+choose the one that best matches their preference and transmitter setup.</p>
+<h3 id="throttle-type-normal">Throttle Type <code>NORMAL</code><a class="headerlink" href="#throttle-type-normal" title="Permanent link">&para;</a></h3>
+<p>The throttle channel is controlling the motor throttle directly and continuously.
+The user can use either <em>throttle-on-stick</em> or <em>throttle-on-switch</em>. The governor
+will engage once the targeted headspeed is reached, and will maintain it until
+the throttle is dropped below the handover level.</p>
+<p>Slow spoolup can be controlled with the spoolup parameters.</p>
+<p><strong>NOTE!</strong> <code>NORMAL</code> requires the throttle channel to have full resolution.
+The <em>wide</em> mode channels in ExpressLRS are not suitable for this purpose.</p>
+<h3 id="throttle-type-switch">Throttle Type <code>SWITCH</code><a class="headerlink" href="#throttle-type-switch" title="Permanent link">&para;</a></h3>
+<p>In the idle region, the throttle channel is directly controlling the throttle.
+In the active region, the throttle channel governs the headspeed instead.</p>
+<p>The transition between idle and run throttle levels shall be instantaneous.
+A transmitter switch is typically assigned to toggle between these positions.
+In the active region, multiple discrete throttle positions may be used
+to select different target headspeeds.</p>
+<p><strong>Example</strong> with 10% idle; 80% and 90% headspeeds:
+<div class="highlight"><pre><span></span><code>              10%                                    HS:80%  HS:90%
+        0%     ▼        25%                             ▼       ▼    100%
+ ├┄┄┄┄┄┄┾━━━━━━━━━━━━━━━━┿━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┽┄┄┄┄┄┄┄┤
+</code></pre></div></p>
+<p><strong>NOTE!</strong> This throttle type is not compatible with <em>throttle-on-stick</em>.</p>
+<p><strong>NOTE!</strong> <code>SWITCH</code> requires the throttle channel to have full resolution.
+The <em>wide</em> mode channels in ExpressLRS are not suitable for this purpose.</p>
+<h3 id="throttle-type-function">Throttle Type <code>FUNCTION</code><a class="headerlink" href="#throttle-type-function" title="Permanent link">&para;</a></h3>
+<p>The desired governor function is selected using a switch on the Tx. The throttle
+level determines one of the following functions: OFF, IDLE, AUTO, RUN.</p>
+<p>This throttle type is particularly useful when using limited-resolution channels,
+like the <em>wide</em> mode channels in ExpressLRS.</p>
+<div class="highlight"><pre><span></span><code> ┌ OFF ┐ ┌─────── IDLE ───────┬─────── AUTO ───────┬─────── RUN ────────┐
+
+         0%                  33%                  66%                 100%
+ ├┄┄┄┄┄┄┄┾━━━━━━━━━━━━━━━━━━━━┿━━━━━━━━━━━━━━━━━━━━┿━━━━━━━━━━━━━━━━━━━━┽┄┄┄┄┄┄┄┤
+</code></pre></div>
+<p><strong>Example setup for ELRS</strong></p>
+<p>A Throttle Cut switch sets the throttle channel to the OFF level.
+When TC is not active, another 3-position switch selects between IDLE/AUTO/RUN.</p>
+<div class="highlight"><pre><span></span><code> OFF          IDLE                     AUTO                    RUN
+988µs        1250µs                   1500µs                  1750µs
+ ▼       0%     ▼            33%         ▼        66%            ▼    100%
+ ├┄┄┄┄┄┄┄┾━━━━━━━━━━━━━━━━━━━━┿━━━━━━━━━━━━━━━━━━━━┿━━━━━━━━━━━━━━━━━━━━┽┄┄┄┄┄┄┄┤
+</code></pre></div>
+<p>The ouput throttle for the IDLE and AUTO functions is set with the <code>gov_idle_throttle</code>
+and <code>gov_auto_throttle</code> parameters.</p>
+<h2 id="output-throttle-settings">Output Throttle Settings<a class="headerlink" href="#output-throttle-settings" title="Permanent link">&para;</a></h2>
+<p>The output throttle (servo/ESC) parameters: <code>min_throttle</code>, <code>max_throttle</code>, and
+<code>min_command</code> must be set properly for the correct governer operation.</p>
+<p>The <code>min_throttle</code> and <code>max_throttle</code> set the <em>active range</em> of the output throttle,
+corresponding to the 0%-100% range in the governor. Any throttle change within this
+range must have an actual effect on the motor. There must not be any deadbands,
+where any throttle changes have no effect on the motor RPM or power.</p>
+<p>On electric, <code>min_throttle</code> is a value where the motor is not running, but would start
+just above it. And <code>max_throttle</code> is a value where full throttle (WOT) is reached.
+It is imperative that the motor will start below 5% throttle, and reach WOT at 100%.</p>
+<p>The <code>min_command</code> is a throttle level <em>below</em> <code>min_throttle</code>, where the motor is
+<strong>guaranteed to stop</strong> and not run under any circumstances. On electric it's also
+the level that allows the ESC to arm.</p>
+<p><strong>NOTE.</strong> <code>min_throttle</code> and <code>max_throttle</code> define the throttle range, that is
+displayed as 0%..100% in the logs and in the telemetry.</p>
+<p><strong>NOTE.</strong> Do not set <code>min_throttle</code> to the engine’s idle level.
+<code>min_throttle</code> should be set low enough that the engine will not sustain an idle and
+will shut down at this position. This is not the point where the carb barrel is fully
+closed for engine cut; it is the lowest usable throttle position for idle adjustment.</p>
+<p><code>min_throttle</code> and <code>max_throttle</code> are fixed setup parameters and cannot be adjusted
+at runtime, whereas <code>gov_idle_throttle</code> can be adjusted dynamically.</p>
+<h3 id="idle-throttle">Idle Throttle<a class="headerlink" href="#idle-throttle" title="Permanent link">&para;</a></h3>
+<p>In the idle throttle region, the throttle value is passed to the output, and
+the user can configure the desired idling throttle level in the transmitter.</p>
+<p>Sometimes a single transmitter model is used with multiple helicopters, and
+it is preferred to store the idling throttle level in the FC instead.</p>
+<p>When <code>gov_idle_throttle</code> is set to a non-zero value, it establishes a minimum
+motor output throttle. This allows the desired idle throttle level to be defined
+in the flight controller, while the transmitter may still temporarily output
+a higher idle throttle value.</p>
+<p><strong>Example</strong> with 8% idle throttle:
+<div class="highlight"><pre><span></span><code>        ┌──── input ─────────┄┄
+
+        0%    8%                                                     100%
+ ├┄┄┄┄┄┄┾━━━━━┷━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┽┄┄┄┄┄┄┄┤
+
+              └─ output ─────┄┄
+</code></pre></div></p>
+<h2 id="autorotation">Autorotation<a class="headerlink" href="#autorotation" title="Permanent link">&para;</a></h2>
+<p>The governor can perform a fast bailout from autorotation if it can detect
+when autorotation is being attempted. Autorotation is detected when, while
+the governor is active, the throttle is suddenly reduced to a level within
+a predefined autorotation range.</p>
+<p>In order to enable autorotation detection, the autorotation timeout and
+the autorotation throttle range must be configured.</p>
+<h3 id="auto-timeout">Auto Timeout<a class="headerlink" href="#auto-timeout" title="Permanent link">&para;</a></h3>
+<p>The <em>autorotation timeout</em> defines the maximum duration of an autorotation.
+After this timeout expires, the governor will no longer initiate a bailout.</p>
+<p>Autorotation bailout is disabled unless this timeout is explicitly configured.</p>
+<h3 id="auto-throttle">Auto Throttle<a class="headerlink" href="#auto-throttle" title="Permanent link">&para;</a></h3>
+<p>The autorotation throttle region is defined by the <code>gov_auto_throttle</code> parameter.
+Autorotation is detected when the input throttle is above <code>gov_auto_throttle</code> and
+below <code>gov_handover_throttle</code>.</p>
+<p>Autorotation is canceled when the input throttle falls below the autorotation region.
+A bailout from autorotation is triggered when the input throttle rises above
+the handover throttle.</p>
+<p><strong>Example</strong> with 12% auto throttle:
+<div class="highlight"><pre><span></span><code>        ┌ idle ─┬─ auto ─┬────────── governor enabled ─────────────────┐
+
+        0%     12%      25%                                          100%
+ ├┄┄┄┄┄┄┾━━━━━━━┷━━━━━━━━┿━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┽┄┄┄┄┄┄┄┤
+</code></pre></div></p>
+<h2 id="states">States<a class="headerlink" href="#states" title="Permanent link">&para;</a></h2>
+<p>The governor operates in multiple states. Each state represents a different scenario, with
+different functionality and different parameters. For example, <em>spoolup</em>, <em>active</em>, etc.</p>
+<p>The governor is automatically moving between the states, based on the throttle channel
+value, the motor behaviour, and the previous state.</p>
+<p>The governor state is available as a telemetry sensor, and can be displayed on
+the transmitter.</p>
+<h4 id="state-throttle_off">State <code>THROTTLE_OFF</code><a class="headerlink" href="#state-throttle_off" title="Permanent link">&para;</a></h4>
+<p>The motor is turned off. The value <code>min_command</code> is sent to the ESC/servo.</p>
+<h4 id="state-throttle_idle">State <code>THROTTLE_IDLE</code><a class="headerlink" href="#state-throttle_idle" title="Permanent link">&para;</a></h4>
+<p>The throttle is below <em>handover</em>, and the motor is either stopped or running slow.
+The input throttle is passed to the output, but change speed is limited by
+<code>gov_startup_time</code>.</p>
+<p>The helicopter is expected to be on the ground.</p>
+<h4 id="state-throttle_hold">State <code>THROTTLE_HOLD</code><a class="headerlink" href="#state-throttle_hold" title="Permanent link">&para;</a></h4>
+<p>The input throttle was switched off while in the <code>ACTIVE</code> state. The motor is spooling
+down. If the throttle is restored within <code>gov_throttle_hold_timeout</code>, a fast recovery
+is performed.</p>
+<p>This is a safeguard against an accidential Throttle Cut activation.</p>
+<h4 id="state-spoolup">State <code>SPOOLUP</code><a class="headerlink" href="#state-spoolup" title="Permanent link">&para;</a></h4>
+<p>The input throttle was increased above <em>handover</em>, and the motor is spooling up to
+the required headspeed. The change speed is limited by <code>gov_spoolup_time</code>.</p>
+<p>Once the target headspeed is reached, the governor moves to the <code>ACTIVE</code> state.</p>
+<h4 id="state-recovery">State <code>RECOVERY</code><a class="headerlink" href="#state-recovery" title="Permanent link">&para;</a></h4>
+<p>The governor is recoving from <code>FALLBACK</code> or <code>THROTTLE_HOLD</code>, i.e. going back to <code>ACTIVE</code>.
+This is done with a much faster spoolup speed than in <code>SPOOLUP</code>, as the helicopter is
+likely airborne. The throttle change is limited by <code>gov_recovery time</code>.</p>
+<h4 id="state-active">State <code>ACTIVE</code><a class="headerlink" href="#state-active" title="Permanent link">&para;</a></h4>
+<p>The governor is locked on the target headspeed, and the throttle is controlled by
+the PID loop. Precomps from collective, cyclic, and yaw are applied.</p>
+<p>If the target headspeed is altered, the change speed is limited by <code>gov_tracking_time</code>.</p>
+<h4 id="state-fallback">State <code>FALLBACK</code><a class="headerlink" href="#state-fallback" title="Permanent link">&para;</a></h4>
+<p>RPM signal is unreliable or lost, and the headspeed can't be controlled.
+Instead, an estimated throttle value is used, with optional precomps, so
+that the pilot can land the helicopter safely.</p>
+<p>The parameter <code>gov_fallback_drop</code> sets the percentage of throttle drop for
+indicating this condition, in order to notify the pilot.</p>
+<h4 id="state-autorotation">State <code>AUTOROTATION</code><a class="headerlink" href="#state-autorotation" title="Permanent link">&para;</a></h4>
+<p>Throttle is above <em>autorotation throttle</em>, but below <em>handover</em>, and autorotation is
+active. Similar to <code>THROTTLE_IDLE</code>, but the helicopter is expected to be airborne.
+If the throttle is returned, a fast <code>BAILOUT</code> is performed.</p>
+<p>After a succesful landing, the pilot is expected to disable autorotation by moving to
+an idle throttle level, and proceed with a normal <code>SPOOLUP</code>.</p>
+<h4 id="state-bailout">State <code>BAILOUT</code><a class="headerlink" href="#state-bailout" title="Permanent link">&para;</a></h4>
+<p>The autorotation attempt was abandoned, and an <em>autorotation bailout</em> is performed.
+Throttle is ramped up quickly, according to the <code>gov_recovery_time</code> parameter.</p>
+<h4 id="state-bypass">State <code>BYPASS</code><a class="headerlink" href="#state-bypass" title="Permanent link">&para;</a></h4>
+<p>The governor is temporarily disabled, and the throttle is passed to the ESC unaltered.
+The throttle value is calculated from the collective position, using <code>gov_bypass_throttle</code>.</p>
+<h2 id="settings">Settings<a class="headerlink" href="#settings" title="Permanent link">&para;</a></h2>
+<p>The governor has both global and profile settings. Global settings are always valid.
+Profile settings are applied only when a profile is active.</p>
+<h3 id="global-settings">Global settings<a class="headerlink" href="#global-settings" title="Permanent link">&para;</a></h3>
+<h4 id="governor-mode-gov_mode">Governor Mode <code>gov_mode</code><a class="headerlink" href="#governor-mode-gov_mode" title="Permanent link">&para;</a></h4>
+<p>The governor mode setting chooses what type of governor is used:
+<code>OFF</code>, <code>LIMIT</code>, <code>DIRECT</code>, <code>ELECTRIC</code>, <code>NITRO</code></p>
+<h4 id="throttle-channel-type-gov_throttle_type">Throttle Channel Type <code>gov_throttle_type</code><a class="headerlink" href="#throttle-channel-type-gov_throttle_type" title="Permanent link">&para;</a></h4>
+<p>The type of the Throttle channel: <code>NORMAL</code>, <code>SWITCH</code>, <code>FUNCTION</code></p>
+<h4 id="startup-time-gov_startup_time">Startup time <code>gov_startup_time</code><a class="headerlink" href="#startup-time-gov_startup_time" title="Permanent link">&para;</a></h4>
+<p>The throttle change speed limit for <code>IDLE</code> state.</p>
+<h4 id="spoolup-time-gov_spoolup_time">Spoolup time <code>gov_spoolup_time</code><a class="headerlink" href="#spoolup-time-gov_spoolup_time" title="Permanent link">&para;</a></h4>
+<p>The throttle change speed limit for <code>SPOOLUP</code> state.</p>
+<h4 id="tracking-time-gov_tracking_time">Tracking time <code>gov_tracking_time</code><a class="headerlink" href="#tracking-time-gov_tracking_time" title="Permanent link">&para;</a></h4>
+<p>The throttle change speed limit for <code>ACTIVE</code> state.</p>
+<h4 id="recovery-time-gov_recovery_time">Recovery time <code>gov_recovery_time</code><a class="headerlink" href="#recovery-time-gov_recovery_time" title="Permanent link">&para;</a></h4>
+<p>The throttle change speed limit for <code>RECOVERY</code> and <code>BAILOUT</code> states.</p>
+<h4 id="spooldown-time-gov_spooldown_time">Spooldown time <code>gov_spooldown_time</code><a class="headerlink" href="#spooldown-time-gov_spooldown_time" title="Permanent link">&para;</a></h4>
+<p>The throttle reduction speed limit for <code>THROTTLE_IDLE</code> state.</p>
+<h4 id="throttle-hold-timeout-gov_throttle_hold_timeout">Throttle Hold timeout <code>gov_throttle_hold_timeout</code><a class="headerlink" href="#throttle-hold-timeout-gov_throttle_hold_timeout" title="Permanent link">&para;</a></h4>
+<p>The timeout for <code>THROTTLE_HOLD</code> state.</p>
+<h4 id="autorotation-timeout-gov_autorotation_timeout">Autorotation timeout <code>gov_autorotation_timeout</code><a class="headerlink" href="#autorotation-timeout-gov_autorotation_timeout" title="Permanent link">&para;</a></h4>
+<p>The timeout for <code>AUTOROTATION</code> state.</p>
+<h4 id="handover-throttle-gov_handover_throttle">Handover Throttle <code>gov_handover_throttle</code><a class="headerlink" href="#handover-throttle-gov_handover_throttle" title="Permanent link">&para;</a></h4>
+<p>The minimum throttle level required for the governor to activate.</p>
+<h4 id="idle-throttle-value-gov_idle_throttle">Idle throttle value <code>gov_idle_throttle</code><a class="headerlink" href="#idle-throttle-value-gov_idle_throttle" title="Permanent link">&para;</a></h4>
+<p>The minimum throttle value in the <code>IDLE</code> state.</p>
+<h4 id="autorotation-throttle-value-gov_auto_throttle">Autorotation throttle value <code>gov_auto_throttle</code><a class="headerlink" href="#autorotation-throttle-value-gov_auto_throttle" title="Permanent link">&para;</a></h4>
+<p>The minimum throttle value in the <code>AUTOROTATION</code> state.</p>
+<h4 id="voltage-filter-gov_pwr_filter">Voltage Filter <code>gov_pwr_filter</code><a class="headerlink" href="#voltage-filter-gov_pwr_filter" title="Permanent link">&para;</a></h4>
+<p>A cutoff frequency for the battery voltage filter.</p>
+<h4 id="rpm-filter-gov_rpm_filter">RPM Filter <code>gov_rpm_filter</code><a class="headerlink" href="#rpm-filter-gov_rpm_filter" title="Permanent link">&para;</a></h4>
+<p>A cutoff frequency for the headspeed filter.</p>
+<h4 id="tta-filter-gov_tta_filter">TTA Filter <code>gov_tta_filter</code><a class="headerlink" href="#tta-filter-gov_tta_filter" title="Permanent link">&para;</a></h4>
+<p>A cutoff frequency for the TTA control filter.</p>
+<h4 id="feedforward-filter-gov_ff_filter">Feedforward Filter <code>gov_ff_filter</code><a class="headerlink" href="#feedforward-filter-gov_ff_filter" title="Permanent link">&para;</a></h4>
+<p>A cutoff frequency for the feedforward/precomp filter.</p>
+<h4 id="d-term-filter-gov_d_filter">D-term Filter <code>gov_d_filter</code><a class="headerlink" href="#d-term-filter-gov_d_filter" title="Permanent link">&para;</a></h4>
+<p>A cutoff frequency for the D-term internal filter.</p>
+<h4 id="throttle-curve-for-bypass-gov_bypass_throttle">Throttle Curve for BYPASS <code>gov_bypass_throttle</code><a class="headerlink" href="#throttle-curve-for-bypass-gov_bypass_throttle" title="Permanent link">&para;</a></h4>
+<p>A curve for calculating throttle value from the collective position.
+Used only in the governor bypass.</p>
+<p>An array of 9 values in 0..200, indicating 0..100% throttle with 0.5% steps.</p>
+<h3 id="profile-settings">Profile Settings<a class="headerlink" href="#profile-settings" title="Permanent link">&para;</a></h3>
+<h4 id="target-headspeed-gov_headspeed">Target headspeed <code>gov_headspeed</code><a class="headerlink" href="#target-headspeed-gov_headspeed" title="Permanent link">&para;</a></h4>
+<p>The (full) headspeed for the profile.</p>
+<h4 id="minimum-throttle-while-active-gov_min_throttle">Minimum throttle while active <code>gov_min_throttle</code><a class="headerlink" href="#minimum-throttle-while-active-gov_min_throttle" title="Permanent link">&para;</a></h4>
+<p>The minimum throttle value in the <code>ACTIVE</code> state.
+If set, it must be higher than handover throttle.</p>
+<h4 id="maximum-throttle-used-gov_max_throttle">Maximum throttle used <code>gov_max_throttle</code><a class="headerlink" href="#maximum-throttle-used-gov_max_throttle" title="Permanent link">&para;</a></h4>
+<p>The maximum throttle value, in any state.</p>
+<h4 id="master-gain-gov_gain">Master Gain <code>gov_gain</code><a class="headerlink" href="#master-gain-gov_gain" title="Permanent link">&para;</a></h4>
+<p>The master PID gain.</p>
+<h4 id="p-gain-gov_p_gain">P-Gain <code>gov_p_gain</code><a class="headerlink" href="#p-gain-gov_p_gain" title="Permanent link">&para;</a></h4>
+<p>The governor PID loop P-gain.</p>
+<h4 id="i-gain-gov_i_gain">I-Gain <code>gov_i_gain</code><a class="headerlink" href="#i-gain-gov_i_gain" title="Permanent link">&para;</a></h4>
+<p>The governor PID loop I-gain.</p>
+<h4 id="d-gain-gov_d_gain">D-Gain <code>gov_d_gain</code><a class="headerlink" href="#d-gain-gov_d_gain" title="Permanent link">&para;</a></h4>
+<p>The governor PID loop D-gain.</p>
+<h4 id="f-gain-gov_f_gain">F-gain <code>gov_f_gain</code><a class="headerlink" href="#f-gain-gov_f_gain" title="Permanent link">&para;</a></h4>
+<p>The total <em>feedforward</em> gain, i.e. a common gain for all precomps.</p>
+<h4 id="p-limits-gov_p_limit">P-limits <code>gov_p_limit</code><a class="headerlink" href="#p-limits-gov_p_limit" title="Permanent link">&para;</a></h4>
+<p>The P-term range is <code>[-gov_p_limit, gov_p_limit]</code>.</p>
+<h4 id="i-limit-gov_i_limit">I-limit <code>gov_i_limit</code><a class="headerlink" href="#i-limit-gov_i_limit" title="Permanent link">&para;</a></h4>
+<p>The I-term range is <code>[-gov_i_limit, gov_i_limit]</code>.</p>
+<h4 id="d-limit-gov_d_limit">D-limit <code>gov_d_limit</code><a class="headerlink" href="#d-limit-gov_d_limit" title="Permanent link">&para;</a></h4>
+<p>The D-term range is <code>[-gov_d_limit, gov_d_limit]</code>.</p>
+<h4 id="f-limit-gov_f_limit">F-limit <code>gov_f_limit</code><a class="headerlink" href="#f-limit-gov_f_limit" title="Permanent link">&para;</a></h4>
+<p>The F-term range is <code>[-gov_f_limit, gov_f_limit]</code>.</p>
+<h4 id="yaw-precomp-weight-gov_yaw_ff_weight">Yaw Precomp Weight <code>gov_yaw_ff_weight</code><a class="headerlink" href="#yaw-precomp-weight-gov_yaw_ff_weight" title="Permanent link">&para;</a></h4>
+<p>A relative weight for the yaw precomp.</p>
+<h4 id="cyclic-precomp-weight-gov_cyclic_ff_weight">Cyclic Precomp Weight <code>gov_cyclic_ff_weight</code><a class="headerlink" href="#cyclic-precomp-weight-gov_cyclic_ff_weight" title="Permanent link">&para;</a></h4>
+<p>A relative weight for the cyclic precomp.</p>
+<h4 id="collective-precomp-weight-gov_collective_ff_weight">Collective Precomp Weight <code>gov_collective_ff_weight</code><a class="headerlink" href="#collective-precomp-weight-gov_collective_ff_weight" title="Permanent link">&para;</a></h4>
+<p>A relative weight for the collective precomp.</p>
+<h4 id="collective-precomp-curve-gov_collective_curve">Collective Precomp Curve <code>gov_collective_curve</code><a class="headerlink" href="#collective-precomp-curve-gov_collective_curve" title="Permanent link">&para;</a></h4>
+<p>Collective curve exponent (/10). Values 15..25 are likely good.</p>
+<h4 id="dynamic-throttle-minimum-gov_dyn_min_throttle">Dynamic Throttle Minimum <code>gov_dyn_min_throttle</code><a class="headerlink" href="#dynamic-throttle-minimum-gov_dyn_min_throttle" title="Permanent link">&para;</a></h4>
+<p>The percentage that the throttle is allowed to suddenly drop from
+a steady state level. This prevents the throttle from dropping
+too low during overspeed situations.</p>
+<h4 id="tta-gain-gov_tta_gain">TTA-gain <code>gov_tta_gain</code><a class="headerlink" href="#tta-gain-gov_tta_gain" title="Permanent link">&para;</a></h4>
+<p>A gain for <em>Tail Torque Assist</em>.</p>
+<h4 id="tta-limit-gov_tta_limit">TTA-limit <code>gov_tta_limit</code><a class="headerlink" href="#tta-limit-gov_tta_limit" title="Permanent link">&para;</a></h4>
+<p>A limit for headspeed increase in % due to TTA.</p>
+<h3 id="profile-flags">Profile Flags<a class="headerlink" href="#profile-flags" title="Permanent link">&para;</a></h3>
+<h4 id="flag-gov_use_voltage_comp">Flag <code>gov_use_voltage_comp</code><a class="headerlink" href="#flag-gov_use_voltage_comp" title="Permanent link">&para;</a></h4>
+<p>Use <em>battery voltage compensation</em>. This is useful when the battery has a high internal
+resistance. For example, when using Li-ion or LiFePo4 batteries.</p>
+<h4 id="flag-gov_use_pid_spoolup">Flag <code>gov_use_pid_spoolup</code><a class="headerlink" href="#flag-gov_use_pid_spoolup" title="Permanent link">&para;</a></h4>
+<p>Use a PID controlled spoolup in the <code>SPOOLUP</code> state.</p>
+<h4 id="flag-gov_use_dyn_min_throttle">Flag <code>gov_use_dyn_min_throttle</code><a class="headerlink" href="#flag-gov_use_dyn_min_throttle" title="Permanent link">&para;</a></h4>
+<p>Use <em>Dynamic Minimum Throttle</em> in the <code>ACTIVE</code> state. In case the one-way bearing
+disengages, the output throttle is not allowed to drop below a value that is
+calculated dynamically.</p>
+<h4 id="flag-gov_use_fallback_precomp">Flag <code>gov_use_fallback_precomp</code><a class="headerlink" href="#flag-gov_use_fallback_precomp" title="Permanent link">&para;</a></h4>
+<p>Enable the <em>precompensations</em> in the <code>FALLBACK</code> state.</p>
+<h3 id="mode-switches">Mode Switches<a class="headerlink" href="#mode-switches" title="Permanent link">&para;</a></h3>
+<p>There are three new mode switches for the governor.</p>
+<h4 id="fallback"><code>FALLBACK</code><a class="headerlink" href="#fallback" title="Permanent link">&para;</a></h4>
+<p>Trigger an <em>RPM error</em> temporarily, for testing the <code>FALLBACK</code> state behaviour.</p>
+<h4 id="suspend"><code>SUSPEND</code><a class="headerlink" href="#suspend" title="Permanent link">&para;</a></h4>
+<p>Disable PID control in the <code>ACTIVE</code> state - only use the F-term.</p>
+<h4 id="bypass"><code>BYPASS</code><a class="headerlink" href="#bypass" title="Permanent link">&para;</a></h4>
+<p>Enable <em>throttle bypass</em>, effectively disabling all governor functions.</p>
+<p>In <code>BYPASS</code> mode, no safeguards or throttle rate limiting are applied.
+The throttle output is taken directly from the value derived from
+the collective position.</p>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
+<h4 id="simple-one-headspeed-electric">Simple One Headspeed (electric)<a class="headerlink" href="#simple-one-headspeed-electric" title="Permanent link">&para;</a></h4>
+<p>The most simple setup is to have the throttle channel controlled by
+a Throttle Cut switch. The headspeed is set in the governor profile.</p>
+<p><div class="highlight"><pre><span></span><code>set gov_throttle_type = NORMAL
+set gov_headspeed = 2400
+</code></pre></div>
+No other settings are needed.</p>
+<h4 id="simple-throttle-on-stick-electric">Simple Throttle-on-Stick (electric)<a class="headerlink" href="#simple-throttle-on-stick-electric" title="Permanent link">&para;</a></h4>
+<p>The traditional throttle-on-stick can be set up with the throttle curve in
+the Tx. The flat part of the curve should be set to 100%.</p>
+<p>The required headspeed is set in the governor profile.</p>
+<div class="highlight"><pre><span></span><code>set gov_throttle_type = NORMAL
+set gov_headspeed = 2400
+</code></pre></div>
+<p>It is strongly suggested to have a <em>Throttle Cut</em> switch with this setup.</p>
 
 
 
@@ -5048,7 +6780,7 @@ http://uk.farnell.com/jsp/search/productdetail.jsp?sku=2144328</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../smartfuel/" class="md-footer__link md-footer__link--prev" aria-label="Previous: SmartFuel Internals">
+          <a href="../blackbox-format/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Blackbox Log Format">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -5058,20 +6790,20 @@ http://uk.farnell.com/jsp/search/productdetail.jsp?sku=2144328</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                SmartFuel Internals
+                Blackbox Log Format
               </div>
             </div>
           </a>
         
         
           
-          <a href="../hardware-debugging-vscode-jlink/" class="md-footer__link md-footer__link--next" aria-label="Next: Debugging with VS Code and J-Link">
+          <a href="../smartfuel/" class="md-footer__link md-footer__link--next" aria-label="Next: SmartFuel Internals">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Debugging with VS Code and J-Link
+                SmartFuel Internals
               </div>
             </div>
             <div class="md-footer__button md-icon">
