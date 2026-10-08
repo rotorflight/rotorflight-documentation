@@ -141,18 +141,13 @@ nav:
       - FrSky Ethos:
           - radio/ethos/index.md
           - Radio Setup: radio/ethos/radio-setup.md
-          - Model Setup: radio/ethos/model-setup.md
-          - Rotorflight Lua Suite: radio/ethos/lua-suite.md
-          - Missing Sensors: radio/ethos/missing-sensors.md
-          - Background Task: radio/ethos/background-task.md
-          - Nexus Status: radio/ethos/nexus-status.md
-          - Simulators: radio/ethos/simulators.md
+          - Using RFSuite: radio/ethos/lua-suite.md
+          - Troubleshooting: radio/ethos/troubleshooting.md
       - EdgeTX:
           - radio/edgetx/index.md
           - Radio Setup: radio/edgetx/radio-setup.md
-          - Rotorflight Lua Suite: radio/edgetx/lua-suite.md
-          - Widgets: radio/edgetx/widgets.md
-          - RF API: radio/edgetx/rf-api.md
+          - Using RFSuite: radio/edgetx/lua-suite.md
+          - Classic Lua Scripts: radio/edgetx/classic-scripts.md
       - Futaba: radio/futaba.md
       - Jeti: radio/jeti.md
       - Other Radios: radio/others.md
