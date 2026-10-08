@@ -92,7 +92,6 @@ nav:
       - Remapping Outputs: setup/remapping.md
       - Servo Setup: setup/servos.md
       - Mixer & Swashplate Setup: setup/mixer.md
-      - Extra Servo: setup/extra-servo.md
       - RPM Measurement: setup/rpm-measurement.md
       - RPM Filters: setup/rpm-filters.md
       - ESC Telemetry: setup/esc-telemetry.md
@@ -201,4 +200,6 @@ nav:
       - Editing the Docs: contributing/editing-the-docs.md
       - Flow Charts: contributing/flow-charts.md
       - Modeling Cross-Coupling: contributing/modeling-cross-coupling.md
+      - Technical Reference:
+          - SmartFuel Internals: contributing/tech/smartfuel.md
       - Support the Project: contributing/support.md
