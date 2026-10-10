@@ -10,31 +10,31 @@
       
       
       
-        <link rel="canonical" href="https://doc.rotorflight.org/reference/telemetry/">
+        <link rel="canonical" href="https://doc.rotorflight.org/radio/ethos/tune-advisor/">
       
       
-        <link rel="prev" href="../cli-settings/">
+        <link rel="prev" href="../lua-suite/">
       
       
-        <link rel="next" href="../serial-ports/">
+        <link rel="next" href="../troubleshooting/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/favicon.ico">
+      <link rel="icon" href="../../../assets/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
-        <title>Telemetry Sensors - Rotorflight Documentation</title>
+        <title>Tune Advisor - Rotorflight Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -47,9 +47,9 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#telemetry-sensors" class="md-skip">
+        <a href="#tune-advisor" class="md-skip">
           Skip to content
         </a>
       
@@ -88,9 +88,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Rotorflight Documentation" class="md-header__button md-logo" aria-label="Rotorflight Documentation" data-md-component="logo">
+    <a href="../../.." title="Rotorflight Documentation" class="md-header__button md-logo" aria-label="Rotorflight Documentation" data-md-component="logo">
       
-  <img src="../../assets/Rotorflight_outline_dark.svg" alt="logo">
+  <img src="../../../assets/Rotorflight_outline_dark.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Telemetry Sensors
+              Tune Advisor
             
           </span>
         </div>
@@ -220,7 +220,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -241,7 +241,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../getting-started/" class="md-tabs__link">
+        <a href="../../../getting-started/" class="md-tabs__link">
           
   
   
@@ -263,7 +263,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../setup/" class="md-tabs__link">
+        <a href="../../../setup/" class="md-tabs__link">
           
   
   
@@ -285,7 +285,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../configurator/" class="md-tabs__link">
+        <a href="../../../configurator/" class="md-tabs__link">
           
   
   
@@ -303,11 +303,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../radio/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
           
   
   
@@ -329,7 +331,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../tuning/" class="md-tabs__link">
+        <a href="../../../tuning/" class="md-tabs__link">
           
   
   
@@ -351,7 +353,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../hardware/" class="md-tabs__link">
+        <a href="../../../hardware/" class="md-tabs__link">
           
   
   
@@ -369,13 +371,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../reference/" class="md-tabs__link">
           
   
   
@@ -397,7 +397,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../contributing/" class="md-tabs__link">
+        <a href="../../../contributing/" class="md-tabs__link">
           
   
   
@@ -433,9 +433,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Rotorflight Documentation" class="md-nav__button md-logo" aria-label="Rotorflight Documentation" data-md-component="logo">
+    <a href="../../.." title="Rotorflight Documentation" class="md-nav__button md-logo" aria-label="Rotorflight Documentation" data-md-component="logo">
       
-  <img src="../../assets/Rotorflight_outline_dark.svg" alt="logo">
+  <img src="../../../assets/Rotorflight_outline_dark.svg" alt="logo">
 
     </a>
     Rotorflight Documentation
@@ -462,7 +462,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -524,7 +524,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../getting-started/" class="md-nav__link ">
+            <a href="../../../getting-started/" class="md-nav__link ">
               
   
   
@@ -568,7 +568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/downloads/" class="md-nav__link">
+      <a href="../../../getting-started/downloads/" class="md-nav__link">
         
   
   
@@ -596,7 +596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/flashing-the-firmware/" class="md-nav__link">
+      <a href="../../../getting-started/flashing-the-firmware/" class="md-nav__link">
         
   
   
@@ -624,7 +624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/first-connection/" class="md-nav__link">
+      <a href="../../../getting-started/first-connection/" class="md-nav__link">
         
   
   
@@ -652,7 +652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/backup-and-restore/" class="md-nav__link">
+      <a href="../../../getting-started/backup-and-restore/" class="md-nav__link">
         
   
   
@@ -680,7 +680,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/upgrade-notes/" class="md-nav__link">
+      <a href="../../../getting-started/upgrade-notes/" class="md-nav__link">
         
   
   
@@ -708,7 +708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/arming/" class="md-nav__link">
+      <a href="../../../getting-started/arming/" class="md-nav__link">
         
   
   
@@ -736,7 +736,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/example-build/" class="md-nav__link">
+      <a href="../../../getting-started/example-build/" class="md-nav__link">
         
   
   
@@ -830,7 +830,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../setup/" class="md-nav__link ">
+            <a href="../../../setup/" class="md-nav__link ">
               
   
   
@@ -874,7 +874,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/remapping/" class="md-nav__link">
+      <a href="../../../setup/remapping/" class="md-nav__link">
         
   
   
@@ -902,7 +902,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/servos/" class="md-nav__link">
+      <a href="../../../setup/servos/" class="md-nav__link">
         
   
   
@@ -930,7 +930,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/mixer/" class="md-nav__link">
+      <a href="../../../setup/mixer/" class="md-nav__link">
         
   
   
@@ -958,7 +958,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/rpm-measurement/" class="md-nav__link">
+      <a href="../../../setup/rpm-measurement/" class="md-nav__link">
         
   
   
@@ -986,7 +986,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/rpm-filters/" class="md-nav__link">
+      <a href="../../../setup/rpm-filters/" class="md-nav__link">
         
   
   
@@ -1014,7 +1014,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/esc-telemetry/" class="md-nav__link">
+      <a href="../../../setup/esc-telemetry/" class="md-nav__link">
         
   
   
@@ -1042,7 +1042,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/esc-programming/" class="md-nav__link">
+      <a href="../../../setup/esc-programming/" class="md-nav__link">
         
   
   
@@ -1070,7 +1070,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/blheli-s-to-bluejay/" class="md-nav__link">
+      <a href="../../../setup/blheli-s-to-bluejay/" class="md-nav__link">
         
   
   
@@ -1098,7 +1098,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/governor/" class="md-nav__link">
+      <a href="../../../setup/governor/" class="md-nav__link">
         
   
   
@@ -1126,7 +1126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/governor-setup/" class="md-nav__link">
+      <a href="../../../setup/governor-setup/" class="md-nav__link">
         
   
   
@@ -1154,7 +1154,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/nitro/" class="md-nav__link">
+      <a href="../../../setup/nitro/" class="md-nav__link">
         
   
   
@@ -1182,7 +1182,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/gear-ratios/" class="md-nav__link">
+      <a href="../../../setup/gear-ratios/" class="md-nav__link">
         
   
   
@@ -1210,7 +1210,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/smartfuel/" class="md-nav__link">
+      <a href="../../../setup/smartfuel/" class="md-nav__link">
         
   
   
@@ -1238,7 +1238,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/profile-switching/" class="md-nav__link">
+      <a href="../../../setup/profile-switching/" class="md-nav__link">
         
   
   
@@ -1266,7 +1266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/stability-modes/" class="md-nav__link">
+      <a href="../../../setup/stability-modes/" class="md-nav__link">
         
   
   
@@ -1294,7 +1294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/led-strip/" class="md-nav__link">
+      <a href="../../../setup/led-strip/" class="md-nav__link">
         
   
   
@@ -1322,7 +1322,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/openlager/" class="md-nav__link">
+      <a href="../../../setup/openlager/" class="md-nav__link">
         
   
   
@@ -1350,7 +1350,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/fbus-master/" class="md-nav__link">
+      <a href="../../../setup/fbus-master/" class="md-nav__link">
         
   
   
@@ -1378,7 +1378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/elrs-custom-telemetry/" class="md-nav__link">
+      <a href="../../../setup/elrs-custom-telemetry/" class="md-nav__link">
         
   
   
@@ -1486,7 +1486,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../configurator/" class="md-nav__link ">
+            <a href="../../../configurator/" class="md-nav__link ">
               
   
   
@@ -1530,7 +1530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/status/" class="md-nav__link">
+      <a href="../../../configurator/tabs/status/" class="md-nav__link">
         
   
   
@@ -1558,7 +1558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/setup/" class="md-nav__link">
+      <a href="../../../configurator/tabs/setup/" class="md-nav__link">
         
   
   
@@ -1586,7 +1586,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/configuration/" class="md-nav__link">
+      <a href="../../../configurator/tabs/configuration/" class="md-nav__link">
         
   
   
@@ -1614,7 +1614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/presets/" class="md-nav__link">
+      <a href="../../../configurator/tabs/presets/" class="md-nav__link">
         
   
   
@@ -1642,7 +1642,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/power/" class="md-nav__link">
+      <a href="../../../configurator/tabs/power/" class="md-nav__link">
         
   
   
@@ -1670,7 +1670,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/receiver/" class="md-nav__link">
+      <a href="../../../configurator/tabs/receiver/" class="md-nav__link">
         
   
   
@@ -1698,7 +1698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/failsafe/" class="md-nav__link">
+      <a href="../../../configurator/tabs/failsafe/" class="md-nav__link">
         
   
   
@@ -1726,7 +1726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/mixer/" class="md-nav__link">
+      <a href="../../../configurator/tabs/mixer/" class="md-nav__link">
         
   
   
@@ -1754,7 +1754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/servos/" class="md-nav__link">
+      <a href="../../../configurator/tabs/servos/" class="md-nav__link">
         
   
   
@@ -1782,7 +1782,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/motors/" class="md-nav__link">
+      <a href="../../../configurator/tabs/motors/" class="md-nav__link">
         
   
   
@@ -1810,7 +1810,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/governor/" class="md-nav__link">
+      <a href="../../../configurator/tabs/governor/" class="md-nav__link">
         
   
   
@@ -1838,7 +1838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/profiles/" class="md-nav__link">
+      <a href="../../../configurator/tabs/profiles/" class="md-nav__link">
         
   
   
@@ -1866,7 +1866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/rates/" class="md-nav__link">
+      <a href="../../../configurator/tabs/rates/" class="md-nav__link">
         
   
   
@@ -1894,7 +1894,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/gyro/" class="md-nav__link">
+      <a href="../../../configurator/tabs/gyro/" class="md-nav__link">
         
   
   
@@ -1922,7 +1922,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/modes/" class="md-nav__link">
+      <a href="../../../configurator/tabs/modes/" class="md-nav__link">
         
   
   
@@ -1950,7 +1950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/adjustments/" class="md-nav__link">
+      <a href="../../../configurator/tabs/adjustments/" class="md-nav__link">
         
   
   
@@ -1978,7 +1978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/gps/" class="md-nav__link">
+      <a href="../../../configurator/tabs/gps/" class="md-nav__link">
         
   
   
@@ -2006,7 +2006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/led-strip/" class="md-nav__link">
+      <a href="../../../configurator/tabs/led-strip/" class="md-nav__link">
         
   
   
@@ -2034,7 +2034,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/remap-fc/" class="md-nav__link">
+      <a href="../../../configurator/tabs/remap-fc/" class="md-nav__link">
         
   
   
@@ -2062,7 +2062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/beepers/" class="md-nav__link">
+      <a href="../../../configurator/tabs/beepers/" class="md-nav__link">
         
   
   
@@ -2090,7 +2090,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/sensors/" class="md-nav__link">
+      <a href="../../../configurator/tabs/sensors/" class="md-nav__link">
         
   
   
@@ -2118,7 +2118,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/crsf-sensors/" class="md-nav__link">
+      <a href="../../../configurator/tabs/crsf-sensors/" class="md-nav__link">
         
   
   
@@ -2146,7 +2146,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/xact-servo/" class="md-nav__link">
+      <a href="../../../configurator/tabs/xact-servo/" class="md-nav__link">
         
   
   
@@ -2174,7 +2174,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/esc-programming/" class="md-nav__link">
+      <a href="../../../configurator/tabs/esc-programming/" class="md-nav__link">
         
   
   
@@ -2202,7 +2202,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/blackbox/" class="md-nav__link">
+      <a href="../../../configurator/tabs/blackbox/" class="md-nav__link">
         
   
   
@@ -2230,7 +2230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configurator/tabs/cli/" class="md-nav__link">
+      <a href="../../../configurator/tabs/cli/" class="md-nav__link">
         
   
   
@@ -2262,6 +2262,8 @@
       
   
   
+    
+  
   
   
     
@@ -2285,18 +2287,21 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../radio/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   
@@ -2314,13 +2319,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2337,6 +2342,8 @@
                 
   
   
+    
+  
   
   
     
@@ -2361,15 +2368,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../radio/ethos/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -2393,7 +2400,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2413,7 +2420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../radio/ethos/radio-setup/" class="md-nav__link">
+      <a href="../radio-setup/" class="md-nav__link">
         
   
   
@@ -2441,7 +2448,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../radio/ethos/lua-suite/" class="md-nav__link">
+      <a href="../lua-suite/" class="md-nav__link">
         
   
   
@@ -2466,10 +2473,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../radio/ethos/tune-advisor/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tune Advisor
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2485,6 +2519,120 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#collecting-flight-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Collecting flight data
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-flights-are-saved-and-combined" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How flights are saved and combined
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-it-suggests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What it suggests
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applying-the-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Applying the changes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Applying the changes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#after-applying" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        After applying
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjustment-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adjustment functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clearing-the-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clearing the data
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        See also
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2497,7 +2645,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../radio/ethos/troubleshooting/" class="md-nav__link">
+      <a href="../troubleshooting/" class="md-nav__link">
         
   
   
@@ -2560,7 +2708,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../radio/edgetx/" class="md-nav__link ">
+            <a href="../../edgetx/" class="md-nav__link ">
               
   
   
@@ -2604,7 +2752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../radio/edgetx/radio-setup/" class="md-nav__link">
+      <a href="../../edgetx/radio-setup/" class="md-nav__link">
         
   
   
@@ -2632,7 +2780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../radio/edgetx/lua-suite/" class="md-nav__link">
+      <a href="../../edgetx/lua-suite/" class="md-nav__link">
         
   
   
@@ -2660,7 +2808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../radio/edgetx/classic-scripts/" class="md-nav__link">
+      <a href="../../edgetx/classic-scripts/" class="md-nav__link">
         
   
   
@@ -2696,7 +2844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../radio/futaba/" class="md-nav__link">
+      <a href="../../futaba/" class="md-nav__link">
         
   
   
@@ -2724,7 +2872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../radio/jeti/" class="md-nav__link">
+      <a href="../../jeti/" class="md-nav__link">
         
   
   
@@ -2752,7 +2900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../radio/others/" class="md-nav__link">
+      <a href="../../others/" class="md-nav__link">
         
   
   
@@ -2822,7 +2970,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../tuning/" class="md-nav__link ">
+            <a href="../../../tuning/" class="md-nav__link ">
               
   
   
@@ -2866,7 +3014,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tuning/process/" class="md-nav__link">
+      <a href="../../../tuning/process/" class="md-nav__link">
         
   
   
@@ -2894,7 +3042,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tuning/filters/" class="md-nav__link">
+      <a href="../../../tuning/filters/" class="md-nav__link">
         
   
   
@@ -2922,7 +3070,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tuning/governor/" class="md-nav__link">
+      <a href="../../../tuning/governor/" class="md-nav__link">
         
   
   
@@ -2950,7 +3098,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tuning/high-speed-integral/" class="md-nav__link">
+      <a href="../../../tuning/high-speed-integral/" class="md-nav__link">
         
   
   
@@ -2978,7 +3126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tuning/cyclic-cross-coupling/" class="md-nav__link">
+      <a href="../../../tuning/cyclic-cross-coupling/" class="md-nav__link">
         
   
   
@@ -3006,7 +3154,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tuning/motorised-tail/" class="md-nav__link">
+      <a href="../../../tuning/motorised-tail/" class="md-nav__link">
         
   
   
@@ -3034,7 +3182,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tuning/rescue/" class="md-nav__link">
+      <a href="../../../tuning/rescue/" class="md-nav__link">
         
   
   
@@ -3108,7 +3256,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../hardware/" class="md-nav__link ">
+            <a href="../../../hardware/" class="md-nav__link ">
               
   
   
@@ -3152,7 +3300,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hardware/radiomaster-nexus/" class="md-nav__link">
+      <a href="../../../hardware/radiomaster-nexus/" class="md-nav__link">
         
   
   
@@ -3180,7 +3328,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hardware/frsky-007/" class="md-nav__link">
+      <a href="../../../hardware/frsky-007/" class="md-nav__link">
         
   
   
@@ -3208,7 +3356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hardware/flydragon-f722/" class="md-nav__link">
+      <a href="../../../hardware/flydragon-f722/" class="md-nav__link">
         
   
   
@@ -3236,7 +3384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hardware/flywing-heli-f405/" class="md-nav__link">
+      <a href="../../../hardware/flywing-heli-f405/" class="md-nav__link">
         
   
   
@@ -3264,7 +3412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hardware/goosky-f701/" class="md-nav__link">
+      <a href="../../../hardware/goosky-f701/" class="md-nav__link">
         
   
   
@@ -3292,7 +3440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hardware/goosky-f4mini/" class="md-nav__link">
+      <a href="../../../hardware/goosky-f4mini/" class="md-nav__link">
         
   
   
@@ -3320,7 +3468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hardware/matek-g474/" class="md-nav__link">
+      <a href="../../../hardware/matek-g474/" class="md-nav__link">
         
   
   
@@ -3348,7 +3496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hardware/betaflight-diy/" class="md-nav__link">
+      <a href="../../../hardware/betaflight-diy/" class="md-nav__link">
         
   
   
@@ -3376,7 +3524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hardware/manufacturers/" class="md-nav__link">
+      <a href="../../../hardware/manufacturers/" class="md-nav__link">
         
   
   
@@ -3408,8 +3556,6 @@
       
   
   
-    
-  
   
   
     
@@ -3441,21 +3587,18 @@
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../../reference/" class="md-nav__link ">
               
   
   
@@ -3473,13 +3616,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="">
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             
@@ -3499,7 +3642,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cli-reference/" class="md-nav__link">
+      <a href="../../../reference/cli-reference/" class="md-nav__link">
         
   
   
@@ -3527,7 +3670,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cli-settings/" class="md-nav__link">
+      <a href="../../../reference/cli-settings/" class="md-nav__link">
         
   
   
@@ -3552,37 +3695,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Telemetry Sensors
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../reference/telemetry/" class="md-nav__link">
         
   
   
@@ -3598,59 +3714,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#protocols" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Protocols
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#system-status-and-system-config" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        System Status and System Config
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sensor-ids" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sensor IDs
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -3663,7 +3726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../serial-ports/" class="md-nav__link">
+      <a href="../../../reference/serial-ports/" class="md-nav__link">
         
   
   
@@ -3691,7 +3754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../receivers/" class="md-nav__link">
+      <a href="../../../reference/receivers/" class="md-nav__link">
         
   
   
@@ -3719,7 +3782,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../blackbox/" class="md-nav__link">
+      <a href="../../../reference/blackbox/" class="md-nav__link">
         
   
   
@@ -3747,7 +3810,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../led-strip/" class="md-nav__link">
+      <a href="../../../reference/led-strip/" class="md-nav__link">
         
   
   
@@ -3775,7 +3838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../buzzer/" class="md-nav__link">
+      <a href="../../../reference/buzzer/" class="md-nav__link">
         
   
   
@@ -3803,7 +3866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../msp-overview/" class="md-nav__link">
+      <a href="../../../reference/msp-overview/" class="md-nav__link">
         
   
   
@@ -3871,7 +3934,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../contributing/" class="md-nav__link ">
+            <a href="../../../contributing/" class="md-nav__link ">
               
   
   
@@ -3915,7 +3978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/developers/" class="md-nav__link">
+      <a href="../../../contributing/developers/" class="md-nav__link">
         
   
   
@@ -3943,7 +4006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/building-the-firmware/" class="md-nav__link">
+      <a href="../../../contributing/building-the-firmware/" class="md-nav__link">
         
   
   
@@ -3971,7 +4034,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/coding-style/" class="md-nav__link">
+      <a href="../../../contributing/coding-style/" class="md-nav__link">
         
   
   
@@ -3999,7 +4062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/editing-the-docs/" class="md-nav__link">
+      <a href="../../../contributing/editing-the-docs/" class="md-nav__link">
         
   
   
@@ -4027,7 +4090,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/support/" class="md-nav__link">
+      <a href="../../../contributing/support/" class="md-nav__link">
         
   
   
@@ -4100,7 +4163,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../contributing/tech/" class="md-nav__link ">
+            <a href="../../../contributing/tech/" class="md-nav__link ">
               
   
   
@@ -4144,7 +4207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/tech/parameter-groups/" class="md-nav__link">
+      <a href="../../../contributing/tech/parameter-groups/" class="md-nav__link">
         
   
   
@@ -4172,7 +4235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/tech/configuration-format/" class="md-nav__link">
+      <a href="../../../contributing/tech/configuration-format/" class="md-nav__link">
         
   
   
@@ -4200,7 +4263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/tech/atomic-barrier/" class="md-nav__link">
+      <a href="../../../contributing/tech/atomic-barrier/" class="md-nav__link">
         
   
   
@@ -4228,7 +4291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/tech/customizing-the-build/" class="md-nav__link">
+      <a href="../../../contributing/tech/customizing-the-build/" class="md-nav__link">
         
   
   
@@ -4256,7 +4319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/tech/custom-boards/" class="md-nav__link">
+      <a href="../../../contributing/tech/custom-boards/" class="md-nav__link">
         
   
   
@@ -4284,7 +4347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/tech/blackbox-format/" class="md-nav__link">
+      <a href="../../../contributing/tech/blackbox-format/" class="md-nav__link">
         
   
   
@@ -4312,7 +4375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/tech/governor/" class="md-nav__link">
+      <a href="../../../contributing/tech/governor/" class="md-nav__link">
         
   
   
@@ -4340,7 +4403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/tech/smartfuel/" class="md-nav__link">
+      <a href="../../../contributing/tech/smartfuel/" class="md-nav__link">
         
   
   
@@ -4368,7 +4431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/tech/hardware-debugging/" class="md-nav__link">
+      <a href="../../../contributing/tech/hardware-debugging/" class="md-nav__link">
         
   
   
@@ -4396,7 +4459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/tech/hardware-debugging-vscode-jlink/" class="md-nav__link">
+      <a href="../../../contributing/tech/hardware-debugging-vscode-jlink/" class="md-nav__link">
         
   
   
@@ -4424,7 +4487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/tech/test-coverage/" class="md-nav__link">
+      <a href="../../../contributing/tech/test-coverage/" class="md-nav__link">
         
   
   
@@ -4452,7 +4515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/tech/modeling-cross-coupling/" class="md-nav__link">
+      <a href="../../../contributing/tech/modeling-cross-coupling/" class="md-nav__link">
         
   
   
@@ -4515,10 +4578,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#protocols" class="md-nav__link">
+  <a href="#collecting-flight-data" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Protocols
+        Collecting flight data
       
     </span>
   </a>
@@ -4526,10 +4589,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#system-status-and-system-config" class="md-nav__link">
+  <a href="#how-flights-are-saved-and-combined" class="md-nav__link">
     <span class="md-ellipsis">
       
-        System Status and System Config
+        How flights are saved and combined
       
     </span>
   </a>
@@ -4537,10 +4600,71 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sensor-ids" class="md-nav__link">
+  <a href="#what-it-suggests" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Sensor IDs
+        What it suggests
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applying-the-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Applying the changes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Applying the changes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#after-applying" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        After applying
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjustment-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adjustment functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clearing-the-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clearing the data
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        See also
       
     </span>
   </a>
@@ -4564,7 +4688,7 @@
 
 
   
-    <a href="https://github.com/rotorflight/rotorflight-documentation/edit/main/docs/reference/telemetry.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/rotorflight/rotorflight-documentation/edit/main/docs/radio/ethos/tune-advisor.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -4572,933 +4696,167 @@
   
 
 
-<h1 id="telemetry-sensors">Telemetry Sensors<a class="headerlink" href="#telemetry-sensors" title="Permanent link">&para;</a></h1>
-<p>Rotorflight sends its data to your radio as telemetry sensors: battery,
-ESC, headspeed, governor state, profiles, attitude, GPS and more. Choose
-which on the <a href="../../configurator/tabs/receiver/#telemetry-sensors">Receiver</a>
-tab, or with the <code>telemetry_sensors</code> setting.</p>
-<h2 id="protocols">Protocols<a class="headerlink" href="#protocols" title="Permanent link">&para;</a></h2>
+<h1 id="tune-advisor">Tune Advisor<a class="headerlink" href="#tune-advisor" title="Permanent link">&para;</a></h1>
+<p>The Tune Advisor tells you how your heli answers the sticks and what to change next. While you fly in rate
+mode, the flight controller measures each axis. Each time you disarm, the radio saves those measurements. The
+page combines your last few flights and suggests one change at a time for each axis. <strong>Save</strong> can write that
+change to the flight controller for you.</p>
+<p><strong>Flight Tuning → Tune Advisor</strong></p>
+<p><img alt="Tune Advisor with changes suggested for roll" src="../img/rf-tune-advisor.png" width="560" /></p>
+<p>The flight controller needs firmware with the Tune Advisor. Older firmware shows <em>Needs newer firmware</em>. The
+radio's background task must be running, and the heli must have been connected since the page opened. After
+that, the saved flights stay on screen through a link loss.</p>
+<h2 id="collecting-flight-data">Collecting flight data<a class="headerlink" href="#collecting-flight-data" title="Permanent link">&para;</a></h2>
+<p>The flight controller counts only rate flight while spooled up and airborne, with the heli moving on some axis.
+Time in Angle, Horizon, Trainer, Altitude hold, Rescue, GPS rescue or failsafe is left out.</p>
+<p>What it needs:</p>
+<ul>
+<li><strong>Response</strong> needs about ten seconds of stick inputs between 40 and 200 deg/s on that axis. <em>Needs more flying</em>
+  shows how far along it is.</li>
+<li><strong>Stops</strong> needs 10 stick releases: move the stick, then let it come back to centre. Centre the stick after each
+  input instead of reversing straight through.</li>
+</ul>
+<p>One flight may be enough, or it may take a few. Fly your normal rate-mode flying with clear inputs and releases
+on each axis.</p>
+<h2 id="how-flights-are-saved-and-combined">How flights are saved and combined<a class="headerlink" href="#how-flights-are-saved-and-combined" title="Permanent link">&para;</a></h2>
+<p>Each time you disarm, the radio's background task reads the measurements for roll, pitch and yaw from the flight
+controller. It saves them as one flight and then clears them on the flight controller, so the next flight is
+measured on its own. This happens whether or not the Tune Advisor page is open.</p>
+<ul>
+<li>The flights are kept on the radio's SD card in <code>LOGS:/rfsuite/tune/&lt;model&gt;/history.csv</code>, one row per axis per
+  flight. <code>&lt;model&gt;</code> is the flight controller's ID, the same one that names the flight log folders.</li>
+<li>Only the <strong>last 5 flights</strong> are kept.</li>
+<li>A flight with no rate flight in it is not saved.</li>
+<li>If you disarm while the radio has lost the link, the flight is saved when it reconnects. That works as long as
+  the flight controller has not been powered off in between.</li>
+</ul>
+<p>The page combines the flights like this:</p>
+<ol>
+<li>It starts from the <strong>newest</strong> flight and works backwards, up to 5 flights.</li>
+<li>It only combines flights flown on <strong>the same tune</strong> as the newest one: the same P, F, B, Iterm Relax Cutoff,
+   rate type and rates on that axis. It stops at the first older flight with a different tune. Advice worked out
+   from flights on an old tune would be advice for settings you no longer fly.</li>
+<li>Counts add up: seconds of data, stick releases, full-stick moments.</li>
+<li>Each measurement is averaged across the flights, weighted by how much data it came from. A long flight counts
+   for more than a short one.</li>
+</ol>
+<p>The flight controller weights its own response figure slightly differently inside a flight, so the combined
+response is a close estimate rather than an exact one. The stop figures combine exactly. Each axis is combined
+on its own.</p>
+<p><em>Flight data</em> on the page shows how much was combined, for example <em>2m 27s, 1/5 flights</em>.</p>
+<h2 id="what-it-suggests">What it suggests<a class="headerlink" href="#what-it-suggests" title="Permanent link">&para;</a></h2>
+<p>The flight controller only measures. The advice is worked out on the radio, so it can be improved without a
+firmware update.</p>
+<ul>
+<li><strong>Turns faster or slower than asked</strong> (more than 15% off): change F and the rates by the same amount in
+  opposite directions. The stick feel stays the same, but the heli now flies the rate you ask for. One step
+  changes F by at most 20%. An axis with F set to 0 (often the tail) gets no F advice.</li>
+<li><strong>Full stick asks for more rate than the heli reaches</strong> (roll and pitch), with the cyclic at its limit: lower
+  the rates to what the heli reaches.</li>
+<li><strong>Stops bounce back 12% or more:</strong></li>
+<li>If the I-term pushes the heli back after the stop, lower <em>PID Controller &gt; Iterm Relax Cutoff</em> by 20%.</li>
+<li>If F does not match yet, fix F first and check again.</li>
+<li>Otherwise the controller is barely braking the stop: raise P by 20% (or add B).</li>
+<li><strong>Turns faster at high |collective| than at low</strong> (or the reverse) by 25% or more is shown as a fact, with no
+  change.</li>
+</ul>
+<p>With Actual, Quick and Rotorflight rates the page gives the exact rate values. With Betaflight, Raceflight and
+KISS rates the curve cannot be scaled exactly, so it gives a percentage.</p>
+<h2 id="applying-the-changes">Applying the changes<a class="headerlink" href="#applying-the-changes" title="Permanent link">&para;</a></h2>
+<p>Press <strong>Save</strong> to write the suggested changes for the axis on screen. It is greyed out unless the heli is
+connected and disarmed and there is a change it can write. It applies <strong>one axis at a time</strong>: switch <em>Axis</em> and
+press <strong>Save</strong> again for another axis.</p>
+<p><img alt="Save lists the changes and asks before writing" src="../img/rf-tune-advisor-apply.png" width="560" /></p>
+<p><strong>Save</strong> first lists exactly what it will change and asks you to confirm (<em>Cancel</em> is selected). It then shows
+each step as it runs:</p>
+<ol>
+<li><strong>Reading current settings</strong>: reads PIDs, PID Controller and Rates from the flight controller. If a read
+   fails, or a reply comes back short, it stops and nothing is changed.</li>
+<li>It checks that the flight controller still holds the tune the flights were flown with: the same PID and rate
+   profile, and the same P, F, B, Iterm Relax Cutoff, rate type and rates on that axis. If anything differs it
+   stops, and nothing is changed. That happens if you changed a setting by hand, switched profile, or already
+   applied this advice. It also stops if a new value is out of range or the heli has been armed.</li>
+<li><strong>Writing changes</strong>: only the advised settings change. Everything else is written back exactly as it was read.</li>
+<li><strong>Saving to flight controller</strong>: makes the change permanent.</li>
+<li><strong>Checking saved settings</strong>: reads the settings back to confirm the new values.</li>
+</ol>
+<p>With Betaflight, Raceflight or KISS rates, <strong>Save</strong> does not write the percentage rate change. It does not write
+the F change that goes with it either, because F on its own would change the stick feel. Make both by hand, or
+use Actual, Quick or Rotorflight rates.</p>
 <table>
 <thead>
 <tr>
-<th>Protocol</th>
-<th>How sensors are sent</th>
-<th>Notes</th>
+<th>Message</th>
+<th>What happened</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>FrSky S.Port / F.Port / F.Bus</strong></td>
-<td>Each sensor has an S.Port application ID (below).</td>
-<td>The selected sensors are sent in turn.</td>
+<td>Could not read the settings…</td>
+<td>A read failed. Nothing was changed.</td>
 </tr>
 <tr>
-<td><strong>CRSF / ExpressLRS -- Custom</strong></td>
-<td>Rotorflight's own frames, each sensor with a custom ID (below). Up to 40 sensors.</td>
-<td>Needs a decoder on the radio -- see <a href="../../setup/elrs-custom-telemetry/">ELRS Custom Telemetry</a>.</td>
+<td>The settings on the flight controller are not the ones these flights were flown with…</td>
+<td>The tune differs from the flights'. Nothing was changed. Fly again on the current settings.</td>
 </tr>
 <tr>
-<td><strong>CRSF / ExpressLRS -- Native</strong></td>
-<td>Standard CRSF frames: flight mode, battery, attitude, altitude, GPS, and (2.3+) RPM and temperature.</td>
-<td>Works on any CRSF radio, but carries far less.</td>
+<td>Disarm first…</td>
+<td>The heli was armed. Nothing was saved.</td>
 </tr>
 <tr>
-<td><strong>FrSky Hub (D-series)</strong></td>
-<td>Fixed set of hub sensors.</td>
-<td>Legacy.</td>
+<td>Writing failed…</td>
+<td>Part of the change may have been sent but none of it was saved. Restarting the flight controller undoes it.</td>
 </tr>
 <tr>
-<td><strong>FlySky iBUS / iBUS2</strong></td>
-<td>iBUS sensor slots.</td>
-<td></td>
+<td>Saving failed…</td>
+<td>The change is active but not saved. It is undone when the flight controller restarts.</td>
 </tr>
 <tr>
-<td><strong>Futaba SBUS2</strong></td>
-<td>Fixed slots -- see <a href="../../radio/futaba/">Futaba</a>.</td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Jeti EX Bus</strong></td>
-<td>Sensors appear on the radio automatically.</td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Graupner HoTT, Spektrum SRXL / SRXL2, Ghost, MAVLink, LTM</strong></td>
-<td>Protocol-specific sets.</td>
-<td></td>
+<td>Saved, but reading back did not confirm it…</td>
+<td>Check the values on <em>PIDs</em>, <em>Rates</em> and <em>PID Controller</em>.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="system-status-and-system-config">System Status and System Config<a class="headerlink" href="#system-status-and-system-config" title="Permanent link">&para;</a></h2>
-<p><em>New in 2.4.</em> Two sensors pack the flight controller's state into bit
-fields, so a radio dashboard can show everything at once without dozens of
-sensors:</p>
-<p><strong>System Status</strong> (ID 120; S.Port <code>0x5140</code>, CRSF <code>0x1230</code>) -- live state:
-armed, airborne, motors running, RX link, failsafe phase, GPS fix and
-health, spooled up, battery state, control saturated, gyro overflow,
-accelerometer not calibrated, override active, rescue state, Blackbox
-logging and governor state.</p>
-<p><strong>System Config</strong> (ID 121; S.Port <code>0x5141</code>, CRSF <code>0x1231</code>) -- slower
-configuration state: PID, rate and battery profile numbers, unsaved
-changes, saving, reboot required, beeper on, which sensors are present
-(accelerometer, barometer, compass, GPS), Blackbox full, RPM source
-active, and governor mode.</p>
-<p>The exact bit layout is in the firmware's
-<a href="https://github.com/rotorflight/rotorflight-firmware/blob/master/src/main/telemetry/status.h"><code>telemetry/status.h</code></a>.
-Both are in the default sensor selection.</p>
-<h2 id="sensor-ids">Sensor IDs<a class="headerlink" href="#sensor-ids" title="Permanent link">&para;</a></h2>
-<p>The <strong>ID</strong> is what goes in <code>telemetry_sensors</code>. A sensor can only be sent
-over a protocol for which it has an ID in the table.</p>
-<!-- Generated by tools/gen_telemetry_sensors.py. Do not edit by hand. -->
-
-<table>
-<thead>
-<tr>
-<th style="text-align: right;">ID</th>
-<th>Sensor</th>
-<th>Configurator name</th>
-<th>S.Port ID</th>
-<th>CRSF custom ID</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: right;">1</td>
-<td><code>HEARTBEAT</code></td>
-<td>Heartbeat</td>
-<td><code>0x5100</code></td>
-<td><code>0x1001</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">2</td>
-<td><code>BATTERY</code></td>
-<td>Battery</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: right;">3</td>
-<td><code>BATTERY_VOLTAGE</code></td>
-<td>Battery Voltage</td>
-<td><code>0x0210</code></td>
-<td><code>0x1011</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">4</td>
-<td><code>BATTERY_CURRENT</code></td>
-<td>Battery Current</td>
-<td><code>0x0200</code></td>
-<td><code>0x1012</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">5</td>
-<td><code>BATTERY_CONSUMPTION</code></td>
-<td>Battery Consumption</td>
-<td><code>0x5250</code></td>
-<td><code>0x1013</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">6</td>
-<td><code>BATTERY_CHARGE_LEVEL</code></td>
-<td>Battery Charge Level</td>
-<td><code>0x0600</code></td>
-<td><code>0x1014</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">7</td>
-<td><code>BATTERY_CELL_COUNT</code></td>
-<td>Battery Cell Count</td>
-<td><code>0x5260</code></td>
-<td><code>0x1020</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">8</td>
-<td><code>BATTERY_CELL_VOLTAGE</code></td>
-<td>Battery Cell Voltage</td>
-<td><code>0x0910</code></td>
-<td><code>0x1021</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">9</td>
-<td><code>BATTERY_CELL_VOLTAGES</code></td>
-<td>Battery Cell Voltages</td>
-<td></td>
-<td><code>0x102F</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">10</td>
-<td><code>CONTROL</code></td>
-<td>Control (hi-res)</td>
-<td></td>
-<td><code>0x1030</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">11</td>
-<td><code>PITCH_CONTROL</code></td>
-<td>Pitch Control</td>
-<td><code>0x51A0</code></td>
-<td><code>0x1031</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">12</td>
-<td><code>ROLL_CONTROL</code></td>
-<td>Roll Control</td>
-<td><code>0x51A1</code></td>
-<td><code>0x1032</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">13</td>
-<td><code>YAW_CONTROL</code></td>
-<td>Yaw Control</td>
-<td><code>0x51A2</code></td>
-<td><code>0x1033</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">14</td>
-<td><code>COLLECTIVE_CONTROL</code></td>
-<td>Collective Control</td>
-<td><code>0x51A3</code></td>
-<td><code>0x1034</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">15</td>
-<td><code>THROTTLE_CONTROL</code></td>
-<td>Throttle Control</td>
-<td><code>0x51A4</code></td>
-<td><code>0x1035</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">16</td>
-<td><code>ESC1_DATA</code></td>
-<td>#1 ESC Data</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: right;">17</td>
-<td><code>ESC1_VOLTAGE</code></td>
-<td>#1 ESC Voltage</td>
-<td><code>0x0218</code></td>
-<td><code>0x1041</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">18</td>
-<td><code>ESC1_CURRENT</code></td>
-<td>#1 ESC Current</td>
-<td><code>0x0208</code></td>
-<td><code>0x1042</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">19</td>
-<td><code>ESC1_CAPACITY</code></td>
-<td>#1 ESC Capacity</td>
-<td><code>0x5258</code></td>
-<td><code>0x1043</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">20</td>
-<td><code>ESC1_ERPM</code></td>
-<td>#1 ESC ERPM</td>
-<td><code>0x0508</code></td>
-<td><code>0x1044</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">21</td>
-<td><code>ESC1_POWER</code></td>
-<td>#1 ESC Power</td>
-<td><code>0x5268</code></td>
-<td><code>0x1045</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">22</td>
-<td><code>ESC1_THROTTLE</code></td>
-<td>#1 ESC Throttle</td>
-<td><code>0x5269</code></td>
-<td><code>0x1046</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">23</td>
-<td><code>ESC1_TEMP1</code></td>
-<td>#1 ESC Temp 1</td>
-<td><code>0x0418</code></td>
-<td><code>0x1047</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">24</td>
-<td><code>ESC1_TEMP2</code></td>
-<td>#1 ESC Temp 2</td>
-<td><code>0x0419</code></td>
-<td><code>0x1048</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">25</td>
-<td><code>ESC1_BEC_VOLTAGE</code></td>
-<td>#1 ESC BEC Voltage</td>
-<td><code>0x0219</code></td>
-<td><code>0x1049</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">26</td>
-<td><code>ESC1_BEC_CURRENT</code></td>
-<td>#1 ESC BEC Current</td>
-<td><code>0x0229</code></td>
-<td><code>0x104A</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">27</td>
-<td><code>ESC1_STATUS</code></td>
-<td>#1 ESC Status</td>
-<td><code>0x5128</code></td>
-<td><code>0x104E</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">28</td>
-<td><code>ESC1_MODEL</code></td>
-<td>#1 ESC Model</td>
-<td><code>0x5129</code></td>
-<td><code>0x104F</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">29</td>
-<td><code>ESC2_DATA</code></td>
-<td>#2 ESC Data</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: right;">30</td>
-<td><code>ESC2_VOLTAGE</code></td>
-<td>#2 ESC Voltage</td>
-<td><code>0x021A</code></td>
-<td><code>0x1051</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">31</td>
-<td><code>ESC2_CURRENT</code></td>
-<td>#2 ESC Current</td>
-<td><code>0x020A</code></td>
-<td><code>0x1052</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">32</td>
-<td><code>ESC2_CAPACITY</code></td>
-<td>#2 ESC Capacity</td>
-<td><code>0x525A</code></td>
-<td><code>0x1053</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">33</td>
-<td><code>ESC2_ERPM</code></td>
-<td>#2 ESC ERPM</td>
-<td><code>0x050A</code></td>
-<td><code>0x1054</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">34</td>
-<td><code>ESC2_POWER</code></td>
-<td>#2 ESC Power</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: right;">35</td>
-<td><code>ESC2_THROTTLE</code></td>
-<td>#2 ESC Throttle</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: right;">36</td>
-<td><code>ESC2_TEMP1</code></td>
-<td>#2 ESC Temp 1</td>
-<td><code>0x041A</code></td>
-<td><code>0x1057</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">37</td>
-<td><code>ESC2_TEMP2</code></td>
-<td>#2 ESC Temp 2</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: right;">38</td>
-<td><code>ESC2_BEC_VOLTAGE</code></td>
-<td>#2 ESC BEC Voltage</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: right;">39</td>
-<td><code>ESC2_BEC_CURRENT</code></td>
-<td>#2 ESC BEC Current</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: right;">40</td>
-<td><code>ESC2_STATUS</code></td>
-<td>#2 ESC Status</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: right;">41</td>
-<td><code>ESC2_MODEL</code></td>
-<td>#2 ESC Model</td>
-<td><code>0x512B</code></td>
-<td><code>0x105F</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">42</td>
-<td><code>ESC_VOLTAGE</code></td>
-<td>ESC Voltage</td>
-<td><code>0x0211</code></td>
-<td><code>0x1080</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">43</td>
-<td><code>BEC_VOLTAGE</code></td>
-<td>BEC Voltage</td>
-<td><code>0x0901</code></td>
-<td><code>0x1081</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">44</td>
-<td><code>BUS_VOLTAGE</code></td>
-<td>Bus Voltage</td>
-<td><code>0x0902</code></td>
-<td><code>0x1082</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">45</td>
-<td><code>MCU_VOLTAGE</code></td>
-<td>MCU Voltage</td>
-<td><code>0x0900</code></td>
-<td><code>0x1083</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">46</td>
-<td><code>ESC_CURRENT</code></td>
-<td>ESC Current</td>
-<td><code>0x0201</code></td>
-<td><code>0x1090</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">47</td>
-<td><code>BEC_CURRENT</code></td>
-<td>BEC Current</td>
-<td><code>0x0222</code></td>
-<td><code>0x1091</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">48</td>
-<td><code>BUS_CURRENT</code></td>
-<td>Bus Current</td>
-<td></td>
-<td><code>0x1092</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">49</td>
-<td><code>MCU_CURRENT</code></td>
-<td>MCU Current</td>
-<td></td>
-<td><code>0x1093</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">50</td>
-<td><code>ESC_TEMP</code></td>
-<td>ESC Temp</td>
-<td><code>0x0401</code></td>
-<td><code>0x10A0</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">51</td>
-<td><code>BEC_TEMP</code></td>
-<td>BEC Temp</td>
-<td><code>0x0402</code></td>
-<td><code>0x10A1</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">52</td>
-<td><code>MCU_TEMP</code></td>
-<td>MCU Temp</td>
-<td><code>0x0400</code></td>
-<td><code>0x10A3</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">53</td>
-<td><code>AIR_TEMP</code></td>
-<td>Air Temp</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: right;">54</td>
-<td><code>MOTOR_TEMP</code></td>
-<td>Motor Temp</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: right;">55</td>
-<td><code>BATTERY_TEMP</code></td>
-<td>Battery Temp</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: right;">56</td>
-<td><code>EXHAUST_TEMP</code></td>
-<td>Exhaust Temp</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: right;">57</td>
-<td><code>HEADING</code></td>
-<td>Heading</td>
-<td><code>0x5210</code></td>
-<td><code>0x10B1</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">58</td>
-<td><code>ALTITUDE</code></td>
-<td>Altitude</td>
-<td><code>0x0100</code></td>
-<td><code>0x10B2</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">59</td>
-<td><code>VARIOMETER</code></td>
-<td>Variometer</td>
-<td><code>0x0110</code></td>
-<td><code>0x10B3</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">60</td>
-<td><code>HEADSPEED</code></td>
-<td>Headspeed</td>
-<td><code>0x0500</code></td>
-<td><code>0x10C0</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">61</td>
-<td><code>TAILSPEED</code></td>
-<td>Tailspeed</td>
-<td><code>0x0501</code></td>
-<td><code>0x10C1</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">62</td>
-<td><code>MOTOR_RPM</code></td>
-<td>Motor RPM</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: right;">63</td>
-<td><code>TRANS_RPM</code></td>
-<td>Transmission RPM</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: right;">64</td>
-<td><code>ATTITUDE</code></td>
-<td>Attitude (hi-res)</td>
-<td><code>0x0730</code></td>
-<td><code>0x1100</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">65</td>
-<td><code>ATTITUDE_PITCH</code></td>
-<td>Attitude Pitch</td>
-<td></td>
-<td><code>0x1101</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">66</td>
-<td><code>ATTITUDE_ROLL</code></td>
-<td>Attitude Roll</td>
-<td></td>
-<td><code>0x1102</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">67</td>
-<td><code>ATTITUDE_YAW</code></td>
-<td>Attitude Yaw</td>
-<td></td>
-<td><code>0x1103</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">68</td>
-<td><code>ACCEL</code></td>
-<td>Accelerometer (hi-res)</td>
-<td></td>
-<td><code>0x1110</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">69</td>
-<td><code>ACCEL_X</code></td>
-<td>Accelerometer X-axis</td>
-<td><code>0x0700</code></td>
-<td><code>0x1111</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">70</td>
-<td><code>ACCEL_Y</code></td>
-<td>Accelerometer Y-axis</td>
-<td><code>0x0710</code></td>
-<td><code>0x1112</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">71</td>
-<td><code>ACCEL_Z</code></td>
-<td>Accelerometer Z-axis</td>
-<td><code>0x0720</code></td>
-<td><code>0x1113</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">72</td>
-<td><code>GPS</code></td>
-<td>GPS</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: right;">73</td>
-<td><code>GPS_SATS</code></td>
-<td>GPS Sats</td>
-<td><code>0x0860</code></td>
-<td><code>0x1121</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">74</td>
-<td><code>GPS_PDOP</code></td>
-<td>GPS PDOP</td>
-<td></td>
-<td><code>0x1122</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">75</td>
-<td><code>GPS_HDOP</code></td>
-<td>GPS HDOP</td>
-<td></td>
-<td><code>0x1123</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">76</td>
-<td><code>GPS_VDOP</code></td>
-<td>GPS VDOP</td>
-<td></td>
-<td><code>0x1124</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">77</td>
-<td><code>GPS_COORD</code></td>
-<td>GPS Coord</td>
-<td><code>0x0800</code></td>
-<td><code>0x1125</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">78</td>
-<td><code>GPS_ALTITUDE</code></td>
-<td>GPS Altitude</td>
-<td><code>0x0820</code></td>
-<td><code>0x1126</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">79</td>
-<td><code>GPS_HEADING</code></td>
-<td>GPS Course</td>
-<td><code>0x0840</code></td>
-<td><code>0x1127</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">80</td>
-<td><code>GPS_GROUNDSPEED</code></td>
-<td>GPS Groundspeed</td>
-<td><code>0x0830</code></td>
-<td><code>0x1128</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">81</td>
-<td><code>GPS_HOME_DISTANCE</code></td>
-<td>GPS Home Distance</td>
-<td></td>
-<td><code>0x1129</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">82</td>
-<td><code>GPS_HOME_DIRECTION</code></td>
-<td>GPS Home Direction</td>
-<td></td>
-<td><code>0x112A</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">83</td>
-<td><code>GPS_DATE_TIME</code></td>
-<td>GPS Date Time</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: right;">84</td>
-<td><code>LOAD</code></td>
-<td>Load</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: right;">85</td>
-<td><code>CPU_LOAD</code></td>
-<td>CPU Load</td>
-<td><code>0x51D0</code></td>
-<td><code>0x1141</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">86</td>
-<td><code>SYS_LOAD</code></td>
-<td>SYS Load</td>
-<td><code>0x51D1</code></td>
-<td><code>0x1142</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">87</td>
-<td><code>RT_LOAD</code></td>
-<td>RT Load</td>
-<td><code>0x51D2</code></td>
-<td><code>0x1143</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">88</td>
-<td><code>MODEL_ID</code></td>
-<td>Model Id</td>
-<td><code>0x5120</code></td>
-<td><code>0x1200</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">89</td>
-<td><code>FLIGHT_MODE</code></td>
-<td>Flight Mode</td>
-<td><code>0x5121</code></td>
-<td><code>0x1201</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">90</td>
-<td><code>ARMING_FLAGS</code></td>
-<td>Arming Flags</td>
-<td><code>0x5122</code></td>
-<td><code>0x1202</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">91</td>
-<td><code>ARMING_DISABLE_FLAGS</code></td>
-<td>Arming Disable Flags</td>
-<td><code>0x5123</code></td>
-<td><code>0x1203</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">92</td>
-<td><code>RESCUE_STATE</code></td>
-<td>Rescue State</td>
-<td><code>0x5124</code></td>
-<td><code>0x1204</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">93</td>
-<td><code>GOVERNOR_STATE</code></td>
-<td>Governor State</td>
-<td><code>0x5125</code></td>
-<td><code>0x1205</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">94</td>
-<td><code>GOVERNOR_FLAGS</code></td>
-<td>Governor Flags</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: right;">95</td>
-<td><code>PID_PROFILE</code></td>
-<td>PID Profile</td>
-<td><code>0x5130</code></td>
-<td><code>0x1211</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">96</td>
-<td><code>RATES_PROFILE</code></td>
-<td>Rates Profile</td>
-<td><code>0x5131</code></td>
-<td><code>0x1212</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">97</td>
-<td><code>BATTERY_PROFILE</code></td>
-<td>Battery Profile</td>
-<td><code>0x5133</code></td>
-<td><code>0x1214</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">98</td>
-<td><code>LED_PROFILE</code></td>
-<td>LED Profile</td>
-<td><code>0x5132</code></td>
-<td><code>0x1213</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">99</td>
-<td><code>ADJFUNC</code></td>
-<td>Adjustment Function</td>
-<td><code>0x5111</code></td>
-<td><code>0x1220</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">100</td>
-<td><code>DEBUG_0</code></td>
-<td>Debug 0</td>
-<td><code>0x52F0</code></td>
-<td><code>0xDB00</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">101</td>
-<td><code>DEBUG_1</code></td>
-<td>Debug 1</td>
-<td><code>0x52F1</code></td>
-<td><code>0xDB01</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">102</td>
-<td><code>DEBUG_2</code></td>
-<td>Debug 2</td>
-<td><code>0x52F2</code></td>
-<td><code>0xDB02</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">103</td>
-<td><code>DEBUG_3</code></td>
-<td>Debug 3</td>
-<td><code>0x52F3</code></td>
-<td><code>0xDB03</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">104</td>
-<td><code>DEBUG_4</code></td>
-<td>Debug 4</td>
-<td><code>0x52F4</code></td>
-<td><code>0xDB04</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">105</td>
-<td><code>DEBUG_5</code></td>
-<td>Debug 5</td>
-<td><code>0x52F5</code></td>
-<td><code>0xDB05</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">106</td>
-<td><code>DEBUG_6</code></td>
-<td>Debug 6</td>
-<td><code>0x52F6</code></td>
-<td><code>0xDB06</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">107</td>
-<td><code>DEBUG_7</code></td>
-<td>Debug 7</td>
-<td><code>0x52F8</code></td>
-<td><code>0xDB07</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">108</td>
-<td><code>RPM</code></td>
-<td>RPM</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: right;">109</td>
-<td><code>TEMP</code></td>
-<td>Temperature</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: right;">110</td>
-<td><code>FBUS_SENSOR_1</code></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: right;">111</td>
-<td><code>FBUS_SENSOR_2</code></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: right;">112</td>
-<td><code>FBUS_SENSOR_3</code></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: right;">113</td>
-<td><code>FBUS_SENSOR_4</code></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: right;">114</td>
-<td><code>FBUS_SENSOR_5</code></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: right;">115</td>
-<td><code>FBUS_SENSOR_6</code></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: right;">116</td>
-<td><code>FBUS_SENSOR_7</code></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: right;">117</td>
-<td><code>FBUS_SENSOR_8</code></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: right;">120</td>
-<td><code>SYSTEM_STATUS</code></td>
-<td>System Status</td>
-<td><code>0x5140</code></td>
-<td><code>0x1230</code></td>
-</tr>
-<tr>
-<td style="text-align: right;">121</td>
-<td><code>SYSTEM_CONFIG</code></td>
-<td>System Config</td>
-<td><code>0x5141</code></td>
-<td><code>0x1231</code></td>
-</tr>
-</tbody>
-</table>
-<p>Sensors 110-117 are slots for forwarding FrSky sensors connected to the
-flight controller -- see <a href="../../setup/fbus-master/">FBUS Master</a>.</p>
+<h3 id="after-applying">After applying<a class="headerlink" href="#after-applying" title="Permanent link">&para;</a></h3>
+<p>The saved flights are <strong>not</strong> erased. Your next flight is on the new tune, so the page starts again from it and
+leaves the older flights out of the advice. The flight controller also starts its measurements afresh when it
+arms on a changed tune. You do not need to clear anything.</p>
+<p>Every change <strong>Save</strong> writes is added to <code>changes.csv</code> beside the flight history: date, axis, setting, old value,
+new value (raw values, as the flight controller stores them). It is your record of what the advisor changed, so
+you can always set a value back by hand. Clearing the flights does not erase it.</p>
+<h2 id="adjustment-functions">Adjustment functions<a class="headerlink" href="#adjustment-functions" title="Permanent link">&para;</a></h2>
+<p><a href="../../../configurator/tabs/adjustments/">Adjustments</a> let you change settings from a switch or knob while flying.
+Several of them change exactly what the Tune Advisor measures and writes: P, F, B, the rates and Iterm Relax
+Cutoff per axis, and the PID and rate profile. The firmware applies an adjustment straight away and saves it when
+you disarm.</p>
+<ul>
+<li><strong>Adjusting during a flight mixes two tunes.</strong> The flight controller checks the tune only when you arm. A
+  flight where you adjusted one of these settings, or switched profile, is measured partly on the old value. It is
+  then saved as if it had all been flown on the value you ended on. Leave these adjustments alone while you
+  collect flights for the advisor. If you did use one, clear the flights and fly again.</li>
+<li><strong>Adjusting between flights is fine.</strong> A <em>Stepped</em> adjustment is saved at disarm, so the next flight is on a new
+  tune and the advisor starts again from it, just as it does after <strong>Save</strong>.</li>
+<li><strong>A <em>Mapped</em> adjustment overrides Save.</strong> It sets the value from the knob's position: as soon as the knob moves,
+  and at every power-up while the adjustment is enabled. A value written by <strong>Save</strong> only lasts until then. Before
+  applying advice to a setting that has a <em>Mapped</em> adjustment, set that adjustment's <em>Type</em> to <em>Off</em>, or leave the
+  knob where it gives the new value.</li>
+<li>A <em>Mapped</em> profile switch is fine between flights. Flights are only combined when their tune values match, so
+  the advice follows the profile you fly. Two profiles with identical values on an axis count as the same tune
+  for that axis.</li>
+<li><strong>Save</strong> checks the profiles and values at the moment it writes. An adjustment or profile switch made since the
+  flights makes it stop with nothing changed.</li>
+</ul>
+<h2 id="clearing-the-data">Clearing the data<a class="headerlink" href="#clearing-the-data" title="Permanent link">&para;</a></h2>
+<p>The page's <strong>*</strong> button erases this model's saved flights and the flight controller's current measurements,
+after asking. Use it when the saved flights no longer describe the heli, for example after a repair, new blades
+or a head change, or after an in-flight adjustment.</p>
+<h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../../../configurator/tabs/profiles/#pid-controller-gains">Profiles: PID Controller Gains</a> and
+  <a href="../../../configurator/tabs/profiles/#pid-controller-settings">PID Controller Settings</a>.</li>
+<li><a href="../../../configurator/tabs/rates/#rates">Rates</a>.</li>
+<li><a href="../../../configurator/tabs/adjustments/#mapped-and-stepped">Adjustments: Mapped and Stepped</a>.</li>
+</ul>
 
 
 
@@ -5536,7 +4894,7 @@ flight controller -- see <a href="../../setup/fbus-master/">FBUS Master</a>.</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../cli-settings/" class="md-footer__link md-footer__link--prev" aria-label="Previous: CLI Settings">
+          <a href="../lua-suite/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Using RFSuite">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -5546,20 +4904,20 @@ flight controller -- see <a href="../../setup/fbus-master/">FBUS Master</a>.</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                CLI Settings
+                Using RFSuite
               </div>
             </div>
           </a>
         
         
           
-          <a href="../serial-ports/" class="md-footer__link md-footer__link--next" aria-label="Next: Serial Ports">
+          <a href="../troubleshooting/" class="md-footer__link md-footer__link--next" aria-label="Next: Troubleshooting">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Serial Ports
+                Troubleshooting
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -5634,12 +4992,12 @@ flight controller -- see <a href="../../setup/fbus-master/">FBUS Master</a>.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.action.edit", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.action.edit", "content.code.copy", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
-        <script src="../../javascripts/gear-calc.js"></script>
+        <script src="../../../javascripts/gear-calc.js"></script>
       
     
   </body>
